@@ -12,7 +12,7 @@ use TelegramBot\TelegramMethod;
  * method is only guaranteed to work for other users if the bot is an
  * administrator in the chat. Returns a ChatMember object on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetChatMember extends TelegramMethod implements MethodsInterface

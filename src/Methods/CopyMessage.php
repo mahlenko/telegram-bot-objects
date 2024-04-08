@@ -11,16 +11,18 @@ use TelegramBot\Types\InlineKeyboardMarkup;
 use TelegramBot\Types\MessageEntity;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
+use TelegramBot\Types\ReplyParameters;
 
 /**
- * Use this method to copy messages of any kind. Service messages and
- * invoice messages can't be copied. A quiz poll can be copied only if
- * the value of the field correct_option_id is known to the bot. The
- * method is analogous to the method forwardMessage, but the copied
- * message doesn't have a link to the original message. Returns the
- * MessageId of the sent message on success.
+ * Use this method to copy messages of any kind. Service messages,
+ * giveaway messages, giveaway winners messages, and invoice messages
+ * can't be copied. A quiz poll can be copied only if the value of the
+ * field correct_option_id is known to the bot. The method is analogous
+ * to the method forwardMessage, but the copied message doesn't have a
+ * link to the original message. Returns the MessageId of the sent
+ * message on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class CopyMessage extends TelegramMethod implements MethodsInterface
@@ -75,14 +77,8 @@ class CopyMessage extends TelegramMethod implements MethodsInterface
     /** Protects the contents of the sent message from forwarding and saving */
     public ?bool $protect_content;
 
-    /** If the message is a reply, ID of the original message */
-    public ?int $reply_to_message_id;
-
-    /**
-     * Pass True if the message should be sent even if the specified
-     * replied-to message is not found
-     */
-    public ?bool $allow_sending_without_reply;
+    /** Description of the message to reply to */
+    public ?ReplyParameters $reply_parameters;
 
     /**
      * Additional interface options. A JSON-serialized object for an inline

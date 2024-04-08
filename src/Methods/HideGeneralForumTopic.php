@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * and must have the can_manage_topics administrator rights. The topic
  * will be automatically closed if it was open. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class HideGeneralForumTopic extends TelegramMethod implements MethodsInterface

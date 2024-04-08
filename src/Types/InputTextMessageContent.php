@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * Represents the content of a text message to be sent as the result of
  * an inline query.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputTextMessageContent extends TelegramType implements InlineModeInterface
@@ -33,6 +33,6 @@ class InputTextMessageContent extends TelegramType implements InlineModeInterfac
      */
     public ?array $entities;
 
-    /** Optional. Disables link previews for links in the sent message */
-    public ?bool $disable_web_page_preview;
+    /** Optional. Link preview generation options for the message */
+    public ?LinkPreviewOptions $link_preview_options;
 }

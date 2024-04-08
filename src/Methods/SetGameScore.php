@@ -14,7 +14,7 @@ use TelegramBot\TelegramMethod;
  * the new score is not greater than the user's current score in the chat
  * and force is False.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetGameScore extends TelegramMethod implements GamesInterface

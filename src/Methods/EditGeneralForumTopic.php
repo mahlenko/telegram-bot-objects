@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * to work and must have can_manage_topics administrator rights. Returns
  * True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class EditGeneralForumTopic extends TelegramMethod implements MethodsInterface

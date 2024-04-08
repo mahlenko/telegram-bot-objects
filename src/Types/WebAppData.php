@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Describes data sent from a Web App to the bot.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class WebAppData extends TelegramType implements TypesInterface

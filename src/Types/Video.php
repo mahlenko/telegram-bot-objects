@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a video file.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class Video extends TelegramType implements TypesInterface

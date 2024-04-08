@@ -12,7 +12,7 @@ use TelegramBot\TelegramType;
  * an empty query, your bot could return some default or trending
  * results.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InlineQuery extends TelegramType implements InlineModeInterface

@@ -14,7 +14,7 @@ use TelegramBot\TelegramMethod;
  * administrator right in a supergroup or 'can_edit_messages'
  * administrator right in a channel. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class UnpinAllChatMessages extends TelegramMethod implements MethodsInterface

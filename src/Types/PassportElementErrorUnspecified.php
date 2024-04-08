@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * Represents an issue in an unspecified place. The error is considered
  * resolved when new data is added.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class PassportElementErrorUnspecified extends TelegramType implements TelegramPassportInterface

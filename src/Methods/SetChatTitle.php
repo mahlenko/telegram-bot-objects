@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * this to work and must have the appropriate administrator rights.
  * Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetChatTitle extends TelegramMethod implements MethodsInterface

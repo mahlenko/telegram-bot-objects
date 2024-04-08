@@ -10,11 +10,11 @@ use TelegramBot\TelegramType;
 /**
  * This object represents one button of the reply keyboard. For simple
  * text buttons, String can be used instead of this object to specify the
- * button text. The optional fields web_app, request_user, request_chat,
+ * button text. The optional fields web_app, request_users, request_chat,
  * request_contact, request_location, and request_poll are mutually
  * exclusive.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class KeyboardButton extends TelegramType implements TypesInterface
@@ -27,11 +27,11 @@ class KeyboardButton extends TelegramType implements TypesInterface
 
     /**
      * Optional. If specified, pressing the button will open a list of
-     * suitable users. Tapping on any user will send their identifier to the
-     * bot in a “user_shared” service message. Available in private chats
+     * suitable users. Identifiers of selected users will be sent to the bot
+     * in a “users_shared” service message. Available in private chats
      * only.
      */
-    public ?KeyboardButtonRequestUser $request_user;
+    public ?KeyboardButtonRequestUsers $request_users;
 
     /**
      * Optional. If specified, pressing the button will open a list of

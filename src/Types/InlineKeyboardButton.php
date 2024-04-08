@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * This object represents one button of an inline keyboard. You must use
  * exactly one of the optional fields.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InlineKeyboardButton extends TelegramType implements TypesInterface
@@ -21,9 +21,9 @@ class InlineKeyboardButton extends TelegramType implements TypesInterface
 
     /**
      * Optional. HTTP or tg:// URL to be opened when the button is pressed.
-     * Links tg://user?id=<user_id> can be used to mention a user by their ID
-     * without using a username, if this is allowed by their privacy
-     * settings.
+     * Links tg://user?id=<user_id> can be used to mention a user by their
+     * identifier without using a username, if this is allowed by their
+     * privacy settings.
      */
     public ?string $url;
 

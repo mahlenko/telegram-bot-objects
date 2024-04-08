@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a message.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class Message extends TelegramType implements TypesInterface
@@ -41,45 +41,41 @@ class Message extends TelegramType implements TypesInterface
      */
     public ?Chat $sender_chat;
 
-    /** Date the message was sent in Unix time */
+    /**
+     * Optional. If the sender of the message boosted the chat, the number of
+     * boosts added by the user
+     */
+    public ?int $sender_boost_count;
+
+    /**
+     * Optional. The bot that actually sent the message on behalf of the
+     * business account. Available only for outgoing messages sent on behalf
+     * of the connected business account.
+     */
+    public ?User $sender_business_bot;
+
+    /**
+     * Date the message was sent in Unix time. It is always a positive
+     * number, representing a valid date.
+     */
     public int $date;
 
-    /** Conversation the message belongs to */
+    /**
+     * Optional. Unique identifier of the business connection from which the
+     * message was received. If non-empty, the message belongs to a chat of
+     * the corresponding business account that is independent from any
+     * potential bot chat which might share the same identifier.
+     */
+    public ?string $business_connection_id;
+
+    /** Chat the message belongs to */
     public Chat $chat;
 
-    /** Optional. For forwarded messages, sender of the original message */
-    public ?User $forward_from;
-
     /**
-     * Optional. For messages forwarded from channels or from anonymous
-     * administrators, information about the original sender chat
+     * Optional. Information about the original message for forwarded
+     * messages
      */
-    public ?Chat $forward_from_chat;
-
-    /**
-     * Optional. For messages forwarded from channels, identifier of the
-     * original message in the channel
-     */
-    public ?int $forward_from_message_id;
-
-    /**
-     * Optional. For forwarded messages that were originally sent in channels
-     * or by an anonymous chat administrator, signature of the message sender
-     * if present
-     */
-    public ?string $forward_signature;
-
-    /**
-     * Optional. Sender's name for messages forwarded from users who disallow
-     * adding a link to their account in forwarded messages
-     */
-    public ?string $forward_sender_name;
-
-    /**
-     * Optional. For forwarded messages, date the original message was sent
-     * in Unix time
-     */
-    public ?int $forward_date;
+    public ?MessageOrigin $forward_origin;
 
     /** Optional. True, if the message is sent to a forum topic */
     public ?bool $is_topic_message;
@@ -91,11 +87,26 @@ class Message extends TelegramType implements TypesInterface
     public ?bool $is_automatic_forward;
 
     /**
-     * Optional. For replies, the original message. Note that the Message
-     * object in this field will not contain further reply_to_message fields
-     * even if it itself is a reply.
+     * Optional. For replies in the same chat and message thread, the
+     * original message. Note that the Message object in this field will not
+     * contain further reply_to_message fields even if it itself is a reply.
      */
     public ?Message $reply_to_message;
+
+    /**
+     * Optional. Information about the message that is being replied to,
+     * which may come from another chat or forum topic
+     */
+    public ?ExternalReplyInfo $external_reply;
+
+    /**
+     * Optional. For replies that quote part of the original message, the
+     * quoted part of the message
+     */
+    public ?TextQuote $quote;
+
+    /** Optional. For replies to a story, the original story */
+    public ?Story $reply_to_story;
 
     /** Optional. Bot through which the message was sent */
     public ?User $via_bot;
@@ -105,6 +116,13 @@ class Message extends TelegramType implements TypesInterface
 
     /** Optional. True, if the message can't be forwarded */
     public ?bool $has_protected_content;
+
+    /**
+     * Optional. True, if the message was sent by an implicit action, for
+     * example, as an away or a greeting business message, or as a scheduled
+     * message
+     */
+    public ?bool $is_from_offline;
 
     /**
      * Optional. The unique identifier of a media message group this message
@@ -128,6 +146,12 @@ class Message extends TelegramType implements TypesInterface
      * @var array<MessageEntity>
      */
     public ?array $entities;
+
+    /**
+     * Optional. Options used for link preview generation for the message, if
+     * it is a text message and link preview options were changed
+     */
+    public ?LinkPreviewOptions $link_preview_options;
 
     /**
      * Optional. Message is an animation, information about the animation.
@@ -283,9 +307,9 @@ class Message extends TelegramType implements TypesInterface
     /**
      * Optional. Specified message was pinned. Note that the Message object
      * in this field will not contain further reply_to_message fields even if
-     * it is itself a reply.
+     * it itself is a reply.
      */
-    public ?Message $pinned_message;
+    public ?MaybeInaccessibleMessage $pinned_message;
 
     /**
      * Optional. Message is an invoice for a payment, information about the
@@ -299,8 +323,8 @@ class Message extends TelegramType implements TypesInterface
      */
     public ?SuccessfulPayment $successful_payment;
 
-    /** Optional. Service message: a user was shared with the bot */
-    public ?UserShared $user_shared;
+    /** Optional. Service message: users were shared with the bot */
+    public ?UsersShared $users_shared;
 
     /** Optional. Service message: a chat was shared with the bot */
     public ?ChatShared $chat_shared;
@@ -328,6 +352,9 @@ class Message extends TelegramType implements TypesInterface
      */
     public ?ProximityAlertTriggered $proximity_alert_triggered;
 
+    /** Optional. Service message: user boosted the chat */
+    public ?ChatBoostAdded $boost_added;
+
     /** Optional. Service message: forum topic created */
     public ?ForumTopicCreated $forum_topic_created;
 
@@ -345,6 +372,21 @@ class Message extends TelegramType implements TypesInterface
 
     /** Optional. Service message: the 'General' forum topic unhidden */
     public ?GeneralForumTopicUnhidden $general_forum_topic_unhidden;
+
+    /** Optional. Service message: a scheduled giveaway was created */
+    public ?GiveawayCreated $giveaway_created;
+
+    /** Optional. The message is a scheduled giveaway message */
+    public ?Giveaway $giveaway;
+
+    /** Optional. A giveaway with public winners was completed */
+    public ?GiveawayWinners $giveaway_winners;
+
+    /**
+     * Optional. Service message: a giveaway without public winners was
+     * completed
+     */
+    public ?GiveawayCompleted $giveaway_completed;
 
     /** Optional. Service message: video chat scheduled */
     public ?VideoChatScheduled $video_chat_scheduled;

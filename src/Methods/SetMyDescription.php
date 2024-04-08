@@ -11,7 +11,7 @@ use TelegramBot\TelegramMethod;
  * Use this method to change the bot's description, which is shown in the
  * chat with the bot if the chat is empty. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetMyDescription extends TelegramMethod implements MethodsInterface

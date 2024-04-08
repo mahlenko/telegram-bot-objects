@@ -15,7 +15,7 @@ use TelegramBot\TelegramMethod;
  * after the bot is launched. Returns True on success. Requires no
  * parameters.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class Close extends TelegramMethod implements MethodsInterface

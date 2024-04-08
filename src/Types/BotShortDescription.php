@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents the bot's short description.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class BotShortDescription extends TelegramType implements TypesInterface

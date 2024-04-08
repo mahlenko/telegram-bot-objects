@@ -13,7 +13,7 @@ use TelegramBot\Types\InputSticker;
  * will be able to edit the sticker set thus created. Returns True on
  * success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class CreateNewStickerSet extends TelegramMethod implements StickersInterface
@@ -42,12 +42,6 @@ class CreateNewStickerSet extends TelegramMethod implements StickersInterface
     public array $stickers;
 
     /**
-     * Format of stickers in the set, must be one of “static”,
-     * “animated”, “video”
-     */
-    public string $sticker_format;
-
-    /**
      * Type of stickers in the set, pass “regular”, “mask”, or
      * “custom_emoji”. By default, a regular sticker set is created.
      */
@@ -65,5 +59,5 @@ class CreateNewStickerSet extends TelegramMethod implements StickersInterface
      * A list of necessary properties that should be checked before sending
      * requests to the Telegram Bot API
      */
-    public array $required_properties = ['user_id', 'name', 'title', 'stickers', 'sticker_format'];
+    public array $required_properties = ['user_id', 'name', 'title', 'stickers'];
 }

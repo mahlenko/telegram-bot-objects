@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents one row of the high scores table for a game.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GameHighScore extends TelegramType implements GamesInterface

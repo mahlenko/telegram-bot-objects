@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * for this to work and must have the can_delete_messages administrator
  * rights. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class DeleteForumTopic extends TelegramMethod implements MethodsInterface

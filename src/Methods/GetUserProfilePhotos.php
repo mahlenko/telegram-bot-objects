@@ -11,7 +11,7 @@ use TelegramBot\TelegramMethod;
  * Use this method to get a list of profile pictures for a user. Returns
  * a UserProfilePhotos object.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetUserProfilePhotos extends TelegramMethod implements MethodsInterface

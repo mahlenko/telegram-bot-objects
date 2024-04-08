@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * have the can_manage_topics administrator rights, unless it is the
  * creator of the topic. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class CloseForumTopic extends TelegramMethod implements MethodsInterface

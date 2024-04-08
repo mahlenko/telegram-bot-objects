@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a Telegram user or bot.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class User extends TelegramType implements TypesInterface
@@ -62,4 +62,10 @@ class User extends TelegramType implements TypesInterface
      * getMe.
      */
     public ?bool $supports_inline_queries;
+
+    /**
+     * Optional. True, if the bot can be connected to a Telegram Business
+     * account to receive its messages. Returned only in getMe.
+     */
+    public ?bool $can_connect_to_business;
 }

@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * Represents a chat member that is under certain restrictions in the
  * chat. Supergroups only.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatMemberRestricted extends TelegramType implements TypesInterface
@@ -27,7 +27,7 @@ class ChatMemberRestricted extends TelegramType implements TypesInterface
 
     /**
      * True, if the user is allowed to send text messages, contacts,
-     * invoices, locations and venues
+     * giveaways, giveaway winners, invoices, locations and venues
      */
     public bool $can_send_messages;
 

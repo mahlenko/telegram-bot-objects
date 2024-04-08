@@ -12,7 +12,7 @@ use TelegramBot\TelegramMethod;
  * On success, returns a WebhookInfo object. If the bot is using
  * getUpdates, will return an object with the url field empty.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetWebhookInfo extends TelegramMethod implements UpdatesInterface

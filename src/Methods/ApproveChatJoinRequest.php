@@ -12,7 +12,7 @@ use TelegramBot\TelegramMethod;
  * administrator in the chat for this to work and must have the
  * can_invite_users administrator right. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ApproveChatJoinRequest extends TelegramMethod implements MethodsInterface

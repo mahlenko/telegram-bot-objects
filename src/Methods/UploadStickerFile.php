@@ -10,10 +10,11 @@ use TelegramBot\Types\InputFile;
 
 /**
  * Use this method to upload a file with a sticker for later use in the
- * createNewStickerSet and addStickerToSet methods (the file can be used
- * multiple times). Returns the uploaded File on success.
+ * createNewStickerSet, addStickerToSet, or replaceStickerInSet methods
+ * (the file can be used multiple times). Returns the uploaded File on
+ * success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class UploadStickerFile extends TelegramMethod implements StickersInterface

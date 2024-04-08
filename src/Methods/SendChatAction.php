@@ -22,18 +22,24 @@ use TelegramBot\TelegramMethod;
  * We only recommend using this method when a response from the bot will
  * take a noticeable amount of time to arrive.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SendChatAction extends TelegramMethod implements MethodsInterface
 {
+    /**
+     * Unique identifier of the business connection on behalf of which the
+     * action will be sent
+     */
+    public ?string $business_connection_id;
+
     /**
      * Unique identifier for the target chat or username of the target
      * channel (in the format @channelusername)
      */
     public int|string $chat_id;
 
-    /** Unique identifier for the target message thread; supergroups only */
+    /** Unique identifier for the target message thread; for supergroups only */
     public ?int $message_thread_id;
 
     /**

@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * have the can_pin_messages administrator right in the supergroup.
  * Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class UnpinAllForumTopicMessages extends TelegramMethod implements MethodsInterface

@@ -14,7 +14,7 @@ use TelegramBot\Types\ShippingOption;
  * shipping_query field to the bot. Use this method to reply to shipping
  * queries. On success, True is returned.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class AnswerShippingQuery extends TelegramMethod implements PaymentsInterface

@@ -12,7 +12,7 @@ use TelegramBot\TelegramType;
  * posted using multipart/form-data in the usual way that files are
  * uploaded via the browser.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputFile extends TelegramType implements TypesInterface

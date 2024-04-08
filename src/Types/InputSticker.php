@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object describes a sticker to be added to a sticker set.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputSticker extends TelegramType implements StickersInterface
@@ -25,6 +25,13 @@ class InputSticker extends TelegramType implements StickersInterface
      * information on Sending Files »
      */
     public InputFile|string $sticker;
+
+    /**
+     * Format of the added sticker, must be one of “static” for a .WEBP
+     * or .PNG image, “animated” for a .TGS animation, “video” for a
+     * WEBM video
+     */
+    public string $format;
 
     /**
      * List of 1-20 emoji associated with the sticker

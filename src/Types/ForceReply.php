@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * you want to create user-friendly step-by-step interfaces without
  * having to sacrifice privacy mode.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ForceReply extends TelegramType implements TypesInterface
@@ -34,8 +34,8 @@ class ForceReply extends TelegramType implements TypesInterface
     /**
      * Optional. Use this parameter if you want to force reply from specific
      * users only. Targets: 1) users that are @mentioned in the text of the
-     * Message object; 2) if the bot's message is a reply (has
-     * reply_to_message_id), sender of the original message.
+     * Message object; 2) if the bot's message is a reply to a message in the
+     * same chat and forum topic, sender of the original message.
      */
     public ?bool $selective;
 }

@@ -20,7 +20,7 @@ use TelegramBot\Types\InputFile;
  * request will contain a header “X-Telegram-Bot-Api-Secret-Token”
  * with the secret token as content.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetWebhook extends TelegramMethod implements UpdatesInterface
@@ -53,14 +53,14 @@ class SetWebhook extends TelegramMethod implements UpdatesInterface
 
     /**
      * A JSON-serialized list of the update types you want your bot to
-     * receive. For example, specify [“message”,
-     * “edited_channel_post”, “callback_query”] to only receive
-     * updates of these types. See Update for a complete list of available
-     * update types. Specify an empty list to receive all update types except
-     * chat_member (default). If not specified, the previous setting will be
-     * used.Please note that this parameter doesn't affect updates created
-     * before the call to the setWebhook, so unwanted updates may be received
-     * for a short period of time.
+     * receive. For example, specify ["message", "edited_channel_post",
+     * "callback_query"] to only receive updates of these types. See Update
+     * for a complete list of available update types. Specify an empty list
+     * to receive all update types except chat_member, message_reaction, and
+     * message_reaction_count (default). If not specified, the previous
+     * setting will be used.Please note that this parameter doesn't affect
+     * updates created before the call to the setWebhook, so unwanted updates
+     * may be received for a short period of time.
      *
      * @var array<string>
      */

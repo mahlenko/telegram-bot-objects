@@ -13,7 +13,7 @@ use TelegramBot\TelegramType;
  * Web App from a link, or accepting an explicit request from a Web App
  * sent by the method requestWriteAccess.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class WriteAccessAllowed extends TelegramType implements TypesInterface

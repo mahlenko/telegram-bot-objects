@@ -20,7 +20,7 @@ use TelegramBot\Types\PassportElementError;
  * shows evidence of tampering, etc. Supply some details in the error
  * message to make sure the user knows how to correct the issues.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetPassportDataErrors extends TelegramMethod implements TelegramPassportInterface

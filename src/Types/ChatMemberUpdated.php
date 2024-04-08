@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents changes in the status of a chat member.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatMemberUpdated extends TelegramType implements TypesInterface

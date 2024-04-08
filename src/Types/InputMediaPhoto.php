@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Represents a photo to be sent.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputMediaPhoto extends TelegramType implements TypesInterface

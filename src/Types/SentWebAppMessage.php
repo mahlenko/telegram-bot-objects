@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Describes an inline message sent by a Web App on behalf of a user.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SentWebAppMessage extends TelegramType implements InlineModeInterface

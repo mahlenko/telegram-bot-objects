@@ -16,7 +16,7 @@ use TelegramBot\TelegramType;
  * If an InlineQueryResultVideo message contains an embedded video (e.g.,
  * YouTube), you must replace its content using input_message_content.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InlineQueryResultVideo extends TelegramType implements InlineModeInterface

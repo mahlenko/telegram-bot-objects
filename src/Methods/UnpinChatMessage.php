@@ -15,7 +15,7 @@ use TelegramBot\TelegramMethod;
  * 'can_edit_messages' administrator right in a channel. Returns True on
  * success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class UnpinChatMessage extends TelegramMethod implements MethodsInterface

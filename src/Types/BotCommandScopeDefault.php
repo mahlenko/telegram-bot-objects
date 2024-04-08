@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * Represents the default scope of bot commands. Default commands are
  * used if no commands with a narrower scope are specified for the user.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class BotCommandScopeDefault extends TelegramType implements TypesInterface

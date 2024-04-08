@@ -13,7 +13,7 @@ use TelegramBot\Types\BotCommandScope;
  * Use this method to change the list of the bot's commands. See this
  * manual for more details about bot commands. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetMyCommands extends TelegramMethod implements MethodsInterface

@@ -9,13 +9,11 @@ use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InputSticker;
 
 /**
- * Use this method to add a new sticker to a set created by the bot. The
- * format of the added sticker must match the format of the other
- * stickers in the set. Emoji sticker sets can have up to 200 stickers.
- * Animated and video sticker sets can have up to 50 stickers. Static
- * sticker sets can have up to 120 stickers. Returns True on success.
+ * Use this method to add a new sticker to a set created by the bot.
+ * Emoji sticker sets can have up to 200 stickers. Other sticker sets can
+ * have up to 120 stickers. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class AddStickerToSet extends TelegramMethod implements StickersInterface

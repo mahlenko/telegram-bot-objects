@@ -14,7 +14,7 @@ use TelegramBot\TelegramMethod;
  * can_set_sticker_set optionally returned in getChat requests to check
  * if the bot can use this method. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetChatStickerSet extends TelegramMethod implements MethodsInterface

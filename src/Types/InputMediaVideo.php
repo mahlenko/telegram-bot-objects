@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Represents a video to be sent.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputMediaVideo extends TelegramType implements TypesInterface

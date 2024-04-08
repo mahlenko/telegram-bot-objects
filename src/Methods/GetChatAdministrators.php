@@ -11,7 +11,7 @@ use TelegramBot\TelegramMethod;
  * Use this method to get a list of administrators in a chat, which
  * aren't bots. Returns an Array of ChatMember objects.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetChatAdministrators extends TelegramMethod implements MethodsInterface

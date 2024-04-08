@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents the bot's name.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class BotName extends TelegramType implements TypesInterface

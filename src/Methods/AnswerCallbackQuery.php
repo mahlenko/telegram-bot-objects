@@ -18,7 +18,7 @@ use TelegramBot\TelegramMethod;
  * @BotFather and accept the terms. Otherwise, you may use links like
  * t.me/your_bot?start=XXXX that open your bot with a parameter.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class AnswerCallbackQuery extends TelegramMethod implements MethodsInterface

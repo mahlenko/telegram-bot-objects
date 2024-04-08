@@ -13,7 +13,7 @@ use TelegramBot\Types\InputFile;
  * The format of the thumbnail file must match the format of the stickers
  * in the set. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetStickerSetThumbnail extends TelegramMethod implements StickersInterface
@@ -43,8 +43,15 @@ class SetStickerSetThumbnail extends TelegramMethod implements StickersInterface
     public InputFile|string|null $thumbnail;
 
     /**
+     * Format of the thumbnail, must be one of “static” for a .WEBP or
+     * .PNG image, “animated” for a .TGS animation, or “video” for a
+     * WEBM video
+     */
+    public string $format;
+
+    /**
      * A list of necessary properties that should be checked before sending
      * requests to the Telegram Bot API
      */
-    public array $required_properties = ['name', 'user_id'];
+    public array $required_properties = ['name', 'user_id', 'format'];
 }

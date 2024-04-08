@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a sticker set.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class StickerSet extends TelegramType implements StickersInterface
@@ -26,12 +26,6 @@ class StickerSet extends TelegramType implements StickersInterface
      * “mask”, “custom_emoji”
      */
     public string $sticker_type;
-
-    /** True, if the sticker set contains animated stickers */
-    public bool $is_animated;
-
-    /** True, if the sticker set contains video stickers */
-    public bool $is_video;
 
     /**
      * List of all set stickers

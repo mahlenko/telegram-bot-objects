@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * have the appropriate administrator rights. Returns the edited invite
  * link as a ChatInviteLink object.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class EditChatInviteLink extends TelegramMethod implements MethodsInterface

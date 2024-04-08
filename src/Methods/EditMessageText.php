@@ -7,6 +7,7 @@ namespace TelegramBot\Methods;
 use TelegramBot\Interface\UpdatingMessagesInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\LinkPreviewOptions;
 use TelegramBot\Types\MessageEntity;
 
 /**
@@ -14,7 +15,7 @@ use TelegramBot\Types\MessageEntity;
  * edited message is not an inline message, the edited Message is
  * returned, otherwise True is returned.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class EditMessageText extends TelegramMethod implements UpdatingMessagesInterface
@@ -55,8 +56,8 @@ class EditMessageText extends TelegramMethod implements UpdatingMessagesInterfac
      */
     public ?array $entities;
 
-    /** Disables link previews for links in this message */
-    public ?bool $disable_web_page_preview;
+    /** Link preview generation options for the message */
+    public ?LinkPreviewOptions $link_preview_options;
 
     /** A JSON-serialized object for an inline keyboard. */
     public ?InlineKeyboardMarkup $reply_markup;

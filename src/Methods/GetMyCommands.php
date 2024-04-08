@@ -13,7 +13,7 @@ use TelegramBot\Types\BotCommandScope;
  * given scope and user language. Returns an Array of BotCommand objects.
  * If commands aren't set, an empty list is returned.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetMyCommands extends TelegramMethod implements MethodsInterface

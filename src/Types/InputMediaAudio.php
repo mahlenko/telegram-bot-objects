@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Represents an audio file to be treated as music to be sent.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputMediaAudio extends TelegramType implements TypesInterface

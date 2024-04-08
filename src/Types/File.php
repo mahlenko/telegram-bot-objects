@@ -16,7 +16,7 @@ use TelegramBot\TelegramType;
  *
  * The maximum file size to download is 20 MB
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class File extends TelegramType implements TypesInterface

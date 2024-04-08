@@ -10,16 +10,16 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a point on the map.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class Location extends TelegramType implements TypesInterface
 {
-    /** Longitude as defined by sender */
-    public float $longitude;
-
     /** Latitude as defined by sender */
     public float $latitude;
+
+    /** Longitude as defined by sender */
+    public float $longitude;
 
     /**
      * Optional. The radius of uncertainty for the location, measured in

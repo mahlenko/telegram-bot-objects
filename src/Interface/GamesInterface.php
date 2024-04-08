@@ -42,7 +42,7 @@ namespace TelegramBot\Interface;
  * @gamebot and @gamee bots.
  *
  *
- * @version Bot API 6.9
+ * @version Bot API 7.2
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface GamesInterface

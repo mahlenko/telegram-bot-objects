@@ -8,11 +8,12 @@ use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object defines the criteria used to request a suitable chat. The
- * identifier of the selected chat will be shared with the bot when the
- * corresponding button is pressed. More about requesting chats »
+ * This object defines the criteria used to request a suitable chat.
+ * Information about the selected chat will be shared with the bot when
+ * the corresponding button is pressed. The bot will be granted requested
+ * rights in the сhat if appropriate More about requesting chats »
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class KeyboardButtonRequestChat extends TelegramType implements TypesInterface
@@ -70,4 +71,13 @@ class KeyboardButtonRequestChat extends TelegramType implements TypesInterface
      * Otherwise, no additional restrictions are applied.
      */
     public ?bool $bot_is_member;
+
+    /** Optional. Pass True to request the chat's title */
+    public ?bool $request_title;
+
+    /** Optional. Pass True to request the chat's username */
+    public ?bool $request_username;
+
+    /** Optional. Pass True to request the chat's photo */
+    public ?bool $request_photo;
 }

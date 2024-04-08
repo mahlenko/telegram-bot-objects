@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * instead of the file. Currently, only .PDF and .ZIP files can be sent
  * using this method.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InlineQueryResultDocument extends TelegramType implements InlineModeInterface

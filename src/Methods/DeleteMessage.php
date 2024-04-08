@@ -21,7 +21,7 @@ use TelegramBot\TelegramMethod;
  * permission in a supergroup or a channel, it can delete any message
  * there.Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class DeleteMessage extends TelegramMethod implements UpdatingMessagesInterface

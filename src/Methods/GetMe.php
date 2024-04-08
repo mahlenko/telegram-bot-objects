@@ -12,7 +12,7 @@ use TelegramBot\TelegramMethod;
  * no parameters. Returns basic information about the bot in form of a
  * User object.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetMe extends TelegramMethod implements MethodsInterface

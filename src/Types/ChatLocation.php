@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Represents a location to which a chat is connected.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatLocation extends TelegramType implements TypesInterface

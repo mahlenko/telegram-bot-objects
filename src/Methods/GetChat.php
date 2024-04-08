@@ -8,11 +8,10 @@ use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
- * Use this method to get up to date information about the chat (current
- * name of the user for one-on-one conversations, current username of a
- * user, group or channel, etc.). Returns a Chat object on success.
+ * Use this method to get up to date information about the chat. Returns
+ * a Chat object on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class GetChat extends TelegramMethod implements MethodsInterface

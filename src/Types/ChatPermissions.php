@@ -11,14 +11,14 @@ use TelegramBot\TelegramType;
  * Describes actions that a non-administrator user is allowed to take in
  * a chat.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatPermissions extends TelegramType implements TypesInterface
 {
     /**
      * Optional. True, if the user is allowed to send text messages,
-     * contacts, invoices, locations and venues
+     * contacts, giveaways, giveaway winners, invoices, locations and venues
      */
     public ?bool $can_send_messages;
 

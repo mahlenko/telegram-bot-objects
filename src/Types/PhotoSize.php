@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * This object represents one size of a photo or a file / sticker
  * thumbnail.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class PhotoSize extends TelegramType implements TypesInterface

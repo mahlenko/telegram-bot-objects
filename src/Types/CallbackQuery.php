@@ -15,7 +15,7 @@ use TelegramBot\TelegramType;
  * inline mode), the field inline_message_id will be present. Exactly one
  * of the fields data or game_short_name will be present.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class CallbackQuery extends TelegramType implements TypesInterface
@@ -27,11 +27,10 @@ class CallbackQuery extends TelegramType implements TypesInterface
     public User $from;
 
     /**
-     * Optional. Message with the callback button that originated the query.
-     * Note that message content and message date will not be available if
-     * the message is too old
+     * Optional. Message sent by the bot with the callback button that
+     * originated the query
      */
-    public ?Message $message;
+    public ?MaybeInaccessibleMessage $message;
 
     /**
      * Optional. Identifier of the message sent via the bot in inline mode,

@@ -8,10 +8,10 @@ use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object contains information about the chat whose identifier was
- * shared with the bot using a KeyboardButtonRequestChat button.
+ * This object contains information about a chat that was shared with the
+ * bot using a KeyboardButtonRequestChat button.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatShared extends TelegramType implements TypesInterface
@@ -29,4 +29,21 @@ class ChatShared extends TelegramType implements TypesInterface
      * is already known to the bot by some other means.
      */
     public int $chat_id;
+
+    /** Optional. Title of the chat, if the title was requested by the bot. */
+    public ?string $title;
+
+    /**
+     * Optional. Username of the chat, if the username was requested by the
+     * bot and available.
+     */
+    public ?string $username;
+
+    /**
+     * Optional. Available sizes of the chat photo, if the photo was
+     * requested by the bot
+     *
+     * @var array<PhotoSize>
+     */
+    public ?array $photo;
 }

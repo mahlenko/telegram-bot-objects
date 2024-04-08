@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Represents the rights of an administrator in a chat.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatAdministratorRights extends TelegramType implements TypesInterface
@@ -19,10 +19,9 @@ class ChatAdministratorRights extends TelegramType implements TypesInterface
     public bool $is_anonymous;
 
     /**
-     * True, if the administrator can access the chat event log, chat
-     * statistics, boost list in channels, message statistics in channels,
-     * see channel members, see anonymous administrators in supergroups and
-     * ignore slow mode. Implied by any other administrator privilege
+     * True, if the administrator can access the chat event log, get boost
+     * list, see hidden supergroup and channel members, report spam messages
+     * and ignore slow mode. Implied by any other administrator privilege.
      */
     public bool $can_manage_chat;
 
@@ -32,7 +31,10 @@ class ChatAdministratorRights extends TelegramType implements TypesInterface
     /** True, if the administrator can manage video chats */
     public bool $can_manage_video_chats;
 
-    /** True, if the administrator can restrict, ban or unban chat members */
+    /**
+     * True, if the administrator can restrict, ban or unban chat members, or
+     * access supergroup statistics
+     */
     public bool $can_restrict_members;
 
     /**
@@ -52,45 +54,36 @@ class ChatAdministratorRights extends TelegramType implements TypesInterface
     /** True, if the user is allowed to invite new users to the chat */
     public bool $can_invite_users;
 
+    /** True, if the administrator can post stories to the chat */
+    public bool $can_post_stories;
+
+    /** True, if the administrator can edit stories posted by other users */
+    public bool $can_edit_stories;
+
+    /** True, if the administrator can delete stories posted by other users */
+    public bool $can_delete_stories;
+
     /**
-     * Optional. True, if the administrator can post messages in the channel;
-     * channels only
+     * Optional. True, if the administrator can post messages in the channel,
+     * or access channel statistics; for channels only
      */
     public ?bool $can_post_messages;
 
     /**
      * Optional. True, if the administrator can edit messages of other users
-     * and can pin messages; channels only
+     * and can pin messages; for channels only
      */
     public ?bool $can_edit_messages;
 
     /**
-     * Optional. True, if the user is allowed to pin messages; groups and
+     * Optional. True, if the user is allowed to pin messages; for groups and
      * supergroups only
      */
     public ?bool $can_pin_messages;
 
     /**
-     * Optional. True, if the administrator can post stories in the channel;
-     * channels only
-     */
-    public ?bool $can_post_stories;
-
-    /**
-     * Optional. True, if the administrator can edit stories posted by other
-     * users; channels only
-     */
-    public ?bool $can_edit_stories;
-
-    /**
-     * Optional. True, if the administrator can delete stories posted by
-     * other users
-     */
-    public ?bool $can_delete_stories;
-
-    /**
      * Optional. True, if the user is allowed to create, rename, close, and
-     * reopen forum topics; supergroups only
+     * reopen forum topics; for supergroups only
      */
     public ?bool $can_manage_topics;
 }

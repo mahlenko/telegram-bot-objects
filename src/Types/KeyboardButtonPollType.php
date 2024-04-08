@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * This object represents type of a poll, which is allowed to be created
  * and sent when the corresponding button is pressed.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class KeyboardButtonPollType extends TelegramType implements TypesInterface

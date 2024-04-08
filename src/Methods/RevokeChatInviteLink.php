@@ -14,7 +14,7 @@ use TelegramBot\TelegramMethod;
  * have the appropriate administrator rights. Returns the revoked invite
  * link as ChatInviteLink object.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class RevokeChatInviteLink extends TelegramMethod implements MethodsInterface

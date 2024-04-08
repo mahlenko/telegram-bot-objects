@@ -12,7 +12,7 @@ use TelegramBot\TelegramMethod;
  * on the bot's profile page and is sent together with the link when
  * users share the bot. Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetMyShortDescription extends TelegramMethod implements MethodsInterface

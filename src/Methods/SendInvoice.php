@@ -8,12 +8,13 @@ use TelegramBot\Interface\PaymentsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InlineKeyboardMarkup;
 use TelegramBot\Types\LabeledPrice;
+use TelegramBot\Types\ReplyParameters;
 
 /**
  * Use this method to send invoices. On success, the sent Message is
  * returned.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SendInvoice extends TelegramMethod implements PaymentsInterface
@@ -145,14 +146,8 @@ class SendInvoice extends TelegramMethod implements PaymentsInterface
     /** Protects the contents of the sent message from forwarding and saving */
     public ?bool $protect_content;
 
-    /** If the message is a reply, ID of the original message */
-    public ?int $reply_to_message_id;
-
-    /**
-     * Pass True if the message should be sent even if the specified
-     * replied-to message is not found
-     */
-    public ?bool $allow_sending_without_reply;
+    /** Description of the message to reply to */
+    public ?ReplyParameters $reply_parameters;
 
     /**
      * A JSON-serialized object for an inline keyboard. If empty, one 'Pay

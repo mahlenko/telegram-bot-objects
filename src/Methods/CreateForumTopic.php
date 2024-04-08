@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * the can_manage_topics administrator rights. Returns information about
  * the created topic as a ForumTopic object.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class CreateForumTopic extends TelegramMethod implements MethodsInterface

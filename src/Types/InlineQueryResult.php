@@ -35,7 +35,7 @@ use TelegramBot\TelegramType;
  * Note: All URLs passed in inline query results will be available to end
  * users and therefore must be assumed to be public.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InlineQueryResult extends TelegramType implements InlineModeInterface

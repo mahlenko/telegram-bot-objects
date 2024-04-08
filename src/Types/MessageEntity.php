@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * This object represents one special entity in a text message. For
  * example, hashtags, usernames, URLs, etc.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class MessageEntity extends TelegramType implements TypesInterface
@@ -23,10 +23,11 @@ class MessageEntity extends TelegramType implements TypesInterface
      * (do-not-reply@telegram.org), “phone_number” (+1-212-555-0123),
      * “bold” (bold text), “italic” (italic text), “underline”
      * (underlined text), “strikethrough” (strikethrough text),
-     * “spoiler” (spoiler message), “code” (monowidth string),
-     * “pre” (monowidth block), “text_link” (for clickable text
-     * URLs), “text_mention” (for users without usernames),
-     * “custom_emoji” (for inline custom emoji stickers)
+     * “spoiler” (spoiler message), “blockquote” (block quotation),
+     * “code” (monowidth string), “pre” (monowidth block),
+     * “text_link” (for clickable text URLs), “text_mention” (for
+     * users without usernames), “custom_emoji” (for inline custom emoji
+     * stickers)
      */
     public string $type;
 

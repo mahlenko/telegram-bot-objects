@@ -14,7 +14,7 @@ use TelegramBot\Types\MessageEntity;
  * edited message is not an inline message, the edited Message is
  * returned, otherwise True is returned.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class EditMessageCaption extends TelegramMethod implements UpdatingMessagesInterface

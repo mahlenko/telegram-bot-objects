@@ -17,7 +17,7 @@ use TelegramBot\TelegramType;
  * InputMediaPhoto
  * InputMediaVideo
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InputMedia extends TelegramType implements TypesInterface

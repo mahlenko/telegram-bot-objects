@@ -14,7 +14,7 @@ use TelegramBot\Types\ChatPermissions;
  * work and must have the can_restrict_members administrator rights.
  * Returns True on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class SetChatPermissions extends TelegramMethod implements MethodsInterface

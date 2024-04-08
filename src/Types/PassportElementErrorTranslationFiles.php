@@ -12,7 +12,7 @@ use TelegramBot\TelegramType;
  * error is considered resolved when a file with the document translation
  * change.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class PassportElementErrorTranslationFiles extends TelegramType implements TelegramPassportInterface

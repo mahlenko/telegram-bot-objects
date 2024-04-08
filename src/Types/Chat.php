@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a chat.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class Chat extends TelegramType implements TypesInterface
@@ -60,14 +60,80 @@ class Chat extends TelegramType implements TypesInterface
     public ?array $active_usernames;
 
     /**
-     * Optional. Custom emoji identifier of emoji status of the other party
-     * in a private chat. Returned only in getChat.
+     * Optional. For private chats, the date of birth of the user. Returned
+     * only in getChat.
+     */
+    public ?Birthdate $birthdate;
+
+    /**
+     * Optional. For private chats with business accounts, the intro of the
+     * business. Returned only in getChat.
+     */
+    public ?BusinessIntro $business_intro;
+
+    /**
+     * Optional. For private chats with business accounts, the location of
+     * the business. Returned only in getChat.
+     */
+    public ?BusinessLocation $business_location;
+
+    /**
+     * Optional. For private chats with business accounts, the opening hours
+     * of the business. Returned only in getChat.
+     */
+    public ?BusinessOpeningHours $business_opening_hours;
+
+    /**
+     * Optional. For private chats, the personal channel of the user.
+     * Returned only in getChat.
+     */
+    public ?Chat $personal_chat;
+
+    /**
+     * Optional. List of available reactions allowed in the chat. If omitted,
+     * then all emoji reactions are allowed. Returned only in getChat.
+     *
+     * @var array<ReactionType>
+     */
+    public ?array $available_reactions;
+
+    /**
+     * Optional. Identifier of the accent color for the chat name and
+     * backgrounds of the chat photo, reply header, and link preview. See
+     * accent colors for more details. Returned only in getChat. Always
+     * returned in getChat.
+     */
+    public ?int $accent_color_id;
+
+    /**
+     * Optional. Custom emoji identifier of emoji chosen by the chat for the
+     * reply header and link preview background. Returned only in getChat.
+     */
+    public ?string $background_custom_emoji_id;
+
+    /**
+     * Optional. Identifier of the accent color for the chat's profile
+     * background. See profile accent colors for more details. Returned only
+     * in getChat.
+     */
+    public ?int $profile_accent_color_id;
+
+    /**
+     * Optional. Custom emoji identifier of the emoji chosen by the chat for
+     * its profile background. Returned only in getChat.
+     */
+    public ?string $profile_background_custom_emoji_id;
+
+    /**
+     * Optional. Custom emoji identifier of the emoji status of the chat or
+     * the other party in a private chat. Returned only in getChat.
      */
     public ?string $emoji_status_custom_emoji_id;
 
     /**
-     * Optional. Expiration date of the emoji status of the other party in a
-     * private chat in Unix time, if any. Returned only in getChat.
+     * Optional. Expiration date of the emoji status of the chat or the other
+     * party in a private chat, in Unix time, if any. Returned only in
+     * getChat.
      */
     public ?int $emoji_status_expiration_date;
 
@@ -129,10 +195,17 @@ class Chat extends TelegramType implements TypesInterface
 
     /**
      * Optional. For supergroups, the minimum allowed delay between
-     * consecutive messages sent by each unpriviledged user; in seconds.
+     * consecutive messages sent by each unprivileged user; in seconds.
      * Returned only in getChat.
      */
     public ?int $slow_mode_delay;
+
+    /**
+     * Optional. For supergroups, the minimum number of boosts that a
+     * non-administrator user needs to add in order to ignore slow mode and
+     * chat permissions. Returned only in getChat.
+     */
+    public ?int $unrestrict_boost_count;
 
     /**
      * Optional. The time after which all messages sent to the chat will be
@@ -160,6 +233,12 @@ class Chat extends TelegramType implements TypesInterface
     public ?bool $has_protected_content;
 
     /**
+     * Optional. True, if new chat members will have access to old messages;
+     * available only to chat administrators. Returned only in getChat.
+     */
+    public ?bool $has_visible_history;
+
+    /**
      * Optional. For supergroups, name of group sticker set. Returned only in
      * getChat.
      */
@@ -170,6 +249,13 @@ class Chat extends TelegramType implements TypesInterface
      * only in getChat.
      */
     public ?bool $can_set_sticker_set;
+
+    /**
+     * Optional. For supergroups, the name of the group's custom emoji
+     * sticker set. Custom emoji from this set can be used by all users and
+     * bots in the group. Returned only in getChat.
+     */
+    public ?string $custom_emoji_sticker_set_name;
 
     /**
      * Optional. Unique identifier for the linked chat, i.e. the discussion

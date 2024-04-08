@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a chat photo.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatPhoto extends TelegramType implements TypesInterface

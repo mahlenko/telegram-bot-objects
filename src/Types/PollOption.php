@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * This object contains information about one answer option in a poll.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class PollOption extends TelegramType implements TypesInterface

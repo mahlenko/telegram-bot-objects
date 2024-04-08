@@ -20,7 +20,7 @@ use TelegramBot\TelegramType;
  * button is applied. By default, the menu button opens the list of bot
  * commands.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class MenuButton extends TelegramType implements TypesInterface

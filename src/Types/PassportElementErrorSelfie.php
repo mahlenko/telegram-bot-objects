@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * Represents an issue with the selfie with a document. The error is
  * considered resolved when the file with the selfie changes.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class PassportElementErrorSelfie extends TelegramType implements TelegramPassportInterface

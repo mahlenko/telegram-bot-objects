@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * Represents a chat member that owns the chat and has all administrator
  * privileges.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatMemberOwner extends TelegramType implements TypesInterface

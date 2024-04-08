@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * This object represents a button to be shown above inline query
  * results. You must use exactly one of the optional fields.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class InlineQueryResultsButton extends TelegramType implements InlineModeInterface

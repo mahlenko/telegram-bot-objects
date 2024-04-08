@@ -11,7 +11,7 @@ use TelegramBot\TelegramType;
  * This object represents a service message about new members invited to
  * a video chat.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class VideoChatParticipantsInvited extends TelegramType implements TypesInterface

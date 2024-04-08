@@ -14,7 +14,7 @@ namespace TelegramBot\Interface;
  * after typing your bot's name.
  *
  *
- * @version Bot API 6.9
+ * @version Bot API 7.2
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface InlineModeInterface

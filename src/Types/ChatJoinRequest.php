@@ -10,7 +10,7 @@ use TelegramBot\TelegramType;
 /**
  * Represents a join request sent to a chat.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ChatJoinRequest extends TelegramType implements TypesInterface
@@ -27,7 +27,7 @@ class ChatJoinRequest extends TelegramType implements TypesInterface
      * programming languages may have difficulty/silent defects in
      * interpreting it. But it has at most 52 significant bits, so a 64-bit
      * integer or double-precision float type are safe for storing this
-     * identifier. The bot can use this identifier for 24 hours to send
+     * identifier. The bot can use this identifier for 5 minutes to send
      * messages until the join request is processed, assuming no other
      * administrator contacted the user.
      */

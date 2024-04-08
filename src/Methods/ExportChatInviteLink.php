@@ -14,7 +14,7 @@ use TelegramBot\TelegramMethod;
  * appropriate administrator rights. Returns the new invite link as
  * String on success.
  *
- * Bot API 6.9
+ * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
 class ExportChatInviteLink extends TelegramMethod implements MethodsInterface
