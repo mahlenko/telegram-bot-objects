@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class KeyboardButtonPollType extends TelegramType implements TypesInterface
+class KeyboardButtonPollType extends TelegramType implements TelegramTypeInterface
 {
     /**
      * Optional. If quiz is passed, the user will be allowed to create only

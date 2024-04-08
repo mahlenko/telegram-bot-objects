@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -13,7 +13,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatMemberUpdated extends TelegramType implements TypesInterface
+class ChatMemberUpdated extends TelegramType implements TelegramTypeInterface
 {
     /** Chat the user belongs to */
     public Chat $chat;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
@@ -22,7 +22,7 @@ use TelegramBot\Types\ReplyParameters;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendDocument extends TelegramMethod implements MethodsInterface
+class SendDocument extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the

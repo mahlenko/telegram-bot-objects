@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class BusinessLocation extends TelegramType implements TypesInterface
+class BusinessLocation extends TelegramType implements TelegramTypeInterface
 {
     /** Address of the business */
     public string $address;

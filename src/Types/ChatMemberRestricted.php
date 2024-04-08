@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatMemberRestricted extends TelegramType implements TypesInterface
+class ChatMemberRestricted extends TelegramType implements TelegramTypeInterface
 {
     /** The member's status in the chat, always “restricted” */
     public string $status;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -20,7 +20,7 @@ use TelegramBot\TelegramMethod;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetFile extends TelegramMethod implements MethodsInterface
+class GetFile extends TelegramMethod implements TelegramMethodInterface
 {
     /** File identifier to get information about */
     public string $file_id;

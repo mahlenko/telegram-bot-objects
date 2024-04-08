@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GiveawayCompleted extends TelegramType implements TypesInterface
+class GiveawayCompleted extends TelegramType implements TelegramTypeInterface
 {
     /** Number of winners in the giveaway */
     public int $winner_count;

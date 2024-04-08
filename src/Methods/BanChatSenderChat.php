@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -18,7 +18,7 @@ use TelegramBot\TelegramMethod;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class BanChatSenderChat extends TelegramMethod implements MethodsInterface
+class BanChatSenderChat extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * Unique identifier for the target chat or username of the target

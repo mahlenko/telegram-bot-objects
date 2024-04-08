@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -14,7 +14,7 @@ use TelegramBot\TelegramMethod;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetMyName extends TelegramMethod implements MethodsInterface
+class GetMyName extends TelegramMethod implements TelegramMethodInterface
 {
     /** A two-letter ISO 639-1 language code or an empty string */
     public ?string $language_code;

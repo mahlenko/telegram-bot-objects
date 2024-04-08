@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InputMediaAnimation extends TelegramType implements TypesInterface
+class InputMediaAnimation extends TelegramType implements TelegramTypeInterface
 {
     /** Type of the result, must be animation */
     public string $type;

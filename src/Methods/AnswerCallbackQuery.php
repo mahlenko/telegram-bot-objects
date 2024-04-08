@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -21,7 +21,7 @@ use TelegramBot\TelegramMethod;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class AnswerCallbackQuery extends TelegramMethod implements MethodsInterface
+class AnswerCallbackQuery extends TelegramMethod implements TelegramMethodInterface
 {
     /** Unique identifier for the query to be answered */
     public string $callback_query_id;

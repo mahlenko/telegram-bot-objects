@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -13,7 +13,7 @@ use TelegramBot\TelegramMethod;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyName extends TelegramMethod implements MethodsInterface
+class SetMyName extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * New bot name; 0-64 characters. Pass an empty string to remove the

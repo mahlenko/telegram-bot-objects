@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -18,7 +18,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CallbackQuery extends TelegramType implements TypesInterface
+class CallbackQuery extends TelegramType implements TelegramTypeInterface
 {
     /** Unique identifier for this query */
     public string $id;

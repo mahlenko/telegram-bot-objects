@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ChatAdministratorRights;
 
@@ -17,7 +17,7 @@ use TelegramBot\Types\ChatAdministratorRights;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyDefaultAdministratorRights extends TelegramMethod implements MethodsInterface
+class SetMyDefaultAdministratorRights extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * A JSON-serialized object describing new default administrator rights.

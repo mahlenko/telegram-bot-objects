@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -16,7 +16,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class WriteAccessAllowed extends TelegramType implements TypesInterface
+class WriteAccessAllowed extends TelegramType implements TelegramTypeInterface
 {
     /**
      * Optional. True, if the access was granted after the user accepted an

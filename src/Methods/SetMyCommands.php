@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\BotCommand;
 use TelegramBot\Types\BotCommandScope;
@@ -16,7 +16,7 @@ use TelegramBot\Types\BotCommandScope;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyCommands extends TelegramMethod implements MethodsInterface
+class SetMyCommands extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * A JSON-serialized list of bot commands to be set as the list of the

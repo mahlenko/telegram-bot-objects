@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -15,7 +15,7 @@ use TelegramBot\TelegramMethod;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetBusinessConnection extends TelegramMethod implements MethodsInterface
+class GetBusinessConnection extends TelegramMethod implements TelegramMethodInterface
 {
     /** Unique identifier of the business connection */
     public string $business_connection_id;

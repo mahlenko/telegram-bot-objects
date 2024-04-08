@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -13,7 +13,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class MenuButtonWebApp extends TelegramType implements TypesInterface
+class MenuButtonWebApp extends TelegramType implements TelegramTypeInterface
 {
     /** Type of the button, must be web_app */
     public string $type;

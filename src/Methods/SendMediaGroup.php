@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InputMedia;
 use TelegramBot\Types\ReplyParameters;
@@ -18,7 +18,7 @@ use TelegramBot\Types\ReplyParameters;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendMediaGroup extends TelegramMethod implements MethodsInterface
+class SendMediaGroup extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the

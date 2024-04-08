@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -17,7 +17,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ForceReply extends TelegramType implements TypesInterface
+class ForceReply extends TelegramType implements TelegramTypeInterface
 {
     /**
      * Shows reply interface to the user, as if they manually selected the

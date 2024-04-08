@@ -17,6 +17,6 @@ namespace TelegramBot\Interface;
  * @version Bot API 7.2
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-interface MethodsInterface
+interface TelegramMethodInterface
 {
 }

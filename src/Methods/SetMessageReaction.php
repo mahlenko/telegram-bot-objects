@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\MethodsInterface;
+use TelegramBot\Interface\TelegramMethodInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ReactionType;
 
@@ -17,7 +17,7 @@ use TelegramBot\Types\ReactionType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMessageReaction extends TelegramMethod implements MethodsInterface
+class SetMessageReaction extends TelegramMethod implements TelegramMethodInterface
 {
     /**
      * Unique identifier for the target chat or username of the target

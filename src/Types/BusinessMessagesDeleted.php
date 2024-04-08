@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -14,7 +14,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class BusinessMessagesDeleted extends TelegramType implements TypesInterface
+class BusinessMessagesDeleted extends TelegramType implements TelegramTypeInterface
 {
     /** Unique identifier of the business connection */
     public string $business_connection_id;

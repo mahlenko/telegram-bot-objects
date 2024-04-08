@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TypesInterface;
+use TelegramBot\Interface\TelegramTypeInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -13,7 +13,7 @@ use TelegramBot\TelegramType;
  * Bot API 7.2
  * Sergey Makhlenko <https://github.com/mahlenko>
  */
-class WebAppData extends TelegramType implements TypesInterface
+class WebAppData extends TelegramType implements TelegramTypeInterface
 {
     /**
      * The data. Be aware that a bad client can send arbitrary data in this
