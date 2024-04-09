@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents an animated emoji that displays a random value.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class Dice extends TelegramType implements TelegramTypeInterface
+final class Dice extends TelegramType implements TypesInterface
 {
     /** Emoji on which the dice throw animation is based */
     public string $emoji;

@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\ForumTopic;
 
 /**
  * Use this method to create a topic in a forum supergroup chat. The bot
  * must be an administrator in the chat for this to work and must have
- * the can_manage_topics administrator rights. Returns information about
- * the created topic as a ForumTopic object.
+ * the <em>can_manage_topics</em> administrator rights. Returns
+ * information about the created topic as a <a
+ * href="#forumtopic">ForumTopic</a> object.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CreateForumTopic extends TelegramMethod implements TelegramMethodInterface
+final class CreateForumTopic extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -45,4 +47,7 @@ class CreateForumTopic extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'name'];
+
+    /** Response mapping type. */
+    public string $response_type = ForumTopic::class;
 }

@@ -4,20 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ChatPermissions;
 
 /**
  * Use this method to set default chat permissions for all members. The
  * bot must be an administrator in the group or a supergroup for this to
- * work and must have the can_restrict_members administrator rights.
- * Returns True on success.
+ * work and must have the <em>can_restrict_members</em> administrator
+ * rights. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetChatPermissions extends TelegramMethod implements TelegramMethodInterface
+final class SetChatPermissions extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -43,4 +43,7 @@ class SetChatPermissions extends TelegramMethod implements TelegramMethodInterfa
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'permissions'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents a chat photo.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatPhoto extends TelegramType implements TelegramTypeInterface
+final class ChatPhoto extends TelegramType implements TypesInterface
 {
     /**
      * File identifier of small (160x160) chat photo. This file_id can be

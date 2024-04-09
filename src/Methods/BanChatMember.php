@@ -4,21 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to ban a user in a group, a supergroup or a channel.
  * In the case of supergroups and channels, the user will not be able to
- * return to the chat on their own using invite links, etc., unless
- * unbanned first. The bot must be an administrator in the chat for this
- * to work and must have the appropriate administrator rights. Returns
- * True on success.
+ * return to the chat on their own using invite links, etc., unless <a
+ * href="#unbanchatmember">unbanned</a> first. The bot must be an
+ * administrator in the chat for this to work and must have the
+ * appropriate administrator rights. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class BanChatMember extends TelegramMethod implements TelegramMethodInterface
+final class BanChatMember extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target group or username of the target
@@ -50,4 +50,7 @@ class BanChatMember extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'user_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

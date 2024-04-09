@@ -12,10 +12,10 @@ use TelegramBot\TelegramType;
  * an empty query, your bot could return some default or trending
  * results.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQuery extends TelegramType implements InlineModeInterface
+final class InlineQuery extends TelegramType implements InlineModeInterface
 {
     /** Unique identifier for this query */
     public string $id;

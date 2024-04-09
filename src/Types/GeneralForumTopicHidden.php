@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents a service message about General forum topic
  * hidden in the chat. Currently holds no information.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GeneralForumTopicHidden extends TelegramType implements TelegramTypeInterface
+final class GeneralForumTopicHidden extends TelegramType implements TypesInterface
 {
 }

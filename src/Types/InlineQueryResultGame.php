@@ -8,12 +8,12 @@ use TelegramBot\Interface\InlineModeInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents a Game.
+ * Represents a <a href="#games">Game</a>.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultGame extends TelegramType implements InlineModeInterface
+final class InlineQueryResultGame extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be game */
     public string $type;

@@ -14,10 +14,9 @@ namespace TelegramBot\Interface;
  *
  * Optional fields may be not returned when irrelevant.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-interface TelegramTypeInterface
+interface TypesInterface
 {
 }

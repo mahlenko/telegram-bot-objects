@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to edit the name of the 'General' topic in a forum
  * supergroup chat. The bot must be an administrator in the chat for this
- * to work and must have can_manage_topics administrator rights. Returns
- * True on success.
+ * to work and must have <em>can_manage_topics</em> administrator rights.
+ * Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class EditGeneralForumTopic extends TelegramMethod implements TelegramMethodInterface
+final class EditGeneralForumTopic extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -32,4 +32,7 @@ class EditGeneralForumTopic extends TelegramMethod implements TelegramMethodInte
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'name'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

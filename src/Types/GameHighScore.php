@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object represents one row of the high scores table for a game.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GameHighScore extends TelegramType implements GamesInterface
+final class GameHighScore extends TelegramType implements GamesInterface
 {
     /** Position in high score table for the game */
     public int $position;

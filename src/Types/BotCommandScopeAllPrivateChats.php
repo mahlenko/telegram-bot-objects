@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents the scope of bot commands, covering all private chats.
+ * Represents the <a href="#botcommandscope">scope</a> of bot commands,
+ * covering all private chats.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class BotCommandScopeAllPrivateChats extends TelegramType implements TelegramTypeInterface
+final class BotCommandScopeAllPrivateChats extends TelegramType implements TypesInterface
 {
     /** Scope type, must be all_private_chats */
     public string $type;

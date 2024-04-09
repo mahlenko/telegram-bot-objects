@@ -10,16 +10,14 @@ use TelegramBot\TelegramType;
 /**
  * Represents a link to a page containing an embedded video player or a
  * video file. By default, this video file will be sent by the user with
- * an optional caption. Alternatively, you can use input_message_content
- * to send a message with the specified content instead of the video.
+ * an optional caption. Alternatively, you can use
+ * <em>input_message_content</em> to send a message with the specified
+ * content instead of the video.
  *
- * If an InlineQueryResultVideo message contains an embedded video (e.g.,
- * YouTube), you must replace its content using input_message_content.
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultVideo extends TelegramType implements InlineModeInterface
+final class InlineQueryResultVideo extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be video */
     public string $type;

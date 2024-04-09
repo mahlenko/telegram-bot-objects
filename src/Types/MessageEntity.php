@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents one special entity in a text message. For
  * example, hashtags, usernames, URLs, etc.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class MessageEntity extends TelegramType implements TelegramTypeInterface
+final class MessageEntity extends TelegramType implements TypesInterface
 {
     /**
      * Type of the entity. Currently, can be “mention” (@username),

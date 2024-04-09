@@ -12,15 +12,9 @@ use TelegramBot\TelegramType;
  * of an inline query. Telegram clients currently support the following 5
  * types:
  *
- * InputTextMessageContent
- * InputLocationMessageContent
- * InputVenueMessageContent
- * InputContactMessageContent
- * InputInvoiceMessageContent
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InputMessageContent extends TelegramType implements InlineModeInterface
+final class InputMessageContent extends TelegramType implements InlineModeInterface
 {
 }

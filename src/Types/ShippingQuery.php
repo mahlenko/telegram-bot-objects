@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object contains information about an incoming shipping query.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ShippingQuery extends TelegramType implements PaymentsInterface
+final class ShippingQuery extends TelegramType implements PaymentsInterface
 {
     /** Unique query identifier */
     public string $id;

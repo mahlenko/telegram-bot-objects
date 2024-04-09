@@ -9,18 +9,23 @@ use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
 use TelegramBot\Types\InputFile;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
 use TelegramBot\Types\ReplyParameters;
 
 /**
- * Use this method to send static .WEBP, animated .TGS, or video .WEBM
- * stickers. On success, the sent Message is returned.
+ * Use this method to send static .WEBP, <a
+ * href="https://telegram.org/blog/animated-stickers">animated</a> .TGS,
+ * or <a
+ * href="https://telegram.org/blog/video-stickers-better-reactions">video</a>
+ * .WEBM stickers. On success, the sent <a href="#message">Message</a> is
+ * returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendSticker extends TelegramMethod implements StickersInterface
+final class SendSticker extends TelegramMethod implements StickersInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -78,4 +83,7 @@ class SendSticker extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'sticker'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

@@ -10,13 +10,13 @@ use TelegramBot\TelegramType;
 /**
  * Represents a contact with a phone number. By default, this contact
  * will be sent by the user. Alternatively, you can use
- * input_message_content to send a message with the specified content
- * instead of the contact.
+ * <em>input_message_content</em> to send a message with the specified
+ * content instead of the contact.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultContact extends TelegramType implements InlineModeInterface
+final class InlineQueryResultContact extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be contact */
     public string $type;

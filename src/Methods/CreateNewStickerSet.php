@@ -10,13 +10,13 @@ use TelegramBot\Types\InputSticker;
 
 /**
  * Use this method to create a new sticker set owned by a user. The bot
- * will be able to edit the sticker set thus created. Returns True on
- * success.
+ * will be able to edit the sticker set thus created. Returns
+ * <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CreateNewStickerSet extends TelegramMethod implements StickersInterface
+final class CreateNewStickerSet extends TelegramMethod implements StickersInterface
 {
     /** User identifier of created sticker set owner */
     public int $user_id;
@@ -60,4 +60,7 @@ class CreateNewStickerSet extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['user_id', 'name', 'title', 'stickers'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

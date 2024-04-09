@@ -10,14 +10,16 @@ use TelegramBot\Types\InputSticker;
 
 /**
  * Use this method to replace an existing sticker in a sticker set with a
- * new one. The method is equivalent to calling deleteStickerFromSet,
- * then addStickerToSet, then setStickerPositionInSet. Returns True on
- * success.
+ * new one. The method is equivalent to calling <a
+ * href="#deletestickerfromset">deleteStickerFromSet</a>, then <a
+ * href="#addstickertoset">addStickerToSet</a>, then <a
+ * href="#setstickerpositioninset">setStickerPositionInSet</a>. Returns
+ * <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ReplaceStickerInSet extends TelegramMethod implements StickersInterface
+final class ReplaceStickerInSet extends TelegramMethod implements StickersInterface
 {
     /** User identifier of the sticker set owner */
     public int $user_id;
@@ -40,4 +42,7 @@ class ReplaceStickerInSet extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['user_id', 'name', 'old_sticker', 'sticker'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

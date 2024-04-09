@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents a chat member that isn't currently a member of the chat,
- * but may join it themselves.
+ * Represents a <a href="#chatmember">chat member</a> that isn't
+ * currently a member of the chat, but may join it themselves.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatMemberLeft extends TelegramType implements TelegramTypeInterface
+final class ChatMemberLeft extends TelegramType implements TypesInterface
 {
     /** The member's status in the chat, always “left” */
     public string $status;

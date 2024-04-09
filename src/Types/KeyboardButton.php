@@ -4,20 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents one button of the reply keyboard. For simple
- * text buttons, String can be used instead of this object to specify the
- * button text. The optional fields web_app, request_users, request_chat,
- * request_contact, request_location, and request_poll are mutually
- * exclusive.
+ * text buttons, <em>String</em> can be used instead of this object to
+ * specify the button text. The optional fields <em>web_app</em>,
+ * <em>request_users</em>, <em>request_chat</em>,
+ * <em>request_contact</em>, <em>request_location</em>, and
+ * <em>request_poll</em> are mutually exclusive.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class KeyboardButton extends TelegramType implements TelegramTypeInterface
+final class KeyboardButton extends TelegramType implements TypesInterface
 {
     /**
      * Text of the button. If none of the optional fields are used, it will

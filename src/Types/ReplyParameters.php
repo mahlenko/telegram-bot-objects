@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * Describes reply parameters for the message that is being sent.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ReplyParameters extends TelegramType implements TelegramTypeInterface
+final class ReplyParameters extends TelegramType implements TypesInterface
 {
     /**
      * Identifier of the message that will be replied to in the current chat,

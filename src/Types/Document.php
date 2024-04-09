@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object represents a general file (as opposed to photos, voice
- * messages and audio files).
+ * This object represents a general file (as opposed to <a
+ * href="#photosize">photos</a>, <a href="#voice">voice messages</a> and
+ * <a href="#audio">audio files</a>).
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class Document extends TelegramType implements TelegramTypeInterface
+final class Document extends TelegramType implements TypesInterface
 {
     /**
      * Identifier for this file, which can be used to download or reuse the

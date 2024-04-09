@@ -9,12 +9,13 @@ use TelegramBot\TelegramType;
 
 /**
  * This object represents a button to be shown above inline query
- * results. You must use exactly one of the optional fields.
+ * results. You <strong>must</strong> use exactly one of the optional
+ * fields.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultsButton extends TelegramType implements InlineModeInterface
+final class InlineQueryResultsButton extends TelegramType implements InlineModeInterface
 {
     /** Label text on the button */
     public string $text;

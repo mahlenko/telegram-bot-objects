@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to promote or demote a user in a supergroup or a
  * channel. The bot must be an administrator in the chat for this to work
- * and must have the appropriate administrator rights. Pass False for all
- * boolean parameters to demote a user. Returns True on success.
+ * and must have the appropriate administrator rights. Pass
+ * <em>False</em> for all boolean parameters to demote a user. Returns
+ * <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class PromoteChatMember extends TelegramMethod implements TelegramMethodInterface
+final class PromoteChatMember extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -105,4 +106,7 @@ class PromoteChatMember extends TelegramMethod implements TelegramMethodInterfac
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'user_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

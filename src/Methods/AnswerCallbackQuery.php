@@ -4,24 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
- * Use this method to send answers to callback queries sent from inline
- * keyboards. The answer will be displayed to the user as a notification
- * at the top of the chat screen or as an alert. On success, True is
- * returned.
+ * Use this method to send answers to callback queries sent from <a
+ * href="/bots/features#inline-keyboards">inline keyboards</a>. The
+ * answer will be displayed to the user as a notification at the top of
+ * the chat screen or as an alert. On success, <em>True</em> is returned.
  *
- * Alternatively, the user can be redirected to the specified Game URL.
- * For this option to work, you must first create a game for your bot via
- * @BotFather and accept the terms. Otherwise, you may use links like
- * t.me/your_bot?start=XXXX that open your bot with a parameter.
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class AnswerCallbackQuery extends TelegramMethod implements TelegramMethodInterface
+final class AnswerCallbackQuery extends TelegramMethod implements MethodsInterface
 {
     /** Unique identifier for the query to be answered */
     public string $callback_query_id;
@@ -59,4 +54,7 @@ class AnswerCallbackQuery extends TelegramMethod implements TelegramMethodInterf
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['callback_query_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

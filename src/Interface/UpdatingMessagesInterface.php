@@ -15,8 +15,7 @@ namespace TelegramBot\Interface;
  * Please note, that it is currently only possible to edit messages
  * without reply_markup or with inline keyboards.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface UpdatingMessagesInterface

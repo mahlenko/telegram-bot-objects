@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents a menu button, which launches a Web App.
+ * Represents a menu button, which launches a <a href="/bots/webapps">Web
+ * App</a>.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class MenuButtonWebApp extends TelegramType implements TelegramTypeInterface
+final class MenuButtonWebApp extends TelegramType implements TypesInterface
 {
     /** Type of the button, must be web_app */
     public string $type;

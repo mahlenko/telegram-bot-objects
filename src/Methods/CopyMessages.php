@@ -4,24 +4,26 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\MessageId;
 
 /**
  * Use this method to copy messages of any kind. If some of the specified
  * messages can't be found or copied, they are skipped. Service messages,
  * giveaway messages, giveaway winners messages, and invoice messages
- * can't be copied. A quiz poll can be copied only if the value of the
- * field correct_option_id is known to the bot. The method is analogous
- * to the method forwardMessages, but the copied messages don't have a
- * link to the original message. Album grouping is kept for copied
- * messages. On success, an array of MessageId of the sent messages is
- * returned.
+ * can't be copied. A quiz <a href="#poll">poll</a> can be copied only if
+ * the value of the field <em>correct_option_id</em> is known to the bot.
+ * The method is analogous to the method <a
+ * href="#forwardmessages">forwardMessages</a>, but the copied messages
+ * don't have a link to the original message. Album grouping is kept for
+ * copied messages. On success, an array of <a
+ * href="#messageid">MessageId</a> of the sent messages is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CopyMessages extends TelegramMethod implements TelegramMethodInterface
+final class CopyMessages extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -67,4 +69,10 @@ class CopyMessages extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'from_chat_id', 'message_ids'];
+
+    /**
+     * Response mapping type.
+     * @var array<MessageId>
+     */
+    public array $response_type = [MessageId::class];
 }

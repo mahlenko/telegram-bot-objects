@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to change the bot's description, which is shown in the
- * chat with the bot if the chat is empty. Returns True on success.
+ * chat with the bot if the chat is empty. Returns <em>True</em> on
+ * success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyDescription extends TelegramMethod implements TelegramMethodInterface
+final class SetMyDescription extends TelegramMethod implements MethodsInterface
 {
     /**
      * New bot description; 0-512 characters. Pass an empty string to remove
@@ -34,4 +35,7 @@ class SetMyDescription extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

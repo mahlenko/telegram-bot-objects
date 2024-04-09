@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
- * Use this method to change the bot's name. Returns True on success.
+ * Use this method to change the bot's name. Returns <em>True</em> on
+ * success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyName extends TelegramMethod implements TelegramMethodInterface
+final class SetMyName extends TelegramMethod implements MethodsInterface
 {
     /**
      * New bot name; 0-64 characters. Pass an empty string to remove the
@@ -32,4 +33,7 @@ class SetMyName extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

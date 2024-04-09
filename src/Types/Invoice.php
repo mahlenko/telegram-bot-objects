@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object contains basic information about an invoice.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class Invoice extends TelegramType implements PaymentsInterface
+final class Invoice extends TelegramType implements PaymentsInterface
 {
     /** Product name */
     public string $title;

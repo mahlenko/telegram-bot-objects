@@ -9,13 +9,13 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to delete multiple messages simultaneously. If some of
- * the specified messages can't be found, they are skipped. Returns True
- * on success.
+ * the specified messages can't be found, they are skipped. Returns
+ * <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class DeleteMessages extends TelegramMethod implements UpdatingMessagesInterface
+final class DeleteMessages extends TelegramMethod implements UpdatingMessagesInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -36,4 +36,7 @@ class DeleteMessages extends TelegramMethod implements UpdatingMessagesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'message_ids'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

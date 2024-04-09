@@ -4,22 +4,23 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
 use TelegramBot\Types\ReplyParameters;
 
 /**
- * Use this method to send phone contacts. On success, the sent Message
- * is returned.
+ * Use this method to send phone contacts. On success, the sent <a
+ * href="#message">Message</a> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendContact extends TelegramMethod implements TelegramMethodInterface
+final class SendContact extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -76,4 +77,7 @@ class SendContact extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'phone_number', 'first_name'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

@@ -11,13 +11,13 @@ use TelegramBot\TelegramType;
  * Represents a link to an animated GIF file stored on the Telegram
  * servers. By default, this animated GIF file will be sent by the user
  * with an optional caption. Alternatively, you can use
- * input_message_content to send a message with specified content instead
- * of the animation.
+ * <em>input_message_content</em> to send a message with specified
+ * content instead of the animation.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultCachedGif extends TelegramType implements InlineModeInterface
+final class InlineQueryResultCachedGif extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be gif */
     public string $type;

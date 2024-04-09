@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents the content of a service message, sent whenever
  * a user in the chat triggers a proximity alert set by another user.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ProximityAlertTriggered extends TelegramType implements TelegramTypeInterface
+final class ProximityAlertTriggered extends TelegramType implements TypesInterface
 {
     /** User that triggered the alert */
     public User $traveler;

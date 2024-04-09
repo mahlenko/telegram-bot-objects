@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object represents a video message (available in Telegram apps as
- * of v.4.0).
+ * This object represents a <a
+ * href="https://telegram.org/blog/video-messages-and-telescope">video
+ * message</a> (available in Telegram apps as of <a
+ * href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>).
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class VideoNote extends TelegramType implements TelegramTypeInterface
+final class VideoNote extends TelegramType implements TypesInterface
 {
     /**
      * Identifier for this file, which can be used to download or reuse the

@@ -6,18 +6,21 @@ namespace TelegramBot\Methods;
 
 use TelegramBot\Interface\StickersInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\File;
 use TelegramBot\Types\InputFile;
 
 /**
  * Use this method to upload a file with a sticker for later use in the
- * createNewStickerSet, addStickerToSet, or replaceStickerInSet methods
- * (the file can be used multiple times). Returns the uploaded File on
- * success.
+ * <a href="#createnewstickerset">createNewStickerSet</a>, <a
+ * href="#addstickertoset">addStickerToSet</a>, or <a
+ * href="#replacestickerinset">replaceStickerInSet</a> methods (the file
+ * can be used multiple times). Returns the uploaded <a
+ * href="#file">File</a> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class UploadStickerFile extends TelegramMethod implements StickersInterface
+final class UploadStickerFile extends TelegramMethod implements StickersInterface
 {
     /** User identifier of sticker file owner */
     public int $user_id;
@@ -40,4 +43,7 @@ class UploadStickerFile extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['user_id', 'sticker', 'sticker_format'];
+
+    /** Response mapping type. */
+    public string $response_type = File::class;
 }

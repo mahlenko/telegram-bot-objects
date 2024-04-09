@@ -6,15 +6,17 @@ namespace TelegramBot\Methods;
 
 use TelegramBot\Interface\UpdatesInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\Update;
 
 /**
- * Use this method to receive incoming updates using long polling (wiki).
- * Returns an Array of Update objects.
+ * Use this method to receive incoming updates using long polling (<a
+ * href="https://en.wikipedia.org/wiki/Push_technology#Long_polling">wiki</a>).
+ * Returns an Array of <a href="#update">Update</a> objects.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetUpdates extends TelegramMethod implements UpdatesInterface
+final class GetUpdates extends TelegramMethod implements UpdatesInterface
 {
     /**
      * Identifier of the first update to be returned. Must be greater by one
@@ -60,4 +62,7 @@ class GetUpdates extends TelegramMethod implements UpdatesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = Update::class;
 }

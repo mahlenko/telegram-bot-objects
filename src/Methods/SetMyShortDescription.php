@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to change the bot's short description, which is shown
  * on the bot's profile page and is sent together with the link when
- * users share the bot. Returns True on success.
+ * users share the bot. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyShortDescription extends TelegramMethod implements TelegramMethodInterface
+final class SetMyShortDescription extends TelegramMethod implements MethodsInterface
 {
     /**
      * New short description for the bot; 0-120 characters. Pass an empty
@@ -36,4 +36,7 @@ class SetMyShortDescription extends TelegramMethod implements TelegramMethodInte
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

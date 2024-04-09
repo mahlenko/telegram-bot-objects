@@ -4,18 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\ChatMember;
 
 /**
  * Use this method to get information about a member of a chat. The
  * method is only guaranteed to work for other users if the bot is an
- * administrator in the chat. Returns a ChatMember object on success.
+ * administrator in the chat. Returns a <a
+ * href="#chatmember">ChatMember</a> object on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetChatMember extends TelegramMethod implements TelegramMethodInterface
+final class GetChatMember extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -31,4 +33,7 @@ class GetChatMember extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'user_id'];
+
+    /** Response mapping type. */
+    public string $response_type = ChatMember::class;
 }

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
@@ -12,12 +12,12 @@ use TelegramBot\TelegramMethod;
  * previously generated primary link is revoked. The bot must be an
  * administrator in the chat for this to work and must have the
  * appropriate administrator rights. Returns the new invite link as
- * String on success.
+ * <em>String</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ExportChatInviteLink extends TelegramMethod implements TelegramMethodInterface
+final class ExportChatInviteLink extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -30,4 +30,7 @@ class ExportChatInviteLink extends TelegramMethod implements TelegramMethodInter
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'string';
 }

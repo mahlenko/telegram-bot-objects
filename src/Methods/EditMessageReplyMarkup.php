@@ -7,16 +7,18 @@ namespace TelegramBot\Methods;
 use TelegramBot\Interface\UpdatingMessagesInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\Message;
 
 /**
  * Use this method to edit only the reply markup of messages. On success,
- * if the edited message is not an inline message, the edited Message is
- * returned, otherwise True is returned.
+ * if the edited message is not an inline message, the edited <a
+ * href="#message">Message</a> is returned, otherwise <em>True</em> is
+ * returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class EditMessageReplyMarkup extends TelegramMethod implements UpdatingMessagesInterface
+final class EditMessageReplyMarkup extends TelegramMethod implements UpdatingMessagesInterface
 {
     /**
      * Required if inline_message_id is not specified. Unique identifier for
@@ -45,4 +47,7 @@ class EditMessageReplyMarkup extends TelegramMethod implements UpdatingMessagesI
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

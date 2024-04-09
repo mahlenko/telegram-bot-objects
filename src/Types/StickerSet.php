@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a sticker set.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class StickerSet extends TelegramType implements StickersInterface
+final class StickerSet extends TelegramType implements StickersInterface
 {
     /** Sticker set name */
     public string $name;

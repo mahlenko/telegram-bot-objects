@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object represents a custom keyboard with reply options (see
- * Introduction to bots for details and examples).
+ * This object represents a <a href="/bots/features#keyboards">custom
+ * keyboard</a> with reply options (see <a
+ * href="/bots/features#keyboards">Introduction to bots</a> for details
+ * and examples).
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ReplyKeyboardMarkup extends TelegramType implements TelegramTypeInterface
+final class ReplyKeyboardMarkup extends TelegramType implements TypesInterface
 {
     /**
      * Array of button rows, each represented by an Array of KeyboardButton

@@ -6,15 +6,17 @@ namespace TelegramBot\Methods;
 
 use TelegramBot\Interface\StickersInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\Sticker;
 
 /**
  * Use this method to get information about custom emoji stickers by
- * their identifiers. Returns an Array of Sticker objects.
+ * their identifiers. Returns an Array of <a href="#sticker">Sticker</a>
+ * objects.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetCustomEmojiStickers extends TelegramMethod implements StickersInterface
+final class GetCustomEmojiStickers extends TelegramMethod implements StickersInterface
 {
     /**
      * A JSON-serialized list of custom emoji identifiers. At most 200 custom
@@ -29,4 +31,7 @@ class GetCustomEmojiStickers extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['custom_emoji_ids'];
+
+    /** Response mapping type. */
+    public string $response_type = Sticker::class;
 }

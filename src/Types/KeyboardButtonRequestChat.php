@@ -4,19 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object defines the criteria used to request a suitable chat.
  * Information about the selected chat will be shared with the bot when
  * the corresponding button is pressed. The bot will be granted requested
- * rights in the сhat if appropriate More about requesting chats »
+ * rights in the сhat if appropriate <a
+ * href="/bots/features#chat-and-user-selection">More about requesting
+ * chats »</a>
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class KeyboardButtonRequestChat extends TelegramType implements TelegramTypeInterface
+final class KeyboardButtonRequestChat extends TelegramType implements TypesInterface
 {
     /**
      * Signed 32-bit identifier of the request, which will be received back

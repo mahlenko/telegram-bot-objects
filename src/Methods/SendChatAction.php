@@ -4,28 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method when you need to tell the user that something is
  * happening on the bot's side. The status is set for 5 seconds or less
  * (when a message arrives from your bot, Telegram clients clear its
- * typing status). Returns True on success.
+ * typing status). Returns <em>True</em> on success.
  *
- * Example: The ImageBot needs some time to process a request and upload
- * the image. Instead of sending a text message along the lines of
- * “Retrieving image, please wait…”, the bot may use sendChatAction
- * with action = upload_photo. The user will see a “sending photo”
- * status for the bot.
- *
- * We only recommend using this method when a response from the bot will
- * take a noticeable amount of time to arrive.
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendChatAction extends TelegramMethod implements TelegramMethodInterface
+final class SendChatAction extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -57,4 +48,7 @@ class SendChatAction extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'action'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

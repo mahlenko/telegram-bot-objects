@@ -4,14 +4,14 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class BusinessOpeningHoursInterval extends TelegramType implements TelegramTypeInterface
+final class BusinessOpeningHoursInterval extends TelegramType implements TypesInterface
 {
     /**
      * The minute's sequence number in a week, starting on Monday, marking

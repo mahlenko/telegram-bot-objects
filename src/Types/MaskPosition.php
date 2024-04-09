@@ -11,10 +11,10 @@ use TelegramBot\TelegramType;
  * This object describes the position on faces where a mask should be
  * placed by default.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class MaskPosition extends TelegramType implements StickersInterface
+final class MaskPosition extends TelegramType implements StickersInterface
 {
     /**
      * The part of the face relative to which the mask should be placed. One

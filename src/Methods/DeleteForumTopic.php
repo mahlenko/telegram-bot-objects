@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to delete a forum topic along with all its messages in
  * a forum supergroup chat. The bot must be an administrator in the chat
- * for this to work and must have the can_delete_messages administrator
- * rights. Returns True on success.
+ * for this to work and must have the <em>can_delete_messages</em>
+ * administrator rights. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class DeleteForumTopic extends TelegramMethod implements TelegramMethodInterface
+final class DeleteForumTopic extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -32,4 +32,7 @@ class DeleteForumTopic extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'message_thread_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

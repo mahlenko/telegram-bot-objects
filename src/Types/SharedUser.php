@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object contains information about a user that was shared with the
- * bot using a KeyboardButtonRequestUser button.
+ * bot using a <a
+ * href="#keyboardbuttonrequestuser">KeyboardButtonRequestUser</a>
+ * button.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SharedUser extends TelegramType implements TelegramTypeInterface
+final class SharedUser extends TelegramType implements TypesInterface
 {
     /**
      * Identifier of the shared user. This number may have more than 32

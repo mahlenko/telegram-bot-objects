@@ -4,21 +4,22 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InputMedia;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\ReplyParameters;
 
 /**
  * Use this method to send a group of photos, videos, documents or audios
  * as an album. Documents and audio files can be only grouped in an album
- * with messages of the same type. On success, an array of Messages that
- * were sent is returned.
+ * with messages of the same type. On success, an array of <a
+ * href="#message">Messages</a> that were sent is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendMediaGroup extends TelegramMethod implements TelegramMethodInterface
+final class SendMediaGroup extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -63,4 +64,10 @@ class SendMediaGroup extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'media'];
+
+    /**
+     * Response mapping type.
+     * @var array<Message>
+     */
+    public array $response_type = [Message::class];
 }

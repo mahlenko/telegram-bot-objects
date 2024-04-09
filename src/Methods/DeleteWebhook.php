@@ -9,12 +9,13 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to remove webhook integration if you decide to switch
- * back to getUpdates. Returns True on success.
+ * back to <a href="#getupdates">getUpdates</a>. Returns <em>True</em> on
+ * success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class DeleteWebhook extends TelegramMethod implements UpdatesInterface
+final class DeleteWebhook extends TelegramMethod implements UpdatesInterface
 {
     /** Pass True to drop all pending updates */
     public ?bool $drop_pending_updates;
@@ -24,4 +25,7 @@ class DeleteWebhook extends TelegramMethod implements UpdatesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object represents one button of an inline keyboard. You must use
- * exactly one of the optional fields.
+ * This object represents one button of an inline keyboard. You
+ * <strong>must</strong> use exactly one of the optional fields.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineKeyboardButton extends TelegramType implements TelegramTypeInterface
+final class InlineKeyboardButton extends TelegramType implements TypesInterface
 {
     /** Label text on the button */
     public string $text;

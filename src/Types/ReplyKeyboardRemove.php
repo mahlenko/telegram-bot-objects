@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -13,12 +13,12 @@ use TelegramBot\TelegramType;
  * letter-keyboard. By default, custom keyboards are displayed until a
  * new keyboard is sent by a bot. An exception is made for one-time
  * keyboards that are hidden immediately after the user presses a button
- * (see ReplyKeyboardMarkup).
+ * (see <a href="#replykeyboardmarkup">ReplyKeyboardMarkup</a>).
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ReplyKeyboardRemove extends TelegramType implements TelegramTypeInterface
+final class ReplyKeyboardRemove extends TelegramType implements TypesInterface
 {
     /**
      * Requests clients to remove the custom keyboard (user will not be able

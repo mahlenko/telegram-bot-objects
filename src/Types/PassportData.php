@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * Describes Telegram Passport data shared with the bot by the user.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class PassportData extends TelegramType implements TelegramPassportInterface
+final class PassportData extends TelegramType implements TelegramPassportInterface
 {
     /**
      * Array with information about documents and other Telegram Passport

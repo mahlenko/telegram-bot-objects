@@ -4,22 +4,23 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
 use TelegramBot\Types\ReplyParameters;
 
 /**
  * Use this method to send information about a venue. On success, the
- * sent Message is returned.
+ * sent <a href="#message">Message</a> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendVenue extends TelegramMethod implements TelegramMethodInterface
+final class SendVenue extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -92,4 +93,7 @@ class SendVenue extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'latitude', 'longitude', 'title', 'address'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

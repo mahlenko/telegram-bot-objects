@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to set a custom title for an administrator in a
- * supergroup promoted by the bot. Returns True on success.
+ * supergroup promoted by the bot. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetChatAdministratorCustomTitle extends TelegramMethod implements TelegramMethodInterface
+final class SetChatAdministratorCustomTitle extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -36,4 +36,7 @@ class SetChatAdministratorCustomTitle extends TelegramMethod implements Telegram
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'user_id', 'custom_title'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

@@ -4,22 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents a file ready to be downloaded. The file can be
  * downloaded via the link
- * https://api.telegram.org/file/bot<token>/<file_path>. It is guaranteed
- * that the link will be valid for at least 1 hour. When the link
- * expires, a new one can be requested by calling getFile.
+ * <code>https://api.telegram.org/file/bot&lt;token&gt;/&lt;file_path&gt;</code>.
+ * It is guaranteed that the link will be valid for at least 1 hour. When
+ * the link expires, a new one can be requested by calling <a
+ * href="#getfile">getFile</a>.
  *
- * The maximum file size to download is 20 MB
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class File extends TelegramType implements TelegramTypeInterface
+final class File extends TelegramType implements TypesInterface
 {
     /**
      * Identifier for this file, which can be used to download or reuse the

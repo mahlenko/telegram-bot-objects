@@ -7,15 +7,16 @@ namespace TelegramBot\Methods;
 use TelegramBot\Interface\UpdatingMessagesInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\Poll;
 
 /**
  * Use this method to stop a poll which was sent by the bot. On success,
- * the stopped Poll is returned.
+ * the stopped <a href="#poll">Poll</a> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class StopPoll extends TelegramMethod implements UpdatingMessagesInterface
+final class StopPoll extends TelegramMethod implements UpdatingMessagesInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -34,4 +35,7 @@ class StopPoll extends TelegramMethod implements UpdatingMessagesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'message_id'];
+
+    /** Response mapping type. */
+    public string $response_type = Poll::class;
 }

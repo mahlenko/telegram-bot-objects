@@ -9,12 +9,12 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to delete a sticker from a set created by the bot.
- * Returns True on success.
+ * Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class DeleteStickerFromSet extends TelegramMethod implements StickersInterface
+final class DeleteStickerFromSet extends TelegramMethod implements StickersInterface
 {
     /** File identifier of the sticker */
     public string $sticker;
@@ -24,4 +24,7 @@ class DeleteStickerFromSet extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['sticker'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

@@ -10,13 +10,13 @@ use TelegramBot\TelegramType;
 /**
  * Represents a link to an MP3 audio file. By default, this audio file
  * will be sent by the user. Alternatively, you can use
- * input_message_content to send a message with the specified content
- * instead of the audio.
+ * <em>input_message_content</em> to send a message with the specified
+ * content instead of the audio.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultAudio extends TelegramType implements InlineModeInterface
+final class InlineQueryResultAudio extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be audio */
     public string $type;

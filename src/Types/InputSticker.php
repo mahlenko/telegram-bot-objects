@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object describes a sticker to be added to a sticker set.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InputSticker extends TelegramType implements StickersInterface
+final class InputSticker extends TelegramType implements StickersInterface
 {
     /**
      * The added sticker. Pass a file_id as a String to send a file that

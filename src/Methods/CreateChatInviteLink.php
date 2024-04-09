@@ -4,20 +4,22 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\ChatInviteLink;
 
 /**
  * Use this method to create an additional invite link for a chat. The
  * bot must be an administrator in the chat for this to work and must
  * have the appropriate administrator rights. The link can be revoked
- * using the method revokeChatInviteLink. Returns the new invite link as
- * ChatInviteLink object.
+ * using the method <a
+ * href="#revokechatinvitelink">revokeChatInviteLink</a>. Returns the new
+ * invite link as <a href="#chatinvitelink">ChatInviteLink</a> object.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CreateChatInviteLink extends TelegramMethod implements TelegramMethodInterface
+final class CreateChatInviteLink extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -48,4 +50,7 @@ class CreateChatInviteLink extends TelegramMethod implements TelegramMethodInter
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id'];
+
+    /** Response mapping type. */
+    public string $response_type = ChatInviteLink::class;
 }

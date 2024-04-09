@@ -13,10 +13,9 @@ namespace TelegramBot\Interface;
  * parameters in Bot API requests.On successful call, a JSON-object
  * containing the result will be returned.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-interface TelegramMethodInterface
+interface MethodsInterface
 {
 }

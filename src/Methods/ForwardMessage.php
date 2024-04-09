@@ -4,18 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\Message;
 
 /**
  * Use this method to forward messages of any kind. Service messages and
  * messages with protected content can't be forwarded. On success, the
- * sent Message is returned.
+ * sent <a href="#message">Message</a> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ForwardMessage extends TelegramMethod implements TelegramMethodInterface
+final class ForwardMessage extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -55,4 +56,7 @@ class ForwardMessage extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'from_chat_id', 'message_id'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

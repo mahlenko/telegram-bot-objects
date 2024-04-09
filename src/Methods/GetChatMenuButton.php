@@ -4,18 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\MenuButton;
 
 /**
  * Use this method to get the current value of the bot's menu button in a
- * private chat, or the default menu button. Returns MenuButton on
- * success.
+ * private chat, or the default menu button. Returns <a
+ * href="#menubutton">MenuButton</a> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetChatMenuButton extends TelegramMethod implements TelegramMethodInterface
+final class GetChatMenuButton extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target private chat. If not specified,
@@ -28,4 +29,7 @@ class GetChatMenuButton extends TelegramMethod implements TelegramMethodInterfac
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = MenuButton::class;
 }

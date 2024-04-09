@@ -4,19 +4,15 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object describes the source of a chat boost. It can be one of
  *
- * ChatBoostSourcePremium
- * ChatBoostSourceGiftCode
- * ChatBoostSourceGiveaway
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatBoostSource extends TelegramType implements TelegramTypeInterface
+final class ChatBoostSource extends TelegramType implements TypesInterface
 {
 }

@@ -11,10 +11,10 @@ use TelegramBot\TelegramType;
  * Represents an issue with a document scan. The error is considered
  * resolved when the file with the document scan changes.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class PassportElementErrorFile extends TelegramType implements TelegramPassportInterface
+final class PassportElementErrorFile extends TelegramType implements TelegramPassportInterface
 {
     /** Error source, must be file */
     public string $source;

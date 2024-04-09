@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Describes data sent from a Web App to the bot.
+ * Describes data sent from a <a href="/bots/webapps">Web App</a> to the
+ * bot.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class WebAppData extends TelegramType implements TelegramTypeInterface
+final class WebAppData extends TelegramType implements TypesInterface
 {
     /**
      * The data. Be aware that a bad client can send arbitrary data in this

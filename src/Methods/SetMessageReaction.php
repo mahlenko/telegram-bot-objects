@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ReactionType;
 
@@ -12,12 +12,12 @@ use TelegramBot\Types\ReactionType;
  * Use this method to change the chosen reactions on a message. Service
  * messages can't be reacted to. Automatically forwarded messages from a
  * channel to its discussion group have the same available reactions as
- * messages in the channel. Returns True on success.
+ * messages in the channel. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMessageReaction extends TelegramMethod implements TelegramMethodInterface
+final class SetMessageReaction extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -50,4 +50,7 @@ class SetMessageReaction extends TelegramMethod implements TelegramMethodInterfa
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'message_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

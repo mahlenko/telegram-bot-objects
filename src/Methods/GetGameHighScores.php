@@ -6,21 +6,18 @@ namespace TelegramBot\Methods;
 
 use TelegramBot\Interface\GamesInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\GameHighScore;
 
 /**
  * Use this method to get data for high score tables. Will return the
  * score of the specified user and several of their neighbors in a game.
- * Returns an Array of GameHighScore objects.
+ * Returns an Array of <a href="#gamehighscore">GameHighScore</a>
+ * objects.
  *
- * This method will currently return scores for the target user, plus two
- * of their closest neighbors on each side. Will also return the top
- * three users if the user and their neighbors are not among them. Please
- * note that this behavior is subject to change.
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetGameHighScores extends TelegramMethod implements GamesInterface
+final class GetGameHighScores extends TelegramMethod implements GamesInterface
 {
     /** Target user id */
     public int $user_id;
@@ -48,4 +45,7 @@ class GetGameHighScores extends TelegramMethod implements GamesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['user_id'];
+
+    /** Response mapping type. */
+    public string $response_type = GameHighScore::class;
 }

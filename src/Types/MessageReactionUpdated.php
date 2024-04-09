@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents a change of a reaction on a message performed
  * by a user.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class MessageReactionUpdated extends TelegramType implements TelegramTypeInterface
+final class MessageReactionUpdated extends TelegramType implements TypesInterface
 {
     /** The chat containing the message the user reacted to */
     public Chat $chat;

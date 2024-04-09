@@ -6,18 +6,19 @@ namespace TelegramBot\Methods;
 
 use TelegramBot\Interface\GamesInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\Message;
 
 /**
  * Use this method to set the score of the specified user in a game
- * message. On success, if the message is not an inline message, the
- * Message is returned, otherwise True is returned. Returns an error, if
- * the new score is not greater than the user's current score in the chat
- * and force is False.
+ * message. On success, if the message is not an inline message, the <a
+ * href="#message">Message</a> is returned, otherwise <em>True</em> is
+ * returned. Returns an error, if the new score is not greater than the
+ * user's current score in the chat and <em>force</em> is <em>False</em>.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetGameScore extends TelegramMethod implements GamesInterface
+final class SetGameScore extends TelegramMethod implements GamesInterface
 {
     /** User identifier */
     public int $user_id;
@@ -60,4 +61,7 @@ class SetGameScore extends TelegramMethod implements GamesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['user_id', 'score'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

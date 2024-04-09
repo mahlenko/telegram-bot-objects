@@ -8,13 +8,13 @@ use TelegramBot\Interface\InlineModeInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents a result of an inline query that was chosen by the user and
- * sent to their chat partner.
+ * Represents a <a href="#inlinequeryresult">result</a> of an inline
+ * query that was chosen by the user and sent to their chat partner.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChosenInlineResult extends TelegramType implements InlineModeInterface
+final class ChosenInlineResult extends TelegramType implements InlineModeInterface
 {
     /** The unique identifier for the result that was chosen */
     public string $result_id;

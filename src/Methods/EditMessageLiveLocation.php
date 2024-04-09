@@ -7,18 +7,21 @@ namespace TelegramBot\Methods;
 use TelegramBot\Interface\UpdatingMessagesInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\Message;
 
 /**
  * Use this method to edit live location messages. A location can be
- * edited until its live_period expires or editing is explicitly disabled
- * by a call to stopMessageLiveLocation. On success, if the edited
- * message is not an inline message, the edited Message is returned,
- * otherwise True is returned.
+ * edited until its <em>live_period</em> expires or editing is explicitly
+ * disabled by a call to <a
+ * href="#stopmessagelivelocation">stopMessageLiveLocation</a>. On
+ * success, if the edited message is not an inline message, the edited <a
+ * href="#message">Message</a> is returned, otherwise <em>True</em> is
+ * returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class EditMessageLiveLocation extends TelegramMethod implements UpdatingMessagesInterface
+final class EditMessageLiveLocation extends TelegramMethod implements UpdatingMessagesInterface
 {
     /**
      * Required if inline_message_id is not specified. Unique identifier for
@@ -68,4 +71,7 @@ class EditMessageLiveLocation extends TelegramMethod implements UpdatingMessages
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['latitude', 'longitude'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

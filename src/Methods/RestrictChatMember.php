@@ -4,20 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ChatPermissions;
 
 /**
  * Use this method to restrict a user in a supergroup. The bot must be an
  * administrator in the supergroup for this to work and must have the
- * appropriate administrator rights. Pass True for all permissions to
- * lift restrictions from a user. Returns True on success.
+ * appropriate administrator rights. Pass <em>True</em> for all
+ * permissions to lift restrictions from a user. Returns <em>True</em> on
+ * success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class RestrictChatMember extends TelegramMethod implements TelegramMethodInterface
+final class RestrictChatMember extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -53,4 +54,7 @@ class RestrictChatMember extends TelegramMethod implements TelegramMethodInterfa
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'user_id', 'permissions'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

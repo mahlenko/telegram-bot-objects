@@ -11,8 +11,7 @@ namespace TelegramBot\Interface;
  * introduction to payments for more details on the process and how to
  * set up payments for your bot.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface PaymentsInterface

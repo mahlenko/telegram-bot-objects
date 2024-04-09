@@ -9,22 +9,23 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to delete a message, including service messages, with
- * the following limitations:- A message can only be deleted if it was
- * sent less than 48 hours ago.- Service messages about a supergroup,
- * channel, or forum topic creation can't be deleted.- A dice message in
- * a private chat can only be deleted if it was sent more than 24 hours
- * ago.- Bots can delete outgoing messages in private chats, groups, and
- * supergroups.- Bots can delete incoming messages in private chats.-
- * Bots granted can_post_messages permissions can delete outgoing
- * messages in channels.- If the bot is an administrator of a group, it
- * can delete any message there.- If the bot has can_delete_messages
- * permission in a supergroup or a channel, it can delete any message
- * there.Returns True on success.
+ * the following limitations:<br>- A message can only be deleted if it
+ * was sent less than 48 hours ago.<br>- Service messages about a
+ * supergroup, channel, or forum topic creation can't be deleted.<br>- A
+ * dice message in a private chat can only be deleted if it was sent more
+ * than 24 hours ago.<br>- Bots can delete outgoing messages in private
+ * chats, groups, and supergroups.<br>- Bots can delete incoming messages
+ * in private chats.<br>- Bots granted <em>can_post_messages</em>
+ * permissions can delete outgoing messages in channels.<br>- If the bot
+ * is an administrator of a group, it can delete any message there.<br>-
+ * If the bot has <em>can_delete_messages</em> permission in a supergroup
+ * or a channel, it can delete any message there.<br>Returns
+ * <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class DeleteMessage extends TelegramMethod implements UpdatingMessagesInterface
+final class DeleteMessage extends TelegramMethod implements UpdatingMessagesInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -40,4 +41,7 @@ class DeleteMessage extends TelegramMethod implements UpdatingMessagesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'message_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

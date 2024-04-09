@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * Describes the current status of a webhook.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class WebhookInfo extends TelegramType implements UpdatesInterface
+final class WebhookInfo extends TelegramType implements UpdatesInterface
 {
     /** Webhook URL, may be empty if webhook is not set up */
     public string $url;

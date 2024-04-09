@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -12,10 +12,10 @@ use TelegramBot\TelegramType;
  * to inline mode in a chosen chat, with an optional default inline
  * query.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SwitchInlineQueryChosenChat extends TelegramType implements TelegramTypeInterface
+final class SwitchInlineQueryChosenChat extends TelegramType implements TypesInterface
 {
     /**
      * Optional. The default inline query to be inserted in the input field.

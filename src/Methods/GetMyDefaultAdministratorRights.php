@@ -4,17 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\ChatAdministratorRights;
 
 /**
  * Use this method to get the current default administrator rights of the
- * bot. Returns ChatAdministratorRights on success.
+ * bot. Returns <a
+ * href="#chatadministratorrights">ChatAdministratorRights</a> on
+ * success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class GetMyDefaultAdministratorRights extends TelegramMethod implements TelegramMethodInterface
+final class GetMyDefaultAdministratorRights extends TelegramMethod implements MethodsInterface
 {
     /**
      * Pass True to get default administrator rights of the bot in channels.
@@ -28,4 +31,7 @@ class GetMyDefaultAdministratorRights extends TelegramMethod implements Telegram
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = ChatAdministratorRights::class;
 }

@@ -9,16 +9,17 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Once the user has confirmed their payment and shipping details, the
- * Bot API sends the final confirmation in the form of an Update with the
- * field pre_checkout_query. Use this method to respond to such
- * pre-checkout queries. On success, True is returned. Note: The Bot API
- * must receive an answer within 10 seconds after the pre-checkout query
- * was sent.
+ * Bot API sends the final confirmation in the form of an <a
+ * href="#update">Update</a> with the field <em>pre_checkout_query</em>.
+ * Use this method to respond to such pre-checkout queries. On success,
+ * <em>True</em> is returned. <strong>Note:</strong> The Bot API must
+ * receive an answer within 10 seconds after the pre-checkout query was
+ * sent.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class AnswerPreCheckoutQuery extends TelegramMethod implements PaymentsInterface
+final class AnswerPreCheckoutQuery extends TelegramMethod implements PaymentsInterface
 {
     /** Unique identifier for the query to be answered */
     public string $pre_checkout_query_id;
@@ -45,4 +46,7 @@ class AnswerPreCheckoutQuery extends TelegramMethod implements PaymentsInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['pre_checkout_query_id', 'ok'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

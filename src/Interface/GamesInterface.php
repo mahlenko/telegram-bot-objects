@@ -41,8 +41,7 @@ namespace TelegramBot\Interface;
  * For examples of what can be done using this new stuff, check the
  * @gamebot and @gamee bots.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface GamesInterface

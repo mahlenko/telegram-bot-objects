@@ -11,12 +11,12 @@ use TelegramBot\Types\InputFile;
 /**
  * Use this method to set the thumbnail of a regular or mask sticker set.
  * The format of the thumbnail file must match the format of the stickers
- * in the set. Returns True on success.
+ * in the set. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetStickerSetThumbnail extends TelegramMethod implements StickersInterface
+final class SetStickerSetThumbnail extends TelegramMethod implements StickersInterface
 {
     /** Sticker set name */
     public string $name;
@@ -54,4 +54,7 @@ class SetStickerSetThumbnail extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['name', 'user_id', 'format'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

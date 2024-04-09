@@ -12,19 +12,9 @@ use TelegramBot\TelegramType;
  * was submitted that should be resolved by the user. It should be one
  * of:
  *
- * PassportElementErrorDataField
- * PassportElementErrorFrontSide
- * PassportElementErrorReverseSide
- * PassportElementErrorSelfie
- * PassportElementErrorFile
- * PassportElementErrorFiles
- * PassportElementErrorTranslationFile
- * PassportElementErrorTranslationFiles
- * PassportElementErrorUnspecified
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class PassportElementError extends TelegramType implements TelegramPassportInterface
+final class PassportElementError extends TelegramType implements TelegramPassportInterface
 {
 }

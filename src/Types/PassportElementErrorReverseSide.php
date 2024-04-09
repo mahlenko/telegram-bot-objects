@@ -12,10 +12,10 @@ use TelegramBot\TelegramType;
  * considered resolved when the file with reverse side of the document
  * changes.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class PassportElementErrorReverseSide extends TelegramType implements TelegramPassportInterface
+final class PassportElementErrorReverseSide extends TelegramType implements TelegramPassportInterface
 {
     /** Error source, must be reverse_side */
     public string $source;

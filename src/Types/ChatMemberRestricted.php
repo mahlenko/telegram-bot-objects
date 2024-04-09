@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents a chat member that is under certain restrictions in the
- * chat. Supergroups only.
+ * Represents a <a href="#chatmember">chat member</a> that is under
+ * certain restrictions in the chat. Supergroups only.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatMemberRestricted extends TelegramType implements TelegramTypeInterface
+final class ChatMemberRestricted extends TelegramType implements TypesInterface
 {
     /** The member's status in the chat, always “restricted” */
     public string $status;

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ChatAdministratorRights;
 
@@ -12,12 +12,12 @@ use TelegramBot\Types\ChatAdministratorRights;
  * Use this method to change the default administrator rights requested
  * by the bot when it's added as an administrator to groups or channels.
  * These rights will be suggested to users, but they are free to modify
- * the list before adding the bot. Returns True on success.
+ * the list before adding the bot. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyDefaultAdministratorRights extends TelegramMethod implements TelegramMethodInterface
+final class SetMyDefaultAdministratorRights extends TelegramMethod implements MethodsInterface
 {
     /**
      * A JSON-serialized object describing new default administrator rights.
@@ -37,4 +37,7 @@ class SetMyDefaultAdministratorRights extends TelegramMethod implements Telegram
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

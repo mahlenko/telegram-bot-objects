@@ -10,13 +10,13 @@ use TelegramBot\TelegramType;
 /**
  * Represents a link to a file stored on the Telegram servers. By
  * default, this file will be sent by the user with an optional caption.
- * Alternatively, you can use input_message_content to send a message
- * with the specified content instead of the file.
+ * Alternatively, you can use <em>input_message_content</em> to send a
+ * message with the specified content instead of the file.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultCachedDocument extends TelegramType implements InlineModeInterface
+final class InlineQueryResultCachedDocument extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be document */
     public string $type;

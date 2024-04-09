@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * Represents a link to an article or web page.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultArticle extends TelegramType implements InlineModeInterface
+final class InlineQueryResultArticle extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be article */
     public string $type;

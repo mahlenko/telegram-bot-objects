@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
 use TelegramBot\Types\InputFile;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\MessageEntity;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
@@ -18,14 +19,16 @@ use TelegramBot\Types\ReplyParameters;
  * Use this method to send audio files, if you want Telegram clients to
  * display the file as a playable voice message. For this to work, your
  * audio must be in an .OGG file encoded with OPUS (other formats may be
- * sent as Audio or Document). On success, the sent Message is returned.
- * Bots can currently send voice messages of up to 50 MB in size, this
- * limit may be changed in the future.
+ * sent as <a href="#audio">Audio</a> or <a
+ * href="#document">Document</a>). On success, the sent <a
+ * href="#message">Message</a> is returned. Bots can currently send voice
+ * messages of up to 50 MB in size, this limit may be changed in the
+ * future.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendVoice extends TelegramMethod implements TelegramMethodInterface
+final class SendVoice extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -98,4 +101,7 @@ class SendVoice extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'voice'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

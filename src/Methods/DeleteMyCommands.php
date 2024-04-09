@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\BotCommandScope;
 
 /**
  * Use this method to delete the list of the bot's commands for the given
- * scope and user language. After deletion, higher level commands will be
- * shown to affected users. Returns True on success.
+ * scope and user language. After deletion, <a
+ * href="#determining-list-of-commands">higher level commands</a> will be
+ * shown to affected users. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class DeleteMyCommands extends TelegramMethod implements TelegramMethodInterface
+final class DeleteMyCommands extends TelegramMethod implements MethodsInterface
 {
     /**
      * A JSON-serialized object, describing scope of users for which the
@@ -36,4 +37,7 @@ class DeleteMyCommands extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = [];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

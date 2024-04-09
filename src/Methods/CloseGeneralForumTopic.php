@@ -4,19 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to close an open 'General' topic in a forum supergroup
  * chat. The bot must be an administrator in the chat for this to work
- * and must have the can_manage_topics administrator rights. Returns True
- * on success.
+ * and must have the <em>can_manage_topics</em> administrator rights.
+ * Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CloseGeneralForumTopic extends TelegramMethod implements TelegramMethodInterface
+final class CloseGeneralForumTopic extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -29,4 +29,7 @@ class CloseGeneralForumTopic extends TelegramMethod implements TelegramMethodInt
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

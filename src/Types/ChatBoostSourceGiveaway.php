@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -12,10 +12,10 @@ use TelegramBot\TelegramType;
  * This boosts the chat 4 times for the duration of the corresponding
  * Telegram Premium subscription.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatBoostSourceGiveaway extends TelegramType implements TelegramTypeInterface
+final class ChatBoostSourceGiveaway extends TelegramType implements TypesInterface
 {
     /** Source of the boost, always “giveaway” */
     public string $source;

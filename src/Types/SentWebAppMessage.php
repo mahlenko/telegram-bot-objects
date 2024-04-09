@@ -8,12 +8,13 @@ use TelegramBot\Interface\InlineModeInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Describes an inline message sent by a Web App on behalf of a user.
+ * Describes an inline message sent by a <a href="/bots/webapps">Web
+ * App</a> on behalf of a user.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SentWebAppMessage extends TelegramType implements InlineModeInterface
+final class SentWebAppMessage extends TelegramType implements InlineModeInterface
 {
     /**
      * Optional. Identifier of the sent inline message. Available only if

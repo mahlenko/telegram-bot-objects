@@ -9,12 +9,12 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to move a sticker in a set created by the bot to a
- * specific position. Returns True on success.
+ * specific position. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetStickerPositionInSet extends TelegramMethod implements StickersInterface
+final class SetStickerPositionInSet extends TelegramMethod implements StickersInterface
 {
     /** File identifier of the sticker */
     public string $sticker;
@@ -27,4 +27,7 @@ class SetStickerPositionInSet extends TelegramMethod implements StickersInterfac
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['sticker', 'position'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

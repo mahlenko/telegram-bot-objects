@@ -12,18 +12,14 @@ use TelegramBot\Types\InputFile;
  * Use this method to specify a URL and receive incoming updates via an
  * outgoing webhook. Whenever there is an update for the bot, we will
  * send an HTTPS POST request to the specified URL, containing a
- * JSON-serialized Update. In case of an unsuccessful request, we will
- * give up after a reasonable amount of attempts. Returns True on
- * success.
- * If you'd like to make sure that the webhook was set by you, you can
- * specify secret data in the parameter secret_token. If specified, the
- * request will contain a header “X-Telegram-Bot-Api-Secret-Token”
- * with the secret token as content.
+ * JSON-serialized <a href="#update">Update</a>. In case of an
+ * unsuccessful request, we will give up after a reasonable amount of
+ * attempts. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetWebhook extends TelegramMethod implements UpdatesInterface
+final class SetWebhook extends TelegramMethod implements UpdatesInterface
 {
     /**
      * HTTPS URL to send updates to. Use an empty string to remove webhook
@@ -83,4 +79,7 @@ class SetWebhook extends TelegramMethod implements UpdatesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['url'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\BotCommand;
 use TelegramBot\Types\BotCommandScope;
 
 /**
- * Use this method to change the list of the bot's commands. See this
- * manual for more details about bot commands. Returns True on success.
+ * Use this method to change the list of the bot's commands. See <a
+ * href="/bots/features#commands">this manual</a> for more details about
+ * bot commands. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetMyCommands extends TelegramMethod implements TelegramMethodInterface
+final class SetMyCommands extends TelegramMethod implements MethodsInterface
 {
     /**
      * A JSON-serialized list of bot commands to be set as the list of the
@@ -44,4 +45,7 @@ class SetMyCommands extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['commands'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

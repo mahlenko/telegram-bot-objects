@@ -8,13 +8,13 @@ use TelegramBot\Interface\InlineModeInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Represents the content of an invoice message to be sent as the result
- * of an inline query.
+ * Represents the <a href="#inputmessagecontent">content</a> of an
+ * invoice message to be sent as the result of an inline query.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InputInvoiceMessageContent extends TelegramType implements InlineModeInterface
+final class InputInvoiceMessageContent extends TelegramType implements InlineModeInterface
 {
     /** Product name, 1-32 characters */
     public string $title;

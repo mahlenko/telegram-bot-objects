@@ -4,27 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents a parameter of the inline keyboard button used
  * to automatically authorize a user. Serves as a great replacement for
- * the Telegram Login Widget when the user is coming from Telegram. All
- * the user needs to do is tap/click a button and confirm that they want
- * to log in:
+ * the <a href="/widgets/login">Telegram Login Widget</a> when the user
+ * is coming from Telegram. All the user needs to do is tap/click a
+ * button and confirm that they want to log in:
  *
- *
- *
- *
- * Telegram apps support these buttons as of version 5.7.
- *
- * Sample bot: @discussbot
- *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class LoginUrl extends TelegramType implements TelegramTypeInterface
+final class LoginUrl extends TelegramType implements TypesInterface
 {
     /**
      * An HTTPS URL to be opened with user authorization data added to the

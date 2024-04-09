@@ -9,12 +9,12 @@ use TelegramBot\TelegramMethod;
 
 /**
  * Use this method to set the thumbnail of a custom emoji sticker set.
- * Returns True on success.
+ * Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetCustomEmojiStickerSetThumbnail extends TelegramMethod implements StickersInterface
+final class SetCustomEmojiStickerSetThumbnail extends TelegramMethod implements StickersInterface
 {
     /** Sticker set name */
     public string $name;
@@ -31,4 +31,7 @@ class SetCustomEmojiStickerSetThumbnail extends TelegramMethod implements Sticke
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['name'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

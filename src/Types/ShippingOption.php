@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object represents one shipping option.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ShippingOption extends TelegramType implements PaymentsInterface
+final class ShippingOption extends TelegramType implements PaymentsInterface
 {
     /** Shipping option identifier */
     public string $id;

@@ -7,16 +7,17 @@ namespace TelegramBot\Methods;
 use TelegramBot\Interface\GamesInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\InlineKeyboardMarkup;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\ReplyParameters;
 
 /**
- * Use this method to send a game. On success, the sent Message is
- * returned.
+ * Use this method to send a game. On success, the sent <a
+ * href="#message">Message</a> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendGame extends TelegramMethod implements GamesInterface
+final class SendGame extends TelegramMethod implements GamesInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -64,4 +65,7 @@ class SendGame extends TelegramMethod implements GamesInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'game_short_name'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

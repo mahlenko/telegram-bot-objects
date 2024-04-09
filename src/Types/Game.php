@@ -11,10 +11,10 @@ use TelegramBot\TelegramType;
  * This object represents a game. Use BotFather to create and edit games,
  * their short names will act as unique identifiers.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class Game extends TelegramType implements GamesInterface
+final class Game extends TelegramType implements GamesInterface
 {
     /** Title of the game */
     public string $title;

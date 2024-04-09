@@ -10,12 +10,12 @@ use TelegramBot\Types\LabeledPrice;
 
 /**
  * Use this method to create a link for an invoice. Returns the created
- * invoice link as String on success.
+ * invoice link as <em>String</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CreateInvoiceLink extends TelegramMethod implements PaymentsInterface
+final class CreateInvoiceLink extends TelegramMethod implements PaymentsInterface
 {
     /** Product name, 1-32 characters */
     public string $title;
@@ -117,4 +117,7 @@ class CreateInvoiceLink extends TelegramMethod implements PaymentsInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['title', 'description', 'payload', 'provider_token', 'currency', 'prices'];
+
+    /** Response mapping type. */
+    public string $response_type = 'string';
 }

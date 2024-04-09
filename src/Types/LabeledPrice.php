@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a portion of the price for goods or services.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class LabeledPrice extends TelegramType implements PaymentsInterface
+final class LabeledPrice extends TelegramType implements PaymentsInterface
 {
     /** Portion label */
     public string $label;

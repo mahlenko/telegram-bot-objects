@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
@@ -12,12 +12,13 @@ use TelegramBot\TelegramType;
  * display a reply interface to the user (act as if the user has selected
  * the bot's message and tapped 'Reply'). This can be extremely useful if
  * you want to create user-friendly step-by-step interfaces without
- * having to sacrifice privacy mode.
+ * having to sacrifice <a href="/bots/features#privacy-mode">privacy
+ * mode</a>.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ForceReply extends TelegramType implements TelegramTypeInterface
+final class ForceReply extends TelegramType implements TypesInterface
 {
     /**
      * Shows reply interface to the user, as if they manually selected the

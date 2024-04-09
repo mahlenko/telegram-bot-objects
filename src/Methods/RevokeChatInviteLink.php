@@ -4,20 +4,21 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\ChatInviteLink;
 
 /**
  * Use this method to revoke an invite link created by the bot. If the
  * primary link is revoked, a new link is automatically generated. The
  * bot must be an administrator in the chat for this to work and must
  * have the appropriate administrator rights. Returns the revoked invite
- * link as ChatInviteLink object.
+ * link as <a href="#chatinvitelink">ChatInviteLink</a> object.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class RevokeChatInviteLink extends TelegramMethod implements TelegramMethodInterface
+final class RevokeChatInviteLink extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the target chat or username of the target channel
@@ -33,4 +34,7 @@ class RevokeChatInviteLink extends TelegramMethod implements TelegramMethodInter
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'invite_link'];
+
+    /** Response mapping type. */
+    public string $response_type = ChatInviteLink::class;
 }

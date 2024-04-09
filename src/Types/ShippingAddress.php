@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object represents a shipping address.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ShippingAddress extends TelegramType implements PaymentsInterface
+final class ShippingAddress extends TelegramType implements PaymentsInterface
 {
     /** Two-letter ISO 3166-1 alpha-2 country code */
     public string $country_code;

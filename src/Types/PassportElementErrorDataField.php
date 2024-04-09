@@ -11,10 +11,10 @@ use TelegramBot\TelegramType;
  * Represents an issue in one of the data fields that was provided by the
  * user. The error is considered resolved when the field's value changes.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class PassportElementErrorDataField extends TelegramType implements TelegramPassportInterface
+final class PassportElementErrorDataField extends TelegramType implements TelegramPassportInterface
 {
     /** Error source, must be data */
     public string $source;

@@ -4,21 +4,23 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object represents an incoming callback query from a callback
- * button in an inline keyboard. If the button that originated the query
- * was attached to a message sent by the bot, the field message will be
- * present. If the button was attached to a message sent via the bot (in
- * inline mode), the field inline_message_id will be present. Exactly one
- * of the fields data or game_short_name will be present.
+ * button in an <a href="/bots/features#inline-keyboards">inline
+ * keyboard</a>. If the button that originated the query was attached to
+ * a message sent by the bot, the field <em>message</em> will be present.
+ * If the button was attached to a message sent via the bot (in <a
+ * href="#inline-mode">inline mode</a>), the field
+ * <em>inline_message_id</em> will be present. Exactly one of the fields
+ * <em>data</em> or <em>game_short_name</em> will be present.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CallbackQuery extends TelegramType implements TelegramTypeInterface
+final class CallbackQuery extends TelegramType implements TypesInterface
 {
     /** Unique identifier for this query */
     public string $id;

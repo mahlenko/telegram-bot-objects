@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * The message was originally sent by an unknown user.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class MessageOriginHiddenUser extends TelegramType implements TelegramTypeInterface
+final class MessageOriginHiddenUser extends TelegramType implements TypesInterface
 {
     /** Type of the message origin, always “hidden_user” */
     public string $type;

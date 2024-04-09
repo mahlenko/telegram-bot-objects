@@ -11,10 +11,10 @@ use TelegramBot\TelegramType;
  * Describes documents or other Telegram Passport elements shared with
  * the bot by the user.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class EncryptedPassportElement extends TelegramType implements TelegramPassportInterface
+final class EncryptedPassportElement extends TelegramType implements TelegramPassportInterface
 {
     /**
      * Element type. One of “personal_details”, “passport”,

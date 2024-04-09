@@ -13,8 +13,7 @@ namespace TelegramBot\Interface;
  * provide the placeholder text that the user will see in the input field
  * after typing your bot's name.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface InlineModeInterface

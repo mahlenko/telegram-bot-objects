@@ -10,13 +10,13 @@ use TelegramBot\TelegramType;
 /**
  * Represents a link to a voice recording in an .OGG container encoded
  * with OPUS. By default, this voice recording will be sent by the user.
- * Alternatively, you can use input_message_content to send a message
- * with the specified content instead of the the voice message.
+ * Alternatively, you can use <em>input_message_content</em> to send a
+ * message with the specified content instead of the the voice message.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class InlineQueryResultVoice extends TelegramType implements InlineModeInterface
+final class InlineQueryResultVoice extends TelegramType implements InlineModeInterface
 {
     /** Type of the result, must be voice */
     public string $type;

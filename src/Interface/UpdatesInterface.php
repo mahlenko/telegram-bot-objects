@@ -14,8 +14,7 @@ namespace TelegramBot\Interface;
  * Regardless of which option you choose, you will receive
  * JSON-serialized Update objects as a result.
  *
- *
- * @version Bot API 7.2
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
  * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
 interface UpdatesInterface

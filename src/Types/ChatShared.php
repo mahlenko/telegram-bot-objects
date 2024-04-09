@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object contains information about a chat that was shared with the
- * bot using a KeyboardButtonRequestChat button.
+ * bot using a <a
+ * href="#keyboardbuttonrequestchat">KeyboardButtonRequestChat</a>
+ * button.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ChatShared extends TelegramType implements TelegramTypeInterface
+final class ChatShared extends TelegramType implements TypesInterface
 {
     /** Identifier of the request */
     public int $request_id;

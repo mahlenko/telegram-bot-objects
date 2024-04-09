@@ -4,20 +4,22 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\MessageId;
 
 /**
  * Use this method to forward multiple messages of any kind. If some of
  * the specified messages can't be found or forwarded, they are skipped.
  * Service messages and messages with protected content can't be
  * forwarded. Album grouping is kept for forwarded messages. On success,
- * an array of MessageId of the sent messages is returned.
+ * an array of <a href="#messageid">MessageId</a> of the sent messages is
+ * returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ForwardMessages extends TelegramMethod implements TelegramMethodInterface
+final class ForwardMessages extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -63,4 +65,10 @@ class ForwardMessages extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'from_chat_id', 'message_ids'];
+
+    /**
+     * Response mapping type.
+     * @var array<MessageId>
+     */
+    public array $response_type = [MessageId::class];
 }

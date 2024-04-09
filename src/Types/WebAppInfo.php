@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * Describes a Web App.
+ * Describes a <a href="/bots/webapps">Web App</a>.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class WebAppInfo extends TelegramType implements TelegramTypeInterface
+final class WebAppInfo extends TelegramType implements TypesInterface
 {
     /**
      * An HTTPS URL of a Web App to be opened with additional data as

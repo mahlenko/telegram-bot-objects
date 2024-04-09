@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
 use TelegramBot\Types\MessageEntity;
+use TelegramBot\Types\MessageId;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
 use TelegramBot\Types\ReplyParameters;
@@ -16,16 +17,17 @@ use TelegramBot\Types\ReplyParameters;
 /**
  * Use this method to copy messages of any kind. Service messages,
  * giveaway messages, giveaway winners messages, and invoice messages
- * can't be copied. A quiz poll can be copied only if the value of the
- * field correct_option_id is known to the bot. The method is analogous
- * to the method forwardMessage, but the copied message doesn't have a
- * link to the original message. Returns the MessageId of the sent
- * message on success.
+ * can't be copied. A quiz <a href="#poll">poll</a> can be copied only if
+ * the value of the field <em>correct_option_id</em> is known to the bot.
+ * The method is analogous to the method <a
+ * href="#forwardmessage">forwardMessage</a>, but the copied message
+ * doesn't have a link to the original message. Returns the <a
+ * href="#messageid">MessageId</a> of the sent message on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class CopyMessage extends TelegramMethod implements TelegramMethodInterface
+final class CopyMessage extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -92,4 +94,7 @@ class CopyMessage extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'from_chat_id', 'message_id'];
+
+    /** Response mapping type. */
+    public string $response_type = MessageId::class;
 }

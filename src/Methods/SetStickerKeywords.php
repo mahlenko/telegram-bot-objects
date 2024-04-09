@@ -10,12 +10,12 @@ use TelegramBot\TelegramMethod;
 /**
  * Use this method to change search keywords assigned to a regular or
  * custom emoji sticker. The sticker must belong to a sticker set created
- * by the bot. Returns True on success.
+ * by the bot. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SetStickerKeywords extends TelegramMethod implements StickersInterface
+final class SetStickerKeywords extends TelegramMethod implements StickersInterface
 {
     /** File identifier of the sticker */
     public string $sticker;
@@ -33,4 +33,7 @@ class SetStickerKeywords extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['sticker'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

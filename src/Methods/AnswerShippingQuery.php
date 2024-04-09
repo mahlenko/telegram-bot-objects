@@ -10,14 +10,15 @@ use TelegramBot\Types\ShippingOption;
 
 /**
  * If you sent an invoice requesting a shipping address and the parameter
- * is_flexible was specified, the Bot API will send an Update with a
- * shipping_query field to the bot. Use this method to reply to shipping
- * queries. On success, True is returned.
+ * <em>is_flexible</em> was specified, the Bot API will send an <a
+ * href="#update">Update</a> with a <em>shipping_query</em> field to the
+ * bot. Use this method to reply to shipping queries. On success,
+ * <em>True</em> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class AnswerShippingQuery extends TelegramMethod implements PaymentsInterface
+final class AnswerShippingQuery extends TelegramMethod implements PaymentsInterface
 {
     /** Unique identifier for the query to be answered */
     public string $shipping_query_id;
@@ -50,4 +51,7 @@ class AnswerShippingQuery extends TelegramMethod implements PaymentsInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['shipping_query_id', 'ok'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

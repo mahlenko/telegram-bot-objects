@@ -4,17 +4,17 @@ declare(strict_types=1);
 
 namespace TelegramBot\Types;
 
-use TelegramBot\Interface\TelegramTypeInterface;
+use TelegramBot\Interface\TypesInterface;
 use TelegramBot\TelegramType;
 
 /**
  * This object contains information about a message that is being replied
  * to, which may come from another chat or forum topic.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class ExternalReplyInfo extends TelegramType implements TelegramTypeInterface
+final class ExternalReplyInfo extends TelegramType implements TypesInterface
 {
     /** Origin of the message replied to by the given message */
     public MessageOrigin $origin;

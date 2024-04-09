@@ -4,24 +4,27 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
 use TelegramBot\Types\ForceReply;
 use TelegramBot\Types\InlineKeyboardMarkup;
 use TelegramBot\Types\InputFile;
+use TelegramBot\Types\Message;
 use TelegramBot\Types\ReplyKeyboardMarkup;
 use TelegramBot\Types\ReplyKeyboardRemove;
 use TelegramBot\Types\ReplyParameters;
 
 /**
- * As of v.4.0, Telegram clients support rounded square MPEG4 videos of
- * up to 1 minute long. Use this method to send video messages. On
- * success, the sent Message is returned.
+ * As of <a
+ * href="https://telegram.org/blog/video-messages-and-telescope">v.4.0</a>,
+ * Telegram clients support rounded square MPEG4 videos of up to 1 minute
+ * long. Use this method to send video messages. On success, the sent <a
+ * href="#message">Message</a> is returned.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class SendVideoNote extends TelegramMethod implements TelegramMethodInterface
+final class SendVideoNote extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier of the business connection on behalf of which the
@@ -93,4 +96,7 @@ class SendVideoNote extends TelegramMethod implements TelegramMethodInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'video_note'];
+
+    /** Response mapping type. */
+    public string $response_type = Message::class;
 }

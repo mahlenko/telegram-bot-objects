@@ -10,10 +10,10 @@ use TelegramBot\TelegramType;
 /**
  * This object represents information about an order.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class OrderInfo extends TelegramType implements PaymentsInterface
+final class OrderInfo extends TelegramType implements PaymentsInterface
 {
     /** Optional. User name */
     public ?string $name;

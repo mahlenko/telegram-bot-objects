@@ -4,19 +4,20 @@ declare(strict_types=1);
 
 namespace TelegramBot\Methods;
 
-use TelegramBot\Interface\TelegramMethodInterface;
+use TelegramBot\Interface\MethodsInterface;
 use TelegramBot\TelegramMethod;
+use TelegramBot\Types\ChatInviteLink;
 
 /**
  * Use this method to edit a non-primary invite link created by the bot.
  * The bot must be an administrator in the chat for this to work and must
  * have the appropriate administrator rights. Returns the edited invite
- * link as a ChatInviteLink object.
+ * link as a <a href="#chatinvitelink">ChatInviteLink</a> object.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class EditChatInviteLink extends TelegramMethod implements TelegramMethodInterface
+final class EditChatInviteLink extends TelegramMethod implements MethodsInterface
 {
     /**
      * Unique identifier for the target chat or username of the target
@@ -50,4 +51,7 @@ class EditChatInviteLink extends TelegramMethod implements TelegramMethodInterfa
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['chat_id', 'invite_link'];
+
+    /** Response mapping type. */
+    public string $response_type = ChatInviteLink::class;
 }

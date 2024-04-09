@@ -11,12 +11,12 @@ use TelegramBot\Types\InputSticker;
 /**
  * Use this method to add a new sticker to a set created by the bot.
  * Emoji sticker sets can have up to 200 stickers. Other sticker sets can
- * have up to 120 stickers. Returns True on success.
+ * have up to 120 stickers. Returns <em>True</em> on success.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class AddStickerToSet extends TelegramMethod implements StickersInterface
+final class AddStickerToSet extends TelegramMethod implements StickersInterface
 {
     /** User identifier of sticker set owner */
     public int $user_id;
@@ -36,4 +36,7 @@ class AddStickerToSet extends TelegramMethod implements StickersInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['user_id', 'name', 'sticker'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }

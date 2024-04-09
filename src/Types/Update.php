@@ -8,13 +8,14 @@ use TelegramBot\Interface\UpdatesInterface;
 use TelegramBot\TelegramType;
 
 /**
- * This object represents an incoming update.At most one of the optional
- * parameters can be present in any given update.
+ * This <a href="#available-types">object</a> represents an incoming
+ * update.<br>At most <strong>one</strong> of the optional parameters can
+ * be present in any given update.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class Update extends TelegramType implements UpdatesInterface
+final class Update extends TelegramType implements UpdatesInterface
 {
     /**
      * The update's unique identifier. Update identifiers start from a

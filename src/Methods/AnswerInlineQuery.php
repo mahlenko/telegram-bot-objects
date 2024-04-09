@@ -10,13 +10,14 @@ use TelegramBot\Types\InlineQueryResult;
 use TelegramBot\Types\InlineQueryResultsButton;
 
 /**
- * Use this method to send answers to an inline query. On success, True
- * is returned.No more than 50 results per query are allowed.
+ * Use this method to send answers to an inline query. On success,
+ * <em>True</em> is returned.<br>No more than <strong>50</strong> results
+ * per query are allowed.
  *
- * Bot API 7.2
- * Sergey Makhlenko <https://github.com/mahlenko>
+ * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
+ * @author Sergey Makhlenko <https://github.com/mahlenko>
  */
-class AnswerInlineQuery extends TelegramMethod implements InlineModeInterface
+final class AnswerInlineQuery extends TelegramMethod implements InlineModeInterface
 {
     /** Unique identifier for the answered query */
     public string $inline_query_id;
@@ -60,4 +61,7 @@ class AnswerInlineQuery extends TelegramMethod implements InlineModeInterface
      * requests to the Telegram Bot API
      */
     public array $required_properties = ['inline_query_id', 'results'];
+
+    /** Response mapping type. */
+    public string $response_type = 'bool';
 }
