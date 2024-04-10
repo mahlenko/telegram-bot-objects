@@ -20,24 +20,24 @@ final readonly class CreateInvoiceLink implements TelegramMethodInterface
 
     public function __construct(
         /** Product name, 1-32 characters */
-        public ?string $title,
+        public string $title,
         /** Product description, 1-255 characters */
-        public ?string $description,
+        public string $description,
         /**
          * Bot-defined invoice payload, 1-128 bytes. This will not be displayed to the
          * user, use for your internal processes.
          */
-        public ?string $payload,
+        public string $payload,
         /** Payment provider token, obtained via BotFather */
-        public ?string $provider_token,
+        public string $provider_token,
         /** Three-letter ISO 4217 currency code, see more on currencies */
-        public ?string $currency,
+        public string $currency,
         /**
          * Price breakdown, a JSON-serialized list of components (e.g. product price, tax,
          * discount, delivery cost, delivery tax, bonus, etc.)
          * @var array<LabeledPrice>
          */
-        public ?array $prices,
+        public array $prices,
         /**
          * The maximum accepted amount for tips in the smallest units of the currency
          * (integer, not float/double). For example, for a maximum tip of US$ 1.45 pass
@@ -45,7 +45,7 @@ final readonly class CreateInvoiceLink implements TelegramMethodInterface
          * number of digits past the decimal point for each currency (2 for the majority of
          * currencies). Defaults to 0
          */
-        public int $max_tip_amount,
+        public ?int $max_tip_amount,
         /**
          * A JSON-serialized array of suggested amounts of tips in the smallest units of
          * the currency (integer, not float/double). At most 4 suggested tip amounts can be
@@ -53,38 +53,38 @@ final readonly class CreateInvoiceLink implements TelegramMethodInterface
          * increased order and must not exceed max_tip_amount.
          * @var array<int>
          */
-        public array $suggested_tip_amounts,
+        public ?array $suggested_tip_amounts,
         /**
          * JSON-serialized data about the invoice, which will be shared with the payment
          * provider. A detailed description of required fields should be provided by the
          * payment provider.
          */
-        public string $provider_data,
+        public ?string $provider_data,
         /**
          * URL of the product photo for the invoice. Can be a photo of the goods or a
          * marketing image for a service.
          */
-        public string $photo_url,
+        public ?string $photo_url,
         /** Photo size in bytes */
-        public int $photo_size,
+        public ?int $photo_size,
         /** Photo width */
-        public int $photo_width,
+        public ?int $photo_width,
         /** Photo height */
-        public int $photo_height,
+        public ?int $photo_height,
         /** Pass True if you require the user's full name to complete the order */
-        public bool $need_name,
+        public ?bool $need_name,
         /** Pass True if you require the user's phone number to complete the order */
-        public bool $need_phone_number,
+        public ?bool $need_phone_number,
         /** Pass True if you require the user's email address to complete the order */
-        public bool $need_email,
+        public ?bool $need_email,
         /** Pass True if you require the user's shipping address to complete the order */
-        public bool $need_shipping_address,
+        public ?bool $need_shipping_address,
         /** Pass True if the user's phone number should be sent to the provider */
-        public bool $send_phone_number_to_provider,
+        public ?bool $send_phone_number_to_provider,
         /** Pass True if the user's email address should be sent to the provider */
-        public bool $send_email_to_provider,
+        public ?bool $send_email_to_provider,
         /** Pass True if the final price depends on the shipping method */
-        public bool $is_flexible,
+        public ?bool $is_flexible,
     ) {
     }
 }

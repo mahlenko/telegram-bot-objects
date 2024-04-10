@@ -29,9 +29,9 @@ final readonly class DeleteMessage implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target channel (in the
          * format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** Identifier of the message to delete */
-        public ?int $message_id,
+        public int $message_id,
     ) {
     }
 }

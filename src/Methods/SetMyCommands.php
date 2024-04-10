@@ -25,17 +25,17 @@ final readonly class SetMyCommands implements TelegramMethodInterface
          * commands. At most 100 commands can be specified.
          * @var array<BotCommand>
          */
-        public ?array $commands,
+        public array $commands,
         /**
          * A JSON-serialized object, describing scope of users for which the commands are
          * relevant. Defaults to BotCommandScopeDefault.
          */
-        public BotCommandScope $scope,
+        public ?BotCommandScope $scope,
         /**
          * A two-letter ISO 639-1 language code. If empty, commands will be applied to all
          * users from the given scope, for whose language there are no dedicated commands
          */
-        public string $language_code,
+        public ?string $language_code,
     ) {
     }
 }

@@ -24,7 +24,7 @@ final readonly class GetCustomEmojiStickers implements TelegramMethodInterface
          * identifiers can be specified.
          * @var array<string>
          */
-        public ?array $custom_emoji_ids,
+        public array $custom_emoji_ids,
     ) {
     }
 }

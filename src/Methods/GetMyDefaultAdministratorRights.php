@@ -24,7 +24,7 @@ final readonly class GetMyDefaultAdministratorRights implements TelegramMethodIn
          * default administrator rights of the bot for groups and supergroups will be
          * returned.
          */
-        public bool $for_channels,
+        public ?bool $for_channels,
     ) {
     }
 }

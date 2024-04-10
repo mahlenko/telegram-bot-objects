@@ -23,7 +23,7 @@ final readonly class GetChatAdministrators implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target supergroup or
          * channel (in the format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
     ) {
     }
 }

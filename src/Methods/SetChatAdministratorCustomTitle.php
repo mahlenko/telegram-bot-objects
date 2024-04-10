@@ -22,11 +22,11 @@ final readonly class SetChatAdministratorCustomTitle implements TelegramMethodIn
          * Unique identifier for the target chat or username of the target supergroup (in
          * the format @supergroupusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** Unique identifier of the target user */
-        public ?int $user_id,
+        public int $user_id,
         /** New custom title for the administrator; 0-16 characters, emoji are not allowed */
-        public ?string $custom_title,
+        public string $custom_title,
     ) {
     }
 }

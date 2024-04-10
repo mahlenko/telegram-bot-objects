@@ -19,7 +19,7 @@ final readonly class DeleteStickerFromSet implements TelegramMethodInterface
 
     public function __construct(
         /** File identifier of the sticker */
-        public ?string $sticker,
+        public string $sticker,
     ) {
     }
 }

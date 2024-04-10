@@ -24,11 +24,11 @@ final readonly class StopPoll implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target channel (in the
          * format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** Identifier of the original message with the poll */
-        public ?int $message_id,
+        public int $message_id,
         /** A JSON-serialized object for a new message inline keyboard. */
-        public InlineKeyboardMarkup $reply_markup,
+        public ?InlineKeyboardMarkup $reply_markup,
     ) {
     }
 }

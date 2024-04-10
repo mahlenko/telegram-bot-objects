@@ -25,12 +25,12 @@ final readonly class SetMessageReaction implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target channel (in the
          * format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /**
          * Identifier of the target message. If the message belongs to a media group, the
          * reaction is set to the first non-deleted message in the group instead.
          */
-        public ?int $message_id,
+        public int $message_id,
         /**
          * A JSON-serialized list of reaction types to set on the message. Currently, as
          * non-premium users, bots can set up to one reaction per message. A custom emoji
@@ -38,9 +38,9 @@ final readonly class SetMessageReaction implements TelegramMethodInterface
          * explicitly allowed by chat administrators.
          * @var array<ReactionType>
          */
-        public array $reaction,
+        public ?array $reaction,
         /** Pass True to set the reaction with a big animation */
-        public bool $is_big,
+        public ?bool $is_big,
     ) {
     }
 }

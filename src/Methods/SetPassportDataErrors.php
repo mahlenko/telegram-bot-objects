@@ -27,12 +27,12 @@ final readonly class SetPassportDataErrors implements TelegramMethodInterface
 
     public function __construct(
         /** User identifier */
-        public ?int $user_id,
+        public int $user_id,
         /**
          * A JSON-serialized array describing the errors
          * @var array<PassportElementError>
          */
-        public ?array $errors,
+        public array $errors,
     ) {
     }
 }

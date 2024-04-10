@@ -24,9 +24,9 @@ final readonly class SetChatPhoto implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target channel (in the
          * format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** New chat photo, uploaded using multipart/form-data */
-        public ?InputFile $photo,
+        public InputFile $photo,
     ) {
     }
 }

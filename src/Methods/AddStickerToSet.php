@@ -21,14 +21,14 @@ final readonly class AddStickerToSet implements TelegramMethodInterface
 
     public function __construct(
         /** User identifier of sticker set owner */
-        public ?int $user_id,
+        public int $user_id,
         /** Sticker set name */
-        public ?string $name,
+        public string $name,
         /**
          * A JSON-serialized object with information about the added sticker. If exactly
          * the same sticker had already been added to the set, then the set isn't changed.
          */
-        public ?InputSticker $sticker,
+        public InputSticker $sticker,
     ) {
     }
 }

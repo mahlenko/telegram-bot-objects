@@ -23,9 +23,9 @@ final readonly class EditGeneralForumTopic implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target supergroup (in
          * the format @supergroupusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** New topic name, 1-128 characters */
-        public ?string $name,
+        public string $name,
     ) {
     }
 }

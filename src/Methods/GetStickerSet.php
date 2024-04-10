@@ -20,7 +20,7 @@ final readonly class GetStickerSet implements TelegramMethodInterface
 
     public function __construct(
         /** Name of the sticker set */
-        public ?string $name,
+        public string $name,
     ) {
     }
 }

@@ -28,17 +28,17 @@ final readonly class GetUpdates implements TelegramMethodInterface
          * from -offset update from the end of the updates queue. All previous updates will
          * be forgotten.
          */
-        public int $offset,
+        public ?int $offset,
         /**
          * Limits the number of updates to be retrieved. Values between 1-100 are accepted.
          * Defaults to 100.
          */
-        public int $limit,
+        public ?int $limit,
         /**
          * Timeout in seconds for long polling. Defaults to 0, i.e. usual short polling.
          * Should be positive, short polling should be used for testing purposes only.
          */
-        public int $timeout,
+        public ?int $timeout,
         /**
          * A JSON-serialized list of the update types you want your bot to receive. For
          * example, specify ["message", "edited_channel_post", "callback_query"] to only
@@ -50,7 +50,7 @@ final readonly class GetUpdates implements TelegramMethodInterface
          * updates may be received for a short period of time.
          * @var array<string>
          */
-        public array $allowed_updates,
+        public ?array $allowed_updates,
     ) {
     }
 }

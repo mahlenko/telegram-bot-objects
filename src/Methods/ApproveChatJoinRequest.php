@@ -23,9 +23,9 @@ final readonly class ApproveChatJoinRequest implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target channel (in the
          * format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** Unique identifier of the target user */
-        public ?int $user_id,
+        public int $user_id,
     ) {
     }
 }

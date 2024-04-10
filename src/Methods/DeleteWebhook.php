@@ -19,7 +19,7 @@ final readonly class DeleteWebhook implements TelegramMethodInterface
 
     public function __construct(
         /** Pass True to drop all pending updates */
-        public bool $drop_pending_updates,
+        public ?bool $drop_pending_updates,
     ) {
     }
 }

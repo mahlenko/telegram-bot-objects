@@ -25,9 +25,9 @@ final readonly class BanChatSenderChat implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target channel (in the
          * format @channelusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
         /** Unique identifier of the target sender chat */
-        public ?int $sender_chat_id,
+        public int $sender_chat_id,
     ) {
     }
 }

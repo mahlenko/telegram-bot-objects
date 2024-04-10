@@ -20,12 +20,12 @@ final readonly class SetStickerEmojiList implements TelegramMethodInterface
 
     public function __construct(
         /** File identifier of the sticker */
-        public ?string $sticker,
+        public string $sticker,
         /**
          * A JSON-serialized list of 1-20 emoji associated with the sticker
          * @var array<string>
          */
-        public ?array $emoji_list,
+        public array $emoji_list,
     ) {
     }
 }

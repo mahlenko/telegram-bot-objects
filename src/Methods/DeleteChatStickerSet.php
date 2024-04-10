@@ -25,7 +25,7 @@ final readonly class DeleteChatStickerSet implements TelegramMethodInterface
          * Unique identifier for the target chat or username of the target supergroup (in
          * the format @supergroupusername)
          */
-        public int|string|null $chat_id,
+        public int|string $chat_id,
     ) {
     }
 }

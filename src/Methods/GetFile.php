@@ -25,7 +25,7 @@ final readonly class GetFile implements TelegramMethodInterface
 
     public function __construct(
         /** File identifier to get information about */
-        public ?string $file_id,
+        public string $file_id,
     ) {
     }
 }

@@ -19,9 +19,9 @@ final readonly class SetStickerSetTitle implements TelegramMethodInterface
 
     public function __construct(
         /** Sticker set name */
-        public ?string $name,
+        public string $name,
         /** Sticker set title, 1-64 characters */
-        public ?string $title,
+        public string $title,
     ) {
     }
 }

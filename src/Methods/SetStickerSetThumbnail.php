@@ -21,9 +21,9 @@ final readonly class SetStickerSetThumbnail implements TelegramMethodInterface
 
     public function __construct(
         /** Sticker set name */
-        public ?string $name,
+        public string $name,
         /** User identifier of the sticker set owner */
-        public ?int $user_id,
+        public int $user_id,
         /**
          * A .WEBP or .PNG image with the thumbnail, must be up to 128 kilobytes in size
          * and have a width and height of exactly 100px, or a .TGS animation with a
@@ -39,12 +39,12 @@ final readonly class SetStickerSetThumbnail implements TelegramMethodInterface
          * be uploaded via HTTP URL. If omitted, then the thumbnail is dropped and the
          * first sticker is used as the thumbnail.
          */
-        public InputFile|string $thumbnail,
+        public InputFile|string|null $thumbnail,
         /**
          * Format of the thumbnail, must be one of “static” for a .WEBP or .PNG image,
          * “animated” for a .TGS animation, or “video” for a WEBM video
          */
-        public ?string $format,
+        public string $format,
     ) {
     }
 }
