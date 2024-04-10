@@ -1,33 +1,24 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
+use TelegramBotCast\Interface\TelegramMethodInterface;
 
 /**
- * Use this method to get the number of members in a chat. Returns
- * <em>Int</em> on success.
+ * GetChatMemberCount
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get the number of members in a chat. Returns Int on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetChatMemberCount extends TelegramMethod implements MethodsInterface
+final readonly class GetChatMemberCount implements TelegramMethodInterface
 {
-    /**
-     * Unique identifier for the target chat or username of the target
-     * supergroup or channel (in the format @channelusername)
-     */
-    public int|string $chat_id;
+	public const RESPONSE_TYPE = 'int';
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['chat_id'];
-
-    /** Response mapping type. */
-    public string $response_type = 'int';
+	public function __construct(
+		/** Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername) */
+		public int|string $chat_id,
+	) {
+	}
 }

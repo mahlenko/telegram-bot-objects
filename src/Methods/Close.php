@@ -1,31 +1,18 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
+use TelegramBotCast\Interface\TelegramMethodInterface;
 
 /**
- * Use this method to close the bot instance before moving it from one
- * local server to another. You need to delete the webhook before calling
- * this method to ensure that the bot isn't launched again after server
- * restart. The method will return error 429 in the first 10 minutes
- * after the bot is launched. Returns <em>True</em> on success. Requires
- * no parameters.
+ * Close
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to close the bot instance before moving it from one local server to another. You need to delete the webhook before calling this method to ensure that the bot isn't launched again after server restart. The method will return error 429 in the first 10 minutes after the bot is launched. Returns True on success. Requires no parameters.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class Close extends TelegramMethod implements MethodsInterface
+final readonly class Close implements TelegramMethodInterface
 {
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public const RESPONSE_TYPE = 'true';
 }

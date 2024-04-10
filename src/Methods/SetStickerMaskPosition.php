@@ -1,38 +1,27 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\StickersInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\MaskPosition;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\MaskPosition;
 
 /**
- * Use this method to change the <a href="#maskposition">mask
- * position</a> of a mask sticker. The sticker must belong to a sticker
- * set that was created by the bot. Returns <em>True</em> on success.
+ * SetStickerMaskPosition
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to change the mask position of a mask sticker. The sticker must belong to a sticker set that was created by the bot. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class SetStickerMaskPosition extends TelegramMethod implements StickersInterface
+final readonly class SetStickerMaskPosition implements TelegramMethodInterface
 {
-    /** File identifier of the sticker */
-    public string $sticker;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * A JSON-serialized object with the position where the mask should be
-     * placed on faces. Omit the parameter to remove the mask position.
-     */
-    public ?MaskPosition $mask_position;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['sticker'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** File identifier of the sticker */
+		public string $sticker,
+		/** A JSON-serialized object with the position where the mask should be placed on faces. Omit the parameter to remove the mask position. */
+		public ?MaskPosition $mask_position,
+	) {
+	}
 }

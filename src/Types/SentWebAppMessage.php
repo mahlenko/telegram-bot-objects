@@ -1,24 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\InlineModeInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Describes an inline message sent by a <a href="/bots/webapps">Web
- * App</a> on behalf of a user.
+ * SentWebAppMessage
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Describes an inline message sent by a Web App on behalf of a user.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class SentWebAppMessage extends TelegramType implements InlineModeInterface
+final readonly class SentWebAppMessage implements TelegramTypeInterface
 {
-    /**
-     * Optional. Identifier of the sent inline message. Available only if
-     * there is an inline keyboard attached to the message.
-     */
-    public ?string $inline_message_id;
+	public function __construct(
+		/** Identifier of the sent inline message. Available only if there is an inline keyboard attached to the message. */
+		public string $inline_message_id,
+	) {
+	}
 }

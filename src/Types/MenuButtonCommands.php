@@ -1,20 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * MenuButtonCommands
+ *
  * Represents a menu button, which opens the bot's list of commands.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MenuButtonCommands extends TelegramType implements TypesInterface
+final readonly class MenuButtonCommands implements TelegramTypeInterface
 {
-    /** Type of the button, must be commands */
-    public string $type;
+	public function __construct(
+		/** Type of the button, must be commands */
+		public ?string $type,
+	) {
+	}
 }

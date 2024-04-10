@@ -1,26 +1,26 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\GamesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * GameHighScore
+ *
  * This object represents one row of the high scores table for a game.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GameHighScore extends TelegramType implements GamesInterface
+final readonly class GameHighScore implements TelegramTypeInterface
 {
-    /** Position in high score table for the game */
-    public int $position;
-
-    /** User */
-    public User $user;
-
-    /** Score */
-    public int $score;
+	public function __construct(
+		/** Position in high score table for the game */
+		public ?int $position,
+		/** User */
+		public ?User $user,
+		/** Score */
+		public ?int $score,
+	) {
+	}
 }

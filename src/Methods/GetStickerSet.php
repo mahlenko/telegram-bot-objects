@@ -1,31 +1,25 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\StickersInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\StickerSet;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\StickerSet;
 
 /**
- * Use this method to get a sticker set. On success, a <a
- * href="#stickerset">StickerSet</a> object is returned.
+ * GetStickerSet
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get a sticker set. On success, a StickerSet object is returned.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetStickerSet extends TelegramMethod implements StickersInterface
+final readonly class GetStickerSet implements TelegramMethodInterface
 {
-    /** Name of the sticker set */
-    public string $name;
+	public const RESPONSE_TYPE = StickerSet::class;
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['name'];
-
-    /** Response mapping type. */
-    public string $response_type = StickerSet::class;
+	public function __construct(
+		/** Name of the sticker set */
+		public string $name,
+	) {
+	}
 }

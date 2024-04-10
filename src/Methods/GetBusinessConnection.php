@@ -1,32 +1,25 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\BusinessConnection;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\BusinessConnection;
 
 /**
- * Use this method to get information about the connection of the bot
- * with a business account. Returns a <a
- * href="#businessconnection">BusinessConnection</a> object on success.
+ * GetBusinessConnection
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get information about the connection of the bot with a business account. Returns a BusinessConnection object on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetBusinessConnection extends TelegramMethod implements MethodsInterface
+final readonly class GetBusinessConnection implements TelegramMethodInterface
 {
-    /** Unique identifier of the business connection */
-    public string $business_connection_id;
+	public const RESPONSE_TYPE = BusinessConnection::class;
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['business_connection_id'];
-
-    /** Response mapping type. */
-    public string $response_type = BusinessConnection::class;
+	public function __construct(
+		/** Unique identifier of the business connection */
+		public string $business_connection_id,
+	) {
+	}
 }

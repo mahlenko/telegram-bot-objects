@@ -1,33 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\InlineModeInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents the <a href="#inputmessagecontent">content</a> of a contact
- * message to be sent as the result of an inline query.
+ * InputContactMessageContent
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents the content of a contact message to be sent as the result of an inline query.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class InputContactMessageContent extends TelegramType implements InlineModeInterface
+final readonly class InputContactMessageContent implements TelegramTypeInterface
 {
-    /** Contact's phone number */
-    public string $phone_number;
-
-    /** Contact's first name */
-    public string $first_name;
-
-    /** Optional. Contact's last name */
-    public ?string $last_name;
-
-    /**
-     * Optional. Additional data about the contact in the form of a vCard,
-     * 0-2048 bytes
-     */
-    public ?string $vcard;
+	public function __construct(
+		/** Contact's phone number */
+		public ?string $phone_number,
+		/** Contact's first name */
+		public ?string $first_name,
+		/** Contact's last name */
+		public string $last_name,
+		/** Additional data about the contact in the form of a vCard, 0-2048 bytes */
+		public string $vcard,
+	) {
+	}
 }

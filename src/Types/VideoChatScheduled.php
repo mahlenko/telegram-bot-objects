@@ -1,24 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents a service message about a video chat scheduled
- * in the chat.
+ * VideoChatScheduled
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents a service message about a video chat scheduled in the chat.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class VideoChatScheduled extends TelegramType implements TypesInterface
+final readonly class VideoChatScheduled implements TelegramTypeInterface
 {
-    /**
-     * Point in time (Unix timestamp) when the video chat is supposed to be
-     * started by a chat administrator
-     */
-    public int $start_date;
+	public function __construct(
+		/** Point in time (Unix timestamp) when the video chat is supposed to be started by a chat administrator */
+		public ?int $start_date,
+	) {
+	}
 }

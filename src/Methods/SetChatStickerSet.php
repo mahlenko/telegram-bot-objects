@@ -1,40 +1,26 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
+use TelegramBotCast\Interface\TelegramMethodInterface;
 
 /**
- * Use this method to set a new group sticker set for a supergroup. The
- * bot must be an administrator in the chat for this to work and must
- * have the appropriate administrator rights. Use the field
- * <em>can_set_sticker_set</em> optionally returned in <a
- * href="#getchat">getChat</a> requests to check if the bot can use this
- * method. Returns <em>True</em> on success.
+ * SetChatStickerSet
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to set a new group sticker set for a supergroup. The bot must be an administrator in the chat for this to work and must have the appropriate administrator rights. Use the field can_set_sticker_set optionally returned in getChat requests to check if the bot can use this method. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class SetChatStickerSet extends TelegramMethod implements MethodsInterface
+final readonly class SetChatStickerSet implements TelegramMethodInterface
 {
-    /**
-     * Unique identifier for the target chat or username of the target
-     * supergroup (in the format @supergroupusername)
-     */
-    public int|string $chat_id;
+	public const RESPONSE_TYPE = 'true';
 
-    /** Name of the sticker set to be set as the group sticker set */
-    public string $sticker_set_name;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['chat_id', 'sticker_set_name'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
+		public int|string $chat_id,
+		/** Name of the sticker set to be set as the group sticker set */
+		public string $sticker_set_name,
+	) {
+	}
 }

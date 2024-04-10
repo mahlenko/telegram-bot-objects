@@ -1,29 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\PaymentsInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * ShippingQuery
+ *
  * This object contains information about an incoming shipping query.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ShippingQuery extends TelegramType implements PaymentsInterface
+final readonly class ShippingQuery implements TelegramTypeInterface
 {
-    /** Unique query identifier */
-    public string $id;
-
-    /** User who sent the query */
-    public User $from;
-
-    /** Bot specified invoice payload */
-    public string $invoice_payload;
-
-    /** User specified shipping address */
-    public ShippingAddress $shipping_address;
+	public function __construct(
+		/** Unique query identifier */
+		public ?string $id,
+		/** User who sent the query */
+		public ?User $from,
+		/** Bot specified invoice payload */
+		public ?string $invoice_payload,
+		/** User specified shipping address */
+		public ?ShippingAddress $shipping_address,
+	) {
+	}
 }

@@ -1,38 +1,30 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\StickersInterface;
-use TelegramBot\TelegramMethod;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\string;
 
 /**
- * Use this method to change the list of emoji assigned to a regular or
- * custom emoji sticker. The sticker must belong to a sticker set created
- * by the bot. Returns <em>True</em> on success.
+ * SetStickerEmojiList
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to change the list of emoji assigned to a regular or custom emoji sticker. The sticker must belong to a sticker set created by the bot. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class SetStickerEmojiList extends TelegramMethod implements StickersInterface
+final readonly class SetStickerEmojiList implements TelegramMethodInterface
 {
-    /** File identifier of the sticker */
-    public string $sticker;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * A JSON-serialized list of 1-20 emoji associated with the sticker
-     *
-     * @var array<string>
-     */
-    public array $emoji_list;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['sticker', 'emoji_list'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** File identifier of the sticker */
+		public string $sticker,
+		/**
+		 * A JSON-serialized list of 1-20 emoji associated with the sticker
+		 * @var array<string>
+		 */
+		public array $emoji_list,
+	) {
+	}
 }

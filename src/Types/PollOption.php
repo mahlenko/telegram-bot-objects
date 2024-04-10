@@ -1,23 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * PollOption
+ *
  * This object contains information about one answer option in a poll.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class PollOption extends TelegramType implements TypesInterface
+final readonly class PollOption implements TelegramTypeInterface
 {
-    /** Option text, 1-100 characters */
-    public string $text;
-
-    /** Number of users that voted for this option */
-    public int $voter_count;
+	public function __construct(
+		/** Option text, 1-100 characters */
+		public ?string $text,
+		/** Number of users that voted for this option */
+		public ?int $voter_count,
+	) {
+	}
 }

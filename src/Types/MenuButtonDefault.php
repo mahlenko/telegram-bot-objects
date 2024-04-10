@@ -1,20 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * MenuButtonDefault
+ *
  * Describes that no specific value for the menu button was set.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MenuButtonDefault extends TelegramType implements TypesInterface
+final readonly class MenuButtonDefault implements TelegramTypeInterface
 {
-    /** Type of the button, must be default */
-    public string $type;
+	public function __construct(
+		/** Type of the button, must be default */
+		public ?string $type,
+	) {
+	}
 }

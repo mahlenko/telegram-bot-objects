@@ -1,29 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * ChatBoostRemoved
+ *
  * This object represents a boost removed from a chat.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ChatBoostRemoved extends TelegramType implements TypesInterface
+final readonly class ChatBoostRemoved implements TelegramTypeInterface
 {
-    /** Chat which was boosted */
-    public Chat $chat;
-
-    /** Unique identifier of the boost */
-    public string $boost_id;
-
-    /** Point in time (Unix timestamp) when the boost was removed */
-    public int $remove_date;
-
-    /** Source of the removed boost */
-    public ChatBoostSource $source;
+	public function __construct(
+		/** Chat which was boosted */
+		public ?Chat $chat,
+		/** Unique identifier of the boost */
+		public ?string $boost_id,
+		/** Point in time (Unix timestamp) when the boost was removed */
+		public ?int $remove_date,
+		/** Source of the removed boost */
+		public ?ChatBoostSource $source,
+	) {
+	}
 }

@@ -1,42 +1,26 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Upon receiving a message with this object, Telegram clients will
- * display a reply interface to the user (act as if the user has selected
- * the bot's message and tapped 'Reply'). This can be extremely useful if
- * you want to create user-friendly step-by-step interfaces without
- * having to sacrifice <a href="/bots/features#privacy-mode">privacy
- * mode</a>.
+ * ForceReply
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Upon receiving a message with this object, Telegram clients will display a reply interface to the user (act as if the user has selected the bot's message and tapped 'Reply'). This can be extremely useful if you want to create user-friendly step-by-step interfaces without having to sacrifice privacy mode.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ForceReply extends TelegramType implements TypesInterface
+final readonly class ForceReply implements TelegramTypeInterface
 {
-    /**
-     * Shows reply interface to the user, as if they manually selected the
-     * bot's message and tapped 'Reply'
-     */
-    public bool $force_reply;
-
-    /**
-     * Optional. The placeholder to be shown in the input field when the
-     * reply is active; 1-64 characters
-     */
-    public ?string $input_field_placeholder;
-
-    /**
-     * Optional. Use this parameter if you want to force reply from specific
-     * users only. Targets: 1) users that are @mentioned in the text of the
-     * Message object; 2) if the bot's message is a reply to a message in the
-     * same chat and forum topic, sender of the original message.
-     */
-    public ?bool $selective;
+	public function __construct(
+		/** Shows reply interface to the user, as if they manually selected the bot's message and tapped 'Reply' */
+		public ?true $force_reply,
+		/** The placeholder to be shown in the input field when the reply is active; 1-64 characters */
+		public string $input_field_placeholder,
+		/** Use this parameter if you want to force reply from specific users only. Targets: 1) users that are @mentioned in the text of the Message object; 2) if the bot's message is a reply to a message in the same chat and forum topic, sender of the original message. */
+		public bool $selective,
+	) {
+	}
 }

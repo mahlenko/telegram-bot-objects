@@ -1,20 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * BotName
+ *
  * This object represents the bot's name.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class BotName extends TelegramType implements TypesInterface
+final readonly class BotName implements TelegramTypeInterface
 {
-    /** The bot's name */
-    public string $name;
+	public function __construct(
+		/** The bot's name */
+		public ?string $name,
+	) {
+	}
 }

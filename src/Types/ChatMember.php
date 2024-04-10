@@ -1,19 +1,23 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object contains information about one member of a chat.
- * Currently, the following 6 types of chat members are supported:
+ * ChatMember
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object contains information about one member of a chat. Currently, the following 6 types of chat members are supported:
+ *  - ChatMemberOwner
+ *  - ChatMemberAdministrator
+ *  - ChatMemberMember
+ *  - ChatMemberRestricted
+ *  - ChatMemberLeft
+ *  - ChatMemberBanned
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ChatMember extends TelegramType implements TypesInterface
+final readonly class ChatMember implements TelegramTypeInterface
 {
 }

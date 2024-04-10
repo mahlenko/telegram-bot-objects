@@ -1,21 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents a service message about a change in auto-delete
- * timer settings.
+ * MessageAutoDeleteTimerChanged
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents a service message about a change in auto-delete timer settings.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MessageAutoDeleteTimerChanged extends TelegramType implements TypesInterface
+final readonly class MessageAutoDeleteTimerChanged implements TelegramTypeInterface
 {
-    /** New auto-delete time for messages in the chat; in seconds */
-    public int $message_auto_delete_time;
+	public function __construct(
+		/** New auto-delete time for messages in the chat; in seconds */
+		public ?int $message_auto_delete_time,
+	) {
+	}
 }

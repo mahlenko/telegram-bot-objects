@@ -1,26 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * ChatLocation
+ *
  * Represents a location to which a chat is connected.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ChatLocation extends TelegramType implements TypesInterface
+final readonly class ChatLocation implements TelegramTypeInterface
 {
-    /**
-     * The location to which the supergroup is connected. Can't be a live
-     * location.
-     */
-    public Location $location;
-
-    /** Location address; 1-64 characters, as defined by the chat owner */
-    public string $address;
+	public function __construct(
+		/** The location to which the supergroup is connected. Can't be a live location. */
+		public ?Location $location,
+		/** Location address; 1-64 characters, as defined by the chat owner */
+		public ?string $address,
+	) {
+	}
 }

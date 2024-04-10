@@ -1,30 +1,19 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\UpdatesInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\WebhookInfo;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\WebhookInfo;
 
 /**
- * Use this method to get current webhook status. Requires no parameters.
- * On success, returns a <a href="#webhookinfo">WebhookInfo</a> object.
- * If the bot is using <a href="#getupdates">getUpdates</a>, will return
- * an object with the <em>url</em> field empty.
+ * GetWebhookInfo
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get current webhook status. Requires no parameters. On success, returns a WebhookInfo object. If the bot is using getUpdates, will return an object with the url field empty.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetWebhookInfo extends TelegramMethod implements UpdatesInterface
+final readonly class GetWebhookInfo implements TelegramMethodInterface
 {
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = WebhookInfo::class;
+	public const RESPONSE_TYPE = WebhookInfo::class;
 }

@@ -1,24 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents a <a href="#chatmember">chat member</a> that has no
- * additional privileges or restrictions.
+ * ChatMemberMember
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents a chat member that has no additional privileges or restrictions.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ChatMemberMember extends TelegramType implements TypesInterface
+final readonly class ChatMemberMember implements TelegramTypeInterface
 {
-    /** The member's status in the chat, always “member” */
-    public string $status;
-
-    /** Information about the user */
-    public User $user;
+	public function __construct(
+		/** The member's status in the chat, always “member” */
+		public ?string $status,
+		/** Information about the user */
+		public ?User $user,
+	) {
+	}
 }

@@ -1,42 +1,29 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\StickersInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\InputSticker;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\InputSticker;
 
 /**
- * Use this method to add a new sticker to a set created by the bot.
- * Emoji sticker sets can have up to 200 stickers. Other sticker sets can
- * have up to 120 stickers. Returns <em>True</em> on success.
+ * AddStickerToSet
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to add a new sticker to a set created by the bot. Emoji sticker sets can have up to 200 stickers. Other sticker sets can have up to 120 stickers. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class AddStickerToSet extends TelegramMethod implements StickersInterface
+final readonly class AddStickerToSet implements TelegramMethodInterface
 {
-    /** User identifier of sticker set owner */
-    public int $user_id;
+	public const RESPONSE_TYPE = 'true';
 
-    /** Sticker set name */
-    public string $name;
-
-    /**
-     * A JSON-serialized object with information about the added sticker. If
-     * exactly the same sticker had already been added to the set, then the
-     * set isn't changed.
-     */
-    public InputSticker $sticker;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['user_id', 'name', 'sticker'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** User identifier of sticker set owner */
+		public int $user_id,
+		/** Sticker set name */
+		public string $name,
+		/** A JSON-serialized object with information about the added sticker. If exactly the same sticker had already been added to the set, then the set isn't changed. */
+		public InputSticker $sticker,
+	) {
+	}
 }

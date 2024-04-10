@@ -1,53 +1,31 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\UpdatingMessagesInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\InlineKeyboardMarkup;
-use TelegramBot\Types\Message;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\InlineKeyboardMarkup;
 
 /**
- * Use this method to edit only the reply markup of messages. On success,
- * if the edited message is not an inline message, the edited <a
- * href="#message">Message</a> is returned, otherwise <em>True</em> is
- * returned.
+ * EditMessageReplyMarkup
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to edit only the reply markup of messages. On success, if the edited message is not an inline message, the edited Message is returned, otherwise True is returned.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class EditMessageReplyMarkup extends TelegramMethod implements UpdatingMessagesInterface
+final readonly class EditMessageReplyMarkup implements TelegramMethodInterface
 {
-    /**
-     * Required if inline_message_id is not specified. Unique identifier for
-     * the target chat or username of the target channel (in the format
-     * @channelusername)
-     */
-    public int|string|null $chat_id;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * Required if inline_message_id is not specified. Identifier of the
-     * message to edit
-     */
-    public ?int $message_id;
-
-    /**
-     * Required if chat_id and message_id are not specified. Identifier of
-     * the inline message
-     */
-    public ?string $inline_message_id;
-
-    /** A JSON-serialized object for an inline keyboard. */
-    public ?InlineKeyboardMarkup $reply_markup;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** Required if inline_message_id is not specified. Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+		public int|string|null $chat_id,
+		/** Required if inline_message_id is not specified. Identifier of the message to edit */
+		public ?int $message_id,
+		/** Required if chat_id and message_id are not specified. Identifier of the inline message */
+		public ?string $inline_message_id,
+		/** A JSON-serialized object for an inline keyboard. */
+		public ?InlineKeyboardMarkup $reply_markup,
+	) {
+	}
 }

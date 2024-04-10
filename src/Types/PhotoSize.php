@@ -1,40 +1,30 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents one size of a photo or a <a
- * href="#document">file</a> / <a href="#sticker">sticker</a> thumbnail.
+ * PhotoSize
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents one size of a photo or a file / sticker thumbnail.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class PhotoSize extends TelegramType implements TypesInterface
+final readonly class PhotoSize implements TelegramTypeInterface
 {
-    /**
-     * Identifier for this file, which can be used to download or reuse the
-     * file
-     */
-    public string $file_id;
-
-    /**
-     * Unique identifier for this file, which is supposed to be the same over
-     * time and for different bots. Can't be used to download or reuse the
-     * file.
-     */
-    public string $file_unique_id;
-
-    /** Photo width */
-    public int $width;
-
-    /** Photo height */
-    public int $height;
-
-    /** Optional. File size in bytes */
-    public ?int $file_size;
+	public function __construct(
+		/** Identifier for this file, which can be used to download or reuse the file */
+		public ?string $file_id,
+		/** Unique identifier for this file, which is supposed to be the same over time and for different bots. Can't be used to download or reuse the file. */
+		public ?string $file_unique_id,
+		/** Photo width */
+		public ?int $width,
+		/** Photo height */
+		public ?int $height,
+		/** File size in bytes */
+		public int $file_size,
+	) {
+	}
 }

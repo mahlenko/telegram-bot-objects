@@ -1,29 +1,19 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\User;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\User;
 
 /**
- * A simple method for testing your bot's authentication token. Requires
- * no parameters. Returns basic information about the bot in form of a <a
- * href="#user">User</a> object.
+ * GetMe
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * A simple method for testing your bot's authentication token. Requires no parameters. Returns basic information about the bot in form of a User object.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetMe extends TelegramMethod implements MethodsInterface
+final readonly class GetMe implements TelegramMethodInterface
 {
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = User::class;
+	public const RESPONSE_TYPE = User::class;
 }

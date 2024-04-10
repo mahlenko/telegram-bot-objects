@@ -1,41 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\StickersInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object describes the position on faces where a mask should be
- * placed by default.
+ * MaskPosition
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object describes the position on faces where a mask should be placed by default.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MaskPosition extends TelegramType implements StickersInterface
+final readonly class MaskPosition implements TelegramTypeInterface
 {
-    /**
-     * The part of the face relative to which the mask should be placed. One
-     * of “forehead”, “eyes”, “mouth”, or “chin”.
-     */
-    public string $point;
-
-    /**
-     * Shift by X-axis measured in widths of the mask scaled to the face
-     * size, from left to right. For example, choosing -1.0 will place mask
-     * just to the left of the default mask position.
-     */
-    public float $x_shift;
-
-    /**
-     * Shift by Y-axis measured in heights of the mask scaled to the face
-     * size, from top to bottom. For example, 1.0 will place the mask just
-     * below the default mask position.
-     */
-    public float $y_shift;
-
-    /** Mask scaling coefficient. For example, 2.0 means double size. */
-    public float $scale;
+	public function __construct(
+		/** The part of the face relative to which the mask should be placed. One of “forehead”, “eyes”, “mouth”, or “chin”. */
+		public ?string $point,
+		/** Shift by X-axis measured in widths of the mask scaled to the face size, from left to right. For example, choosing -1.0 will place mask just to the left of the default mask position. */
+		public ?float $x_shift,
+		/** Shift by Y-axis measured in heights of the mask scaled to the face size, from top to bottom. For example, 1.0 will place the mask just below the default mask position. */
+		public ?float $y_shift,
+		/** Mask scaling coefficient. For example, 2.0 means double size. */
+		public ?float $scale,
+	) {
+	}
 }

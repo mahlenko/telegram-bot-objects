@@ -1,19 +1,17 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\GamesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * A placeholder, currently holds no information. Use <a
- * href="https://t.me/botfather">BotFather</a> to set up your game.
+ * CallbackGame
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * A placeholder, currently holds no information. Use BotFather to set up your game.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class CallbackGame extends TelegramType implements GamesInterface
+final readonly class CallbackGame implements TelegramTypeInterface
 {
 }

@@ -1,51 +1,33 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\BotCommand;
-use TelegramBot\Types\BotCommandScope;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\BotCommand;
+use TelegramBotCast\Types\BotCommandScope;
 
 /**
- * Use this method to change the list of the bot's commands. See <a
- * href="/bots/features#commands">this manual</a> for more details about
- * bot commands. Returns <em>True</em> on success.
+ * SetMyCommands
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to change the list of the bot's commands. See this manual for more details about bot commands. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class SetMyCommands extends TelegramMethod implements MethodsInterface
+final readonly class SetMyCommands implements TelegramMethodInterface
 {
-    /**
-     * A JSON-serialized list of bot commands to be set as the list of the
-     * bot's commands. At most 100 commands can be specified.
-     *
-     * @var array<BotCommand>
-     */
-    public array $commands;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * A JSON-serialized object, describing scope of users for which the
-     * commands are relevant. Defaults to BotCommandScopeDefault.
-     */
-    public ?BotCommandScope $scope;
-
-    /**
-     * A two-letter ISO 639-1 language code. If empty, commands will be
-     * applied to all users from the given scope, for whose language there
-     * are no dedicated commands
-     */
-    public ?string $language_code;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['commands'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/**
+		 * A JSON-serialized list of bot commands to be set as the list of the bot's commands. At most 100 commands can be specified.
+		 * @var array<BotCommand>
+		 */
+		public array $commands,
+		/** A JSON-serialized object, describing scope of users for which the commands are relevant. Defaults to BotCommandScopeDefault. */
+		public ?BotCommandScope $scope,
+		/** A two-letter ISO 639-1 language code. If empty, commands will be applied to all users from the given scope, for whose language there are no dedicated commands */
+		public ?string $language_code,
+	) {
+	}
 }

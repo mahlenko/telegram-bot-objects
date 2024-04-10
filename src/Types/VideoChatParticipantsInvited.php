@@ -1,25 +1,25 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents a service message about new members invited to
- * a video chat.
+ * VideoChatParticipantsInvited
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents a service message about new members invited to a video chat.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class VideoChatParticipantsInvited extends TelegramType implements TypesInterface
+final readonly class VideoChatParticipantsInvited implements TelegramTypeInterface
 {
-    /**
-     * New members that were invited to the video chat
-     *
-     * @var array<User>
-     */
-    public array $users;
+	public function __construct(
+		/**
+		 * New members that were invited to the video chat
+		 * @var array<User>
+		 */
+		public ?array $users,
+	) {
+	}
 }

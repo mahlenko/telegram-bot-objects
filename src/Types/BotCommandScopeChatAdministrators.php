@@ -1,27 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents the <a href="#botcommandscope">scope</a> of bot commands,
- * covering all administrators of a specific group or supergroup chat.
+ * BotCommandScopeChatAdministrators
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents the scope of bot commands, covering all administrators of a specific group or supergroup chat.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class BotCommandScopeChatAdministrators extends TelegramType implements TypesInterface
+final readonly class BotCommandScopeChatAdministrators implements TelegramTypeInterface
 {
-    /** Scope type, must be chat_administrators */
-    public string $type;
-
-    /**
-     * Unique identifier for the target chat or username of the target
-     * supergroup (in the format @supergroupusername)
-     */
-    public int|string $chat_id;
+	public function __construct(
+		/** Scope type, must be chat_administrators */
+		public ?string $type,
+		/** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
+		public int|string|null $chat_id,
+	) {
+	}
 }

@@ -1,20 +1,26 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TelegramPassportInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents an error in the Telegram Passport element which
- * was submitted that should be resolved by the user. It should be one
- * of:
+ * PassportElementError
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents an error in the Telegram Passport element which was submitted that should be resolved by the user. It should be one of:
+ *  - PassportElementErrorDataField
+ *  - PassportElementErrorFrontSide
+ *  - PassportElementErrorReverseSide
+ *  - PassportElementErrorSelfie
+ *  - PassportElementErrorFile
+ *  - PassportElementErrorFiles
+ *  - PassportElementErrorTranslationFile
+ *  - PassportElementErrorTranslationFiles
+ *  - PassportElementErrorUnspecified
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class PassportElementError extends TelegramType implements TelegramPassportInterface
+final readonly class PassportElementError implements TelegramTypeInterface
 {
 }

@@ -1,30 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Describes data sent from a <a href="/bots/webapps">Web App</a> to the
- * bot.
+ * WebAppData
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Describes data sent from a Web App to the bot.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class WebAppData extends TelegramType implements TypesInterface
+final readonly class WebAppData implements TelegramTypeInterface
 {
-    /**
-     * The data. Be aware that a bad client can send arbitrary data in this
-     * field.
-     */
-    public string $data;
-
-    /**
-     * Text of the web_app keyboard button from which the Web App was opened.
-     * Be aware that a bad client can send arbitrary data in this field.
-     */
-    public string $button_text;
+	public function __construct(
+		/** The data. Be aware that a bad client can send arbitrary data in this field. */
+		public ?string $data,
+		/** Text of the web_app keyboard button from which the Web App was opened. Be aware that a bad client can send arbitrary data in this field. */
+		public ?string $button_text,
+	) {
+	}
 }

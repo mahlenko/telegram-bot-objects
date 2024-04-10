@@ -1,21 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents a service message about a video chat ended in
- * the chat.
+ * VideoChatEnded
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents a service message about a video chat ended in the chat.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class VideoChatEnded extends TelegramType implements TypesInterface
+final readonly class VideoChatEnded implements TelegramTypeInterface
 {
-    /** Video chat duration in seconds */
-    public int $duration;
+	public function __construct(
+		/** Video chat duration in seconds */
+		public ?int $duration,
+	) {
+	}
 }

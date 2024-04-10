@@ -1,18 +1,21 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object describes the origin of a message. It can be one of
+ * MessageOrigin
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object describes the origin of a message. It can be one of
+ *  - MessageOriginUser
+ *  - MessageOriginHiddenUser
+ *  - MessageOriginChat
+ *  - MessageOriginChannel
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MessageOrigin extends TelegramType implements TypesInterface
+final readonly class MessageOrigin implements TelegramTypeInterface
 {
 }
