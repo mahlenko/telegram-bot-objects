@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class SetStickerSetTitle implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Sticker set name */
-		public ?string $name,
-		/** Sticker set title, 1-64 characters */
-		public ?string $title,
-	) {
-	}
+    public function __construct(
+        /** Sticker set name */
+        public ?string $name,
+        /** Sticker set title, 1-64 characters */
+        public ?string $title,
+    ) {
+    }
 }

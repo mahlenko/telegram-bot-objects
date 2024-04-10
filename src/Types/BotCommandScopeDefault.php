@@ -14,9 +14,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BotCommandScopeDefault implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Scope type, must be default */
-		public string $type,
-	) {
-	}
+    public function __construct(
+        /** Scope type, must be default */
+        public string $type,
+    ) {
+    }
 }

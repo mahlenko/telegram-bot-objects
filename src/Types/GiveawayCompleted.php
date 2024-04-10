@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class GiveawayCompleted implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Number of winners in the giveaway */
-		public int $winner_count,
-		/** Number of undistributed prizes */
-		public ?int $unclaimed_prize_count,
-		/** Message with the giveaway that was completed, if it wasn't deleted */
-		public ?Message $giveaway_message,
-	) {
-	}
+    public function __construct(
+        /** Number of winners in the giveaway */
+        public int $winner_count,
+        /** Number of undistributed prizes */
+        public ?int $unclaimed_prize_count,
+        /** Message with the giveaway that was completed, if it wasn't deleted */
+        public ?Message $giveaway_message,
+    ) {
+    }
 }

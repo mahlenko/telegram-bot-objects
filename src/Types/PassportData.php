@@ -14,14 +14,14 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class PassportData implements TelegramTypeInterface
 {
-	public function __construct(
-		/**
-		 * Array with information about documents and other Telegram Passport elements that was shared with the bot
-		 * @var array<EncryptedPassportElement>
-		 */
-		public array $data,
-		/** Encrypted credentials required to decrypt the data */
-		public EncryptedCredentials $credentials,
-	) {
-	}
+    public function __construct(
+        /**
+         * Array with information about documents and other Telegram Passport elements that was shared with the bot
+         * @var array<EncryptedPassportElement>
+         */
+        public array $data,
+        /** Encrypted credentials required to decrypt the data */
+        public EncryptedCredentials $credentials,
+    ) {
+    }
 }

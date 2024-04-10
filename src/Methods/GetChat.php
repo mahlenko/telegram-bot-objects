@@ -15,11 +15,11 @@ use TelegramBotCast\Types\Chat;
  */
 final readonly class GetChat implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = Chat::class;
+    public const RESPONSE_TYPE = Chat::class;
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+    ) {
+    }
 }

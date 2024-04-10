@@ -15,11 +15,11 @@ use TelegramBotCast\Types\ChatAdministratorRights;
  */
 final readonly class GetMyDefaultAdministratorRights implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = ChatAdministratorRights::class;
+    public const RESPONSE_TYPE = ChatAdministratorRights::class;
 
-	public function __construct(
-		/** Pass True to get default administrator rights of the bot in channels. Otherwise, default administrator rights of the bot for groups and supergroups will be returned. */
-		public bool $for_channels,
-	) {
-	}
+    public function __construct(
+        /** Pass True to get default administrator rights of the bot in channels. Otherwise, default administrator rights of the bot for groups and supergroups will be returned. */
+        public bool $for_channels,
+    ) {
+    }
 }

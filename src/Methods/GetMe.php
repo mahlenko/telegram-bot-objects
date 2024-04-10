@@ -15,5 +15,5 @@ use TelegramBotCast\Types\User;
  */
 final readonly class GetMe implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = User::class;
+    public const RESPONSE_TYPE = User::class;
 }

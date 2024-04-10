@@ -16,15 +16,15 @@ use TelegramBotCast\Types\Poll;
  */
 final readonly class StopPoll implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = Poll::class;
+    public const RESPONSE_TYPE = Poll::class;
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** Identifier of the original message with the poll */
-		public ?int $message_id,
-		/** A JSON-serialized object for a new message inline keyboard. */
-		public InlineKeyboardMarkup $reply_markup,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** Identifier of the original message with the poll */
+        public ?int $message_id,
+        /** A JSON-serialized object for a new message inline keyboard. */
+        public InlineKeyboardMarkup $reply_markup,
+    ) {
+    }
 }

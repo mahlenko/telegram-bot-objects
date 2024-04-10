@@ -14,15 +14,15 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class MessageOriginChat implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Type of the message origin, always “chat” */
-		public string $type,
-		/** Date the message was sent originally in Unix time */
-		public int $date,
-		/** Chat that sent the message originally */
-		public Chat $sender_chat,
-		/** For messages originally sent by an anonymous chat administrator, original message author signature */
-		public ?string $author_signature,
-	) {
-	}
+    public function __construct(
+        /** Type of the message origin, always “chat” */
+        public string $type,
+        /** Date the message was sent originally in Unix time */
+        public int $date,
+        /** Chat that sent the message originally */
+        public Chat $sender_chat,
+        /** For messages originally sent by an anonymous chat administrator, original message author signature */
+        public ?string $author_signature,
+    ) {
+    }
 }

@@ -14,9 +14,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BotCommandScopeAllChatAdministrators implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Scope type, must be all_chat_administrators */
-		public string $type,
-	) {
-	}
+    public function __construct(
+        /** Scope type, must be all_chat_administrators */
+        public string $type,
+    ) {
+    }
 }

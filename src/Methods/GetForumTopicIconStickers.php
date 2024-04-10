@@ -15,5 +15,5 @@ use TelegramBotCast\Types\Sticker;
  */
 final readonly class GetForumTopicIconStickers implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = [Sticker::class];
+    public const RESPONSE_TYPE = [Sticker::class];
 }

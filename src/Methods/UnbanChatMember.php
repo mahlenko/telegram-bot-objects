@@ -14,15 +14,15 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class UnbanChatMember implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Unique identifier for the target group or username of the target supergroup or channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** Unique identifier of the target user */
-		public ?int $user_id,
-		/** Do nothing if the user is not banned */
-		public bool $only_if_banned,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target group or username of the target supergroup or channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** Unique identifier of the target user */
+        public ?int $user_id,
+        /** Do nothing if the user is not banned */
+        public bool $only_if_banned,
+    ) {
+    }
 }

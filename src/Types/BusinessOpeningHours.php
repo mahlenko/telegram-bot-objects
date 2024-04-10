@@ -12,14 +12,14 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BusinessOpeningHours implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Unique name of the time zone for which the opening hours are defined */
-		public string $time_zone_name,
-		/**
-		 * List of time intervals describing business opening hours
-		 * @var array<BusinessOpeningHoursInterval>
-		 */
-		public array $opening_hours,
-	) {
-	}
+    public function __construct(
+        /** Unique name of the time zone for which the opening hours are defined */
+        public string $time_zone_name,
+        /**
+         * List of time intervals describing business opening hours
+         * @var array<BusinessOpeningHoursInterval>
+         */
+        public array $opening_hours,
+    ) {
+    }
 }

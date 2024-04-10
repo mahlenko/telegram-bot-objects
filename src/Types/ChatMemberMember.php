@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ChatMemberMember implements TelegramTypeInterface
 {
-	public function __construct(
-		/** The member's status in the chat, always “member” */
-		public string $status,
-		/** Information about the user */
-		public User $user,
-	) {
-	}
+    public function __construct(
+        /** The member's status in the chat, always “member” */
+        public string $status,
+        /** Information about the user */
+        public User $user,
+    ) {
+    }
 }

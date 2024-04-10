@@ -14,5 +14,5 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class LogOut implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 }

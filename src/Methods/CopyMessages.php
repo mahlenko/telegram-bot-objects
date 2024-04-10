@@ -15,26 +15,26 @@ use TelegramBotCast\Types\MessageId;
  */
 final readonly class CopyMessages implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = [MessageId::class];
+    public const RESPONSE_TYPE = [MessageId::class];
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
-		public int $message_thread_id,
-		/** Unique identifier for the chat where the original messages were sent (or channel username in the format @channelusername) */
-		public int|string|null $from_chat_id,
-		/**
-		 * A JSON-serialized list of 1-100 identifiers of messages in the chat from_chat_id to copy. The identifiers must be specified in a strictly increasing order.
-		 * @var array<int>
-		 */
-		public ?array $message_ids,
-		/** Sends the messages silently. Users will receive a notification with no sound. */
-		public bool $disable_notification,
-		/** Protects the contents of the sent messages from forwarding and saving */
-		public bool $protect_content,
-		/** Pass True to copy the messages without their captions */
-		public bool $remove_caption,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
+        public int $message_thread_id,
+        /** Unique identifier for the chat where the original messages were sent (or channel username in the format @channelusername) */
+        public int|string|null $from_chat_id,
+        /**
+         * A JSON-serialized list of 1-100 identifiers of messages in the chat from_chat_id to copy. The identifiers must be specified in a strictly increasing order.
+         * @var array<int>
+         */
+        public ?array $message_ids,
+        /** Sends the messages silently. Users will receive a notification with no sound. */
+        public bool $disable_notification,
+        /** Protects the contents of the sent messages from forwarding and saving */
+        public bool $protect_content,
+        /** Pass True to copy the messages without their captions */
+        public bool $remove_caption,
+    ) {
+    }
 }

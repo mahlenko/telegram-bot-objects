@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ChatBoostSourcePremium implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Source of the boost, always “premium” */
-		public string $source,
-		/** User that boosted the chat */
-		public User $user,
-	) {
-	}
+    public function __construct(
+        /** Source of the boost, always “premium” */
+        public string $source,
+        /** User that boosted the chat */
+        public User $user,
+    ) {
+    }
 }

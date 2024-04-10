@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class DeleteWebhook implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Pass True to drop all pending updates */
-		public bool $drop_pending_updates,
-	) {
-	}
+    public function __construct(
+        /** Pass True to drop all pending updates */
+        public bool $drop_pending_updates,
+    ) {
+    }
 }

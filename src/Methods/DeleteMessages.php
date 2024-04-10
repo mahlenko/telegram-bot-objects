@@ -14,16 +14,16 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class DeleteMessages implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/**
-		 * A JSON-serialized list of 1-100 identifiers of messages to delete. See deleteMessage for limitations on which messages can be deleted
-		 * @var array<int>
-		 */
-		public ?array $message_ids,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /**
+         * A JSON-serialized list of 1-100 identifiers of messages to delete. See deleteMessage for limitations on which messages can be deleted
+         * @var array<int>
+         */
+        public ?array $message_ids,
+    ) {
+    }
 }

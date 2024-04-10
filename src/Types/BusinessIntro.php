@@ -12,13 +12,13 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BusinessIntro implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Title text of the business intro */
-		public ?string $title,
-		/** Message text of the business intro */
-		public ?string $message,
-		/** Sticker of the business intro */
-		public ?Sticker $sticker,
-	) {
-	}
+    public function __construct(
+        /** Title text of the business intro */
+        public ?string $title,
+        /** Message text of the business intro */
+        public ?string $message,
+        /** Sticker of the business intro */
+        public ?Sticker $sticker,
+    ) {
+    }
 }

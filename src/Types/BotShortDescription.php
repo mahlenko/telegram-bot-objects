@@ -14,9 +14,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BotShortDescription implements TelegramTypeInterface
 {
-	public function __construct(
-		/** The bot's short description */
-		public string $short_description,
-	) {
-	}
+    public function __construct(
+        /** The bot's short description */
+        public string $short_description,
+    ) {
+    }
 }

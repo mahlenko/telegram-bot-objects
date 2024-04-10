@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class GameHighScore implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Position in high score table for the game */
-		public int $position,
-		/** User */
-		public User $user,
-		/** Score */
-		public int $score,
-	) {
-	}
+    public function __construct(
+        /** Position in high score table for the game */
+        public int $position,
+        /** User */
+        public User $user,
+        /** Score */
+        public int $score,
+    ) {
+    }
 }

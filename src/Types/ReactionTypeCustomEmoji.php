@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ReactionTypeCustomEmoji implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Type of the reaction, always “custom_emoji” */
-		public string $type,
-		/** Custom emoji identifier */
-		public string $custom_emoji_id,
-	) {
-	}
+    public function __construct(
+        /** Type of the reaction, always “custom_emoji” */
+        public string $type,
+        /** Custom emoji identifier */
+        public string $custom_emoji_id,
+    ) {
+    }
 }

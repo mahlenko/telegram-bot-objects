@@ -15,11 +15,11 @@ use TelegramBotCast\Types\File;
  */
 final readonly class GetFile implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = File::class;
+    public const RESPONSE_TYPE = File::class;
 
-	public function __construct(
-		/** File identifier to get information about */
-		public ?string $file_id,
-	) {
-	}
+    public function __construct(
+        /** File identifier to get information about */
+        public ?string $file_id,
+    ) {
+    }
 }

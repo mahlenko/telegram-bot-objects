@@ -15,11 +15,11 @@ use TelegramBotCast\Types\BusinessConnection;
  */
 final readonly class GetBusinessConnection implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = BusinessConnection::class;
+    public const RESPONSE_TYPE = BusinessConnection::class;
 
-	public function __construct(
-		/** Unique identifier of the business connection */
-		public ?string $business_connection_id,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier of the business connection */
+        public ?string $business_connection_id,
+    ) {
+    }
 }

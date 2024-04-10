@@ -14,16 +14,16 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class SetStickerEmojiList implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** File identifier of the sticker */
-		public ?string $sticker,
-		/**
-		 * A JSON-serialized list of 1-20 emoji associated with the sticker
-		 * @var array<string>
-		 */
-		public ?array $emoji_list,
-	) {
-	}
+    public function __construct(
+        /** File identifier of the sticker */
+        public ?string $sticker,
+        /**
+         * A JSON-serialized list of 1-20 emoji associated with the sticker
+         * @var array<string>
+         */
+        public ?array $emoji_list,
+    ) {
+    }
 }

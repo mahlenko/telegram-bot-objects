@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class DeleteStickerFromSet implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** File identifier of the sticker */
-		public ?string $sticker,
-	) {
-	}
+    public function __construct(
+        /** File identifier of the sticker */
+        public ?string $sticker,
+    ) {
+    }
 }

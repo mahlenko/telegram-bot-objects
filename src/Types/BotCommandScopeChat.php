@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BotCommandScopeChat implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Scope type, must be chat */
-		public string $type,
-		/** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
-		public int|string $chat_id,
-	) {
-	}
+    public function __construct(
+        /** Scope type, must be chat */
+        public string $type,
+        /** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
+        public int|string $chat_id,
+    ) {
+    }
 }

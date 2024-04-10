@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ChatBoostSourceGiftCode implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Source of the boost, always “gift_code” */
-		public string $source,
-		/** User for which the gift code was created */
-		public User $user,
-	) {
-	}
+    public function __construct(
+        /** Source of the boost, always “gift_code” */
+        public string $source,
+        /** User for which the gift code was created */
+        public User $user,
+    ) {
+    }
 }

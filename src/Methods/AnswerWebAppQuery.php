@@ -16,13 +16,13 @@ use TelegramBotCast\Types\SentWebAppMessage;
  */
 final readonly class AnswerWebAppQuery implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = SentWebAppMessage::class;
+    public const RESPONSE_TYPE = SentWebAppMessage::class;
 
-	public function __construct(
-		/** Unique identifier for the query to be answered */
-		public ?string $web_app_query_id,
-		/** A JSON-serialized object describing the message to be sent */
-		public ?InlineQueryResult $result,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the query to be answered */
+        public ?string $web_app_query_id,
+        /** A JSON-serialized object describing the message to be sent */
+        public ?InlineQueryResult $result,
+    ) {
+    }
 }

@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class DeleteMessage implements TelegramMethodInterface
 {
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** Identifier of the message to delete */
-		public ?int $message_id,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** Identifier of the message to delete */
+        public ?int $message_id,
+    ) {
+    }
 }

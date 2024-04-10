@@ -14,9 +14,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class MessageAutoDeleteTimerChanged implements TelegramTypeInterface
 {
-	public function __construct(
-		/** New auto-delete time for messages in the chat; in seconds */
-		public int $message_auto_delete_time,
-	) {
-	}
+    public function __construct(
+        /** New auto-delete time for messages in the chat; in seconds */
+        public int $message_auto_delete_time,
+    ) {
+    }
 }

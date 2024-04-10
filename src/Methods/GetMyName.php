@@ -15,11 +15,11 @@ use TelegramBotCast\Types\BotName;
  */
 final readonly class GetMyName implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = BotName::class;
+    public const RESPONSE_TYPE = BotName::class;
 
-	public function __construct(
-		/** A two-letter ISO 639-1 language code or an empty string */
-		public string $language_code,
-	) {
-	}
+    public function __construct(
+        /** A two-letter ISO 639-1 language code or an empty string */
+        public string $language_code,
+    ) {
+    }
 }

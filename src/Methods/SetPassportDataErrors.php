@@ -16,16 +16,16 @@ use TelegramBotCast\Types\PassportElementError;
  */
 final readonly class SetPassportDataErrors implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** User identifier */
-		public ?int $user_id,
-		/**
-		 * A JSON-serialized array describing the errors
-		 * @var array<PassportElementError>
-		 */
-		public ?array $errors,
-	) {
-	}
+    public function __construct(
+        /** User identifier */
+        public ?int $user_id,
+        /**
+         * A JSON-serialized array describing the errors
+         * @var array<PassportElementError>
+         */
+        public ?array $errors,
+    ) {
+    }
 }

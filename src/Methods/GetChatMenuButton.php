@@ -15,11 +15,11 @@ use TelegramBotCast\Types\MenuButton;
  */
 final readonly class GetChatMenuButton implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = MenuButton::class;
+    public const RESPONSE_TYPE = MenuButton::class;
 
-	public function __construct(
-		/** Unique identifier for the target private chat. If not specified, default bot's menu button will be returned */
-		public int $chat_id,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target private chat. If not specified, default bot's menu button will be returned */
+        public int $chat_id,
+    ) {
+    }
 }

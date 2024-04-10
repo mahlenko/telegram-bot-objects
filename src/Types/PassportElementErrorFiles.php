@@ -14,18 +14,18 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class PassportElementErrorFiles implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Error source, must be files */
-		public string $source,
-		/** The section of the user's Telegram Passport which has the issue, one of “utility_bill”, “bank_statement”, “rental_agreement”, “passport_registration”, “temporary_registration” */
-		public string $type,
-		/**
-		 * List of base64-encoded file hashes
-		 * @var array<string>
-		 */
-		public array $file_hashes,
-		/** Error message */
-		public string $message,
-	) {
-	}
+    public function __construct(
+        /** Error source, must be files */
+        public string $source,
+        /** The section of the user's Telegram Passport which has the issue, one of “utility_bill”, “bank_statement”, “rental_agreement”, “passport_registration”, “temporary_registration” */
+        public string $type,
+        /**
+         * List of base64-encoded file hashes
+         * @var array<string>
+         */
+        public array $file_hashes,
+        /** Error message */
+        public string $message,
+    ) {
+    }
 }

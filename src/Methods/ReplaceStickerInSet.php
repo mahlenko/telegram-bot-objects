@@ -15,17 +15,17 @@ use TelegramBotCast\Types\InputSticker;
  */
 final readonly class ReplaceStickerInSet implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** User identifier of the sticker set owner */
-		public ?int $user_id,
-		/** Sticker set name */
-		public ?string $name,
-		/** File identifier of the replaced sticker */
-		public ?string $old_sticker,
-		/** A JSON-serialized object with information about the added sticker. If exactly the same sticker had already been added to the set, then the set remains unchanged. */
-		public ?InputSticker $sticker,
-	) {
-	}
+    public function __construct(
+        /** User identifier of the sticker set owner */
+        public ?int $user_id,
+        /** Sticker set name */
+        public ?string $name,
+        /** File identifier of the replaced sticker */
+        public ?string $old_sticker,
+        /** A JSON-serialized object with information about the added sticker. If exactly the same sticker had already been added to the set, then the set remains unchanged. */
+        public ?InputSticker $sticker,
+    ) {
+    }
 }

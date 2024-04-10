@@ -15,13 +15,13 @@ use TelegramBotCast\Types\InputFile;
  */
 final readonly class SetChatPhoto implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** New chat photo, uploaded using multipart/form-data */
-		public ?InputFile $photo,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** New chat photo, uploaded using multipart/form-data */
+        public ?InputFile $photo,
+    ) {
+    }
 }

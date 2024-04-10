@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ProximityAlertTriggered implements TelegramTypeInterface
 {
-	public function __construct(
-		/** User that triggered the alert */
-		public User $traveler,
-		/** User that set the alert */
-		public User $watcher,
-		/** The distance between the users */
-		public int $distance,
-	) {
-	}
+    public function __construct(
+        /** User that triggered the alert */
+        public User $traveler,
+        /** User that set the alert */
+        public User $watcher,
+        /** The distance between the users */
+        public int $distance,
+    ) {
+    }
 }

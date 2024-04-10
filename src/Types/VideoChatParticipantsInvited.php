@@ -14,12 +14,12 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class VideoChatParticipantsInvited implements TelegramTypeInterface
 {
-	public function __construct(
-		/**
-		 * New members that were invited to the video chat
-		 * @var array<User>
-		 */
-		public array $users,
-	) {
-	}
+    public function __construct(
+        /**
+         * New members that were invited to the video chat
+         * @var array<User>
+         */
+        public array $users,
+    ) {
+    }
 }

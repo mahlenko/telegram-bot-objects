@@ -14,9 +14,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class MenuButtonCommands implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Type of the button, must be commands */
-		public string $type,
-	) {
-	}
+    public function __construct(
+        /** Type of the button, must be commands */
+        public string $type,
+    ) {
+    }
 }

@@ -15,11 +15,11 @@ use TelegramBotCast\Types\BotShortDescription;
  */
 final readonly class GetMyShortDescription implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = BotShortDescription::class;
+    public const RESPONSE_TYPE = BotShortDescription::class;
 
-	public function __construct(
-		/** A two-letter ISO 639-1 language code or an empty string */
-		public string $language_code,
-	) {
-	}
+    public function __construct(
+        /** A two-letter ISO 639-1 language code or an empty string */
+        public string $language_code,
+    ) {
+    }
 }

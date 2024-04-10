@@ -12,11 +12,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class BusinessLocation implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Address of the business */
-		public string $address,
-		/** Location of the business */
-		public ?Location $location,
-	) {
-	}
+    public function __construct(
+        /** Address of the business */
+        public string $address,
+        /** Location of the business */
+        public ?Location $location,
+    ) {
+    }
 }

@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class DeclineChatJoinRequest implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** Unique identifier of the target user */
-		public ?int $user_id,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** Unique identifier of the target user */
+        public ?int $user_id,
+    ) {
+    }
 }

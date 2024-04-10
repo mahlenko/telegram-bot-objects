@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ChatBoostUpdated implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Chat which was boosted */
-		public Chat $chat,
-		/** Information about the chat boost */
-		public ChatBoost $boost,
-	) {
-	}
+    public function __construct(
+        /** Chat which was boosted */
+        public Chat $chat,
+        /** Information about the chat boost */
+        public ChatBoost $boost,
+    ) {
+    }
 }

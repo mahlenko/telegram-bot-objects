@@ -14,9 +14,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class VideoChatEnded implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Video chat duration in seconds */
-		public int $duration,
-	) {
-	}
+    public function __construct(
+        /** Video chat duration in seconds */
+        public int $duration,
+    ) {
+    }
 }

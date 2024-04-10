@@ -15,7 +15,7 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class AccentColors implements TelegramTypeInterface
 {
-	public function __construct()
-	{
-	}
+    public function __construct()
+    {
+    }
 }

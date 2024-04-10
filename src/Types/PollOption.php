@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class PollOption implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Option text, 1-100 characters */
-		public string $text,
-		/** Number of users that voted for this option */
-		public int $voter_count,
-	) {
-	}
+    public function __construct(
+        /** Option text, 1-100 characters */
+        public string $text,
+        /** Number of users that voted for this option */
+        public int $voter_count,
+    ) {
+    }
 }

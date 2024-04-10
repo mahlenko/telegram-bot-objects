@@ -14,15 +14,15 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class PinChatMessage implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** Identifier of a message to pin */
-		public ?int $message_id,
-		/** Pass True if it is not necessary to send a notification to all chat members about the new pinned message. Notifications are always disabled in channels and private chats. */
-		public bool $disable_notification,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** Identifier of a message to pin */
+        public ?int $message_id,
+        /** Pass True if it is not necessary to send a notification to all chat members about the new pinned message. Notifications are always disabled in channels and private chats. */
+        public bool $disable_notification,
+    ) {
+    }
 }

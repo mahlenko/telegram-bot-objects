@@ -14,14 +14,14 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class UserProfilePhotos implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Total number of profile pictures the target user has */
-		public int $total_count,
-		/**
-		 * Requested profile pictures (in up to 4 sizes each)
-		 * @var array<PhotoSize>
-		 */
-		public array $photos,
-	) {
-	}
+    public function __construct(
+        /** Total number of profile pictures the target user has */
+        public int $total_count,
+        /**
+         * Requested profile pictures (in up to 4 sizes each)
+         * @var array<PhotoSize>
+         */
+        public array $photos,
+    ) {
+    }
 }

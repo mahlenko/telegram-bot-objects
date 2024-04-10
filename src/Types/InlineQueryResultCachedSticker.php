@@ -14,17 +14,17 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class InlineQueryResultCachedSticker implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Type of the result, must be sticker */
-		public string $type,
-		/** Unique identifier for this result, 1-64 bytes */
-		public string $id,
-		/** A valid file identifier of the sticker */
-		public string $sticker_file_id,
-		/** Inline keyboard attached to the message */
-		public ?InlineKeyboardMarkup $reply_markup,
-		/** Content of the message to be sent instead of the sticker */
-		public ?InputMessageContent $input_message_content,
-	) {
-	}
+    public function __construct(
+        /** Type of the result, must be sticker */
+        public string $type,
+        /** Unique identifier for this result, 1-64 bytes */
+        public string $id,
+        /** A valid file identifier of the sticker */
+        public string $sticker_file_id,
+        /** Inline keyboard attached to the message */
+        public ?InlineKeyboardMarkup $reply_markup,
+        /** Content of the message to be sent instead of the sticker */
+        public ?InputMessageContent $input_message_content,
+    ) {
+    }
 }

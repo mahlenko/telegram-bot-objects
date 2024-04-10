@@ -15,14 +15,14 @@ use TelegramBotCast\Types\Sticker;
  */
 final readonly class GetCustomEmojiStickers implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = [Sticker::class];
+    public const RESPONSE_TYPE = [Sticker::class];
 
-	public function __construct(
-		/**
-		 * A JSON-serialized list of custom emoji identifiers. At most 200 custom emoji identifiers can be specified.
-		 * @var array<string>
-		 */
-		public ?array $custom_emoji_ids,
-	) {
-	}
+    public function __construct(
+        /**
+         * A JSON-serialized list of custom emoji identifiers. At most 200 custom emoji identifiers can be specified.
+         * @var array<string>
+         */
+        public ?array $custom_emoji_ids,
+    ) {
+    }
 }

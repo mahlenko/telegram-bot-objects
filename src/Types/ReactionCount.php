@@ -14,11 +14,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  */
 final readonly class ReactionCount implements TelegramTypeInterface
 {
-	public function __construct(
-		/** Type of the reaction */
-		public ReactionType $type,
-		/** Number of times the reaction was added */
-		public int $total_count,
-	) {
-	}
+    public function __construct(
+        /** Type of the reaction */
+        public ReactionType $type,
+        /** Number of times the reaction was added */
+        public int $total_count,
+    ) {
+    }
 }

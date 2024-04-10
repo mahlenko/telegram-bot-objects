@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class SetChatDescription implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string|null $chat_id,
-		/** New chat description, 0-255 characters */
-		public string $description,
-	) {
-	}
+    public function __construct(
+        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        public int|string|null $chat_id,
+        /** New chat description, 0-255 characters */
+        public string $description,
+    ) {
+    }
 }

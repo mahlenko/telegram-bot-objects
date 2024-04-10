@@ -15,11 +15,11 @@ use TelegramBotCast\Types\StickerSet;
  */
 final readonly class GetStickerSet implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = StickerSet::class;
+    public const RESPONSE_TYPE = StickerSet::class;
 
-	public function __construct(
-		/** Name of the sticker set */
-		public ?string $name,
-	) {
-	}
+    public function __construct(
+        /** Name of the sticker set */
+        public ?string $name,
+    ) {
+    }
 }

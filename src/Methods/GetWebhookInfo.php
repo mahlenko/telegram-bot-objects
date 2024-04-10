@@ -15,5 +15,5 @@ use TelegramBotCast\Types\WebhookInfo;
  */
 final readonly class GetWebhookInfo implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = WebhookInfo::class;
+    public const RESPONSE_TYPE = WebhookInfo::class;
 }

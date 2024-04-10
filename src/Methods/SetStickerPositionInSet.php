@@ -14,13 +14,13 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
  */
 final readonly class SetStickerPositionInSet implements TelegramMethodInterface
 {
-	public const RESPONSE_TYPE = 'true';
+    public const RESPONSE_TYPE = 'true';
 
-	public function __construct(
-		/** File identifier of the sticker */
-		public ?string $sticker,
-		/** New sticker position in the set, zero-based */
-		public ?int $position,
-	) {
-	}
+    public function __construct(
+        /** File identifier of the sticker */
+        public ?string $sticker,
+        /** New sticker position in the set, zero-based */
+        public ?int $position,
+    ) {
+    }
 }
