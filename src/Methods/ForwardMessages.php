@@ -3,7 +3,6 @@ namespace TelegramBotCast\Methods;
 
 use TelegramBotCast\Interface\TelegramMethodInterface;
 use TelegramBotCast\Types\MessageId;
-use TelegramBotCast\Types\int;
 
 /**
  * ForwardMessages

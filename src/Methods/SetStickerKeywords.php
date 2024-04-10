@@ -2,7 +2,6 @@
 namespace TelegramBotCast\Methods;
 
 use TelegramBotCast\Interface\TelegramMethodInterface;
-use TelegramBotCast\Types\string;
 
 /**
  * SetStickerKeywords

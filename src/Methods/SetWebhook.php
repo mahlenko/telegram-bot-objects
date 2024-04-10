@@ -3,7 +3,6 @@ namespace TelegramBotCast\Methods;
 
 use TelegramBotCast\Interface\TelegramMethodInterface;
 use TelegramBotCast\Types\InputFile;
-use TelegramBotCast\Types\string;
 
 /**
  * SetWebhook

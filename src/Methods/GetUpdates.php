@@ -3,7 +3,6 @@ namespace TelegramBotCast\Methods;
 
 use TelegramBotCast\Interface\TelegramMethodInterface;
 use TelegramBotCast\Types\Update;
-use TelegramBotCast\Types\string;
 
 /**
  * GetUpdates

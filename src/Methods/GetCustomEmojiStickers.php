@@ -3,7 +3,6 @@ namespace TelegramBotCast\Methods;
 
 use TelegramBotCast\Interface\TelegramMethodInterface;
 use TelegramBotCast\Types\Sticker;
-use TelegramBotCast\Types\string;
 
 /**
  * GetCustomEmojiStickers

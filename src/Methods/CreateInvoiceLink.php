@@ -3,7 +3,6 @@ namespace TelegramBotCast\Methods;
 
 use TelegramBotCast\Interface\TelegramMethodInterface;
 use TelegramBotCast\Types\LabeledPrice;
-use TelegramBotCast\Types\int;
 
 /**
  * CreateInvoiceLink

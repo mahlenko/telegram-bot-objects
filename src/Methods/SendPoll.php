@@ -9,7 +9,6 @@ use TelegramBotCast\Types\MessageEntity;
 use TelegramBotCast\Types\ReplyKeyboardMarkup;
 use TelegramBotCast\Types\ReplyKeyboardRemove;
 use TelegramBotCast\Types\ReplyParameters;
-use TelegramBotCast\Types\string;
 
 /**
  * SendPoll

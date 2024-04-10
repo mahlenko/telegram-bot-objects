@@ -6,7 +6,6 @@ use TelegramBotCast\Types\InlineKeyboardMarkup;
 use TelegramBotCast\Types\LabeledPrice;
 use TelegramBotCast\Types\Message;
 use TelegramBotCast\Types\ReplyParameters;
-use TelegramBotCast\Types\int;
 
 /**
  * SendInvoice
