@@ -27,13 +27,13 @@ final readonly class InlineQueryResultCachedAudio implements TelegramTypeInterfa
         /** Caption, 0-1024 characters after entities parsing */
         public ?string $caption,
         /**
-         * Mode for parsing entities in the audio caption. See formatting options for more
-         * details.
+         * Mode for parsing entities in the audio caption. See formatting options
+         * for more details.
          */
         public ?string $parse_mode,
         /**
-         * List of special entities that appear in the caption, which can be specified
-         * instead of parse_mode
+         * List of special entities that appear in the caption, which can be
+         * specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $caption_entities,

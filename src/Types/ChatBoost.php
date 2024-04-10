@@ -20,8 +20,9 @@ final readonly class ChatBoost implements TelegramTypeInterface
         /** Point in time (Unix timestamp) when the chat was boosted */
         public int $add_date,
         /**
-         * Point in time (Unix timestamp) when the boost will automatically expire, unless
-         * the booster's Telegram Premium subscription is prolonged
+         * Point in time (Unix timestamp) when the boost will automatically
+         * expire, unless the booster's Telegram Premium subscription is
+         * prolonged
          */
         public int $expiration_date,
         /** Source of the added boost */

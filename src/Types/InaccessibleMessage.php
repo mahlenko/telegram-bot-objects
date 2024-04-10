@@ -21,8 +21,8 @@ final readonly class InaccessibleMessage implements TelegramTypeInterface
         /** Unique message identifier inside the chat */
         public int $message_id,
         /**
-         * Always 0. The field can be used to differentiate regular and inaccessible
-         * messages.
+         * Always 0. The field can be used to differentiate regular and
+         * inaccessible messages.
          */
         public int $date,
     ) {

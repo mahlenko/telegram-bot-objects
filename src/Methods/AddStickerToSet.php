@@ -25,8 +25,9 @@ final readonly class AddStickerToSet implements TelegramMethodInterface
         /** Sticker set name */
         public string $name,
         /**
-         * A JSON-serialized object with information about the added sticker. If exactly
-         * the same sticker had already been added to the set, then the set isn't changed.
+         * A JSON-serialized object with information about the added sticker. If
+         * exactly the same sticker had already been added to the set, then the
+         * set isn't changed.
          */
         public InputSticker $sticker,
     ) {

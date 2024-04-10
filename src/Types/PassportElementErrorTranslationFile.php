@@ -19,8 +19,8 @@ final readonly class PassportElementErrorTranslationFile implements TelegramType
         /** Error source, must be translation_file */
         public string $source,
         /**
-         * Type of element of the user's Telegram Passport which has the issue, one of
-         * “passport”, “driver_license”, “identity_card”,
+         * Type of element of the user's Telegram Passport which has the issue,
+         * one of “passport”, “driver_license”, “identity_card”,
          * “internal_passport”, “utility_bill”, “bank_statement”,
          * “rental_agreement”, “passport_registration”,
          * “temporary_registration”

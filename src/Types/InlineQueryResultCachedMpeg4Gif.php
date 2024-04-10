@@ -27,16 +27,19 @@ final readonly class InlineQueryResultCachedMpeg4Gif implements TelegramTypeInte
         public string $mpeg4_file_id,
         /** Title for the result */
         public ?string $title,
-        /** Caption of the MPEG-4 file to be sent, 0-1024 characters after entities parsing */
+        /**
+         * Caption of the MPEG-4 file to be sent, 0-1024 characters after
+         * entities parsing
+         */
         public ?string $caption,
         /**
-         * Mode for parsing entities in the caption. See formatting options for more
-         * details.
+         * Mode for parsing entities in the caption. See formatting options for
+         * more details.
          */
         public ?string $parse_mode,
         /**
-         * List of special entities that appear in the caption, which can be specified
-         * instead of parse_mode
+         * List of special entities that appear in the caption, which can be
+         * specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $caption_entities,

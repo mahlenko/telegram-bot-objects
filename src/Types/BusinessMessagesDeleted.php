@@ -19,13 +19,13 @@ final readonly class BusinessMessagesDeleted implements TelegramTypeInterface
         /** Unique identifier of the business connection */
         public string $business_connection_id,
         /**
-         * Information about a chat in the business account. The bot may not have access to
-         * the chat or the corresponding user.
+         * Information about a chat in the business account. The bot may not have
+         * access to the chat or the corresponding user.
          */
         public Chat $chat,
         /**
-         * A JSON-serialized list of identifiers of deleted messages in the chat of the
-         * business account
+         * A JSON-serialized list of identifiers of deleted messages in the chat
+         * of the business account
          * @var array<int>
          */
         public array $message_ids,

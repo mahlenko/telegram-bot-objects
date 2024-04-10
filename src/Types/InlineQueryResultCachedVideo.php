@@ -28,16 +28,19 @@ final readonly class InlineQueryResultCachedVideo implements TelegramTypeInterfa
         public string $title,
         /** Short description of the result */
         public ?string $description,
-        /** Caption of the video to be sent, 0-1024 characters after entities parsing */
+        /**
+         * Caption of the video to be sent, 0-1024 characters after entities
+         * parsing
+         */
         public ?string $caption,
         /**
-         * Mode for parsing entities in the video caption. See formatting options for more
-         * details.
+         * Mode for parsing entities in the video caption. See formatting options
+         * for more details.
          */
         public ?string $parse_mode,
         /**
-         * List of special entities that appear in the caption, which can be specified
-         * instead of parse_mode
+         * List of special entities that appear in the caption, which can be
+         * specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $caption_entities,

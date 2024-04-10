@@ -22,8 +22,8 @@ final readonly class SetStickerMaskPosition implements TelegramMethodInterface
         /** File identifier of the sticker */
         public string $sticker,
         /**
-         * A JSON-serialized object with the position where the mask should be placed on
-         * faces. Omit the parameter to remove the mask position.
+         * A JSON-serialized object with the position where the mask should be
+         * placed on faces. Omit the parameter to remove the mask position.
          */
         public ?MaskPosition $mask_position,
     ) {

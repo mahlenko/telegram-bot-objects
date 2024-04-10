@@ -15,17 +15,21 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class Sticker implements TelegramTypeInterface
 {
     public function __construct(
-        /** Identifier for this file, which can be used to download or reuse the file */
+        /**
+         * Identifier for this file, which can be used to download or reuse the
+         * file
+         */
         public string $file_id,
         /**
-         * Unique identifier for this file, which is supposed to be the same over time and
-         * for different bots. Can't be used to download or reuse the file.
+         * Unique identifier for this file, which is supposed to be the same over
+         * time and for different bots. Can't be used to download or reuse the
+         * file.
          */
         public string $file_unique_id,
         /**
          * Type of the sticker, currently one of “regular”, “mask”,
-         * “custom_emoji”. The type of the sticker is independent from its format,
-         * which is determined by the fields is_animated and is_video.
+         * “custom_emoji”. The type of the sticker is independent from its
+         * format, which is determined by the fields is_animated and is_video.
          */
         public string $type,
         /** Sticker width */
@@ -49,9 +53,9 @@ final readonly class Sticker implements TelegramTypeInterface
         /** For custom emoji stickers, unique identifier of the custom emoji */
         public ?string $custom_emoji_id,
         /**
-         * True, if the sticker must be repainted to a text color in messages, the color of
-         * the Telegram Premium badge in emoji status, white color on chat photos, or
-         * another appropriate color in other places
+         * True, if the sticker must be repainted to a text color in messages,
+         * the color of the Telegram Premium badge in emoji status, white color
+         * on chat photos, or another appropriate color in other places
          */
         public ?true $needs_repainting,
         /** File size in bytes */

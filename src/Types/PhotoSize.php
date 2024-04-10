@@ -15,11 +15,15 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class PhotoSize implements TelegramTypeInterface
 {
     public function __construct(
-        /** Identifier for this file, which can be used to download or reuse the file */
+        /**
+         * Identifier for this file, which can be used to download or reuse the
+         * file
+         */
         public string $file_id,
         /**
-         * Unique identifier for this file, which is supposed to be the same over time and
-         * for different bots. Can't be used to download or reuse the file.
+         * Unique identifier for this file, which is supposed to be the same over
+         * time and for different bots. Can't be used to download or reuse the
+         * file.
          */
         public string $file_unique_id,
         /** Photo width */

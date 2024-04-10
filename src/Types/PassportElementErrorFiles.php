@@ -19,8 +19,8 @@ final readonly class PassportElementErrorFiles implements TelegramTypeInterface
         /** Error source, must be files */
         public string $source,
         /**
-         * The section of the user's Telegram Passport which has the issue, one of
-         * “utility_bill”, “bank_statement”, “rental_agreement”,
+         * The section of the user's Telegram Passport which has the issue, one
+         * of “utility_bill”, “bank_statement”, “rental_agreement”,
          * “passport_registration”, “temporary_registration”
          */
         public string $type,

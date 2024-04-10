@@ -30,48 +30,51 @@ final readonly class CopyMessage implements TelegramMethodInterface
 
     public function __construct(
         /**
-         * Unique identifier for the target chat or username of the target channel (in the
-         * format @channelusername)
+         * Unique identifier for the target chat or username of the target
+         * channel (in the format @channelusername)
          */
         public int|string $chat_id,
         /**
-         * Unique identifier for the target message thread (topic) of the forum; for forum
-         * supergroups only
+         * Unique identifier for the target message thread (topic) of the forum;
+         * for forum supergroups only
          */
         public ?int $message_thread_id,
         /**
-         * Unique identifier for the chat where the original message was sent (or channel
-         * username in the format @channelusername)
+         * Unique identifier for the chat where the original message was sent (or
+         * channel username in the format @channelusername)
          */
         public int|string $from_chat_id,
         /** Message identifier in the chat specified in from_chat_id */
         public int $message_id,
         /**
-         * New caption for media, 0-1024 characters after entities parsing. If not
-         * specified, the original caption is kept
+         * New caption for media, 0-1024 characters after entities parsing. If
+         * not specified, the original caption is kept
          */
         public ?string $caption,
         /**
-         * Mode for parsing entities in the new caption. See formatting options for more
-         * details.
+         * Mode for parsing entities in the new caption. See formatting options
+         * for more details.
          */
         public ?string $parse_mode,
         /**
-         * A JSON-serialized list of special entities that appear in the new caption, which
-         * can be specified instead of parse_mode
+         * A JSON-serialized list of special entities that appear in the new
+         * caption, which can be specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $caption_entities,
-        /** Sends the message silently. Users will receive a notification with no sound. */
+        /**
+         * Sends the message silently. Users will receive a notification with no
+         * sound.
+         */
         public ?bool $disable_notification,
         /** Protects the contents of the sent message from forwarding and saving */
         public ?bool $protect_content,
         /** Description of the message to reply to */
         public ?ReplyParameters $reply_parameters,
         /**
-         * Additional interface options. A JSON-serialized object for an inline keyboard,
-         * custom reply keyboard, instructions to remove reply keyboard or to force a reply
-         * from the user.
+         * Additional interface options. A JSON-serialized object for an inline
+         * keyboard, custom reply keyboard, instructions to remove reply keyboard
+         * or to force a reply from the user.
          */
         public InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardRemove|ForceReply|null $reply_markup,
     ) {

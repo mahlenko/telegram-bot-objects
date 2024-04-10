@@ -30,25 +30,31 @@ final readonly class InlineQueryResultGif implements TelegramTypeInterface
         public ?int $gif_height,
         /** Duration of the GIF in seconds */
         public ?int $gif_duration,
-        /** URL of the static (JPEG or GIF) or animated (MPEG4) thumbnail for the result */
+        /**
+         * URL of the static (JPEG or GIF) or animated (MPEG4) thumbnail for the
+         * result
+         */
         public string $thumbnail_url,
         /**
-         * MIME type of the thumbnail, must be one of “image/jpeg”, “image/gif”, or
-         * “video/mp4”. Defaults to “image/jpeg”
+         * MIME type of the thumbnail, must be one of “image/jpeg”,
+         * “image/gif”, or “video/mp4”. Defaults to “image/jpeg”
          */
         public ?string $thumbnail_mime_type,
         /** Title for the result */
         public ?string $title,
-        /** Caption of the GIF file to be sent, 0-1024 characters after entities parsing */
+        /**
+         * Caption of the GIF file to be sent, 0-1024 characters after entities
+         * parsing
+         */
         public ?string $caption,
         /**
-         * Mode for parsing entities in the caption. See formatting options for more
-         * details.
+         * Mode for parsing entities in the caption. See formatting options for
+         * more details.
          */
         public ?string $parse_mode,
         /**
-         * List of special entities that appear in the caption, which can be specified
-         * instead of parse_mode
+         * List of special entities that appear in the caption, which can be
+         * specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $caption_entities,

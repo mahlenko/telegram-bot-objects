@@ -19,8 +19,8 @@ final readonly class BotCommandScopeChatMember implements TelegramTypeInterface
         /** Scope type, must be chat_member */
         public string $type,
         /**
-         * Unique identifier for the target chat or username of the target supergroup (in
-         * the format @supergroupusername)
+         * Unique identifier for the target chat or username of the target
+         * supergroup (in the format @supergroupusername)
          */
         public int|string $chat_id,
         /** Unique identifier of the target user */

@@ -19,13 +19,14 @@ final readonly class SetMyDescription implements TelegramMethodInterface
 
     public function __construct(
         /**
-         * New bot description; 0-512 characters. Pass an empty string to remove the
-         * dedicated description for the given language.
+         * New bot description; 0-512 characters. Pass an empty string to remove
+         * the dedicated description for the given language.
          */
         public ?string $description,
         /**
-         * A two-letter ISO 639-1 language code. If empty, the description will be applied
-         * to all users for whose language there is no dedicated description.
+         * A two-letter ISO 639-1 language code. If empty, the description will
+         * be applied to all users for whose language there is no dedicated
+         * description.
          */
         public ?string $language_code,
     ) {

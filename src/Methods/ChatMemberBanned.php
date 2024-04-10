@@ -25,8 +25,8 @@ final readonly class ChatMemberBanned implements TelegramMethodInterface
         /** Information about the user */
         public User $user,
         /**
-         * Date when restrictions will be lifted for this user; Unix time. If 0, then the
-         * user is banned forever
+         * Date when restrictions will be lifted for this user; Unix time. If 0,
+         * then the user is banned forever
          */
         public int $until_date,
     ) {

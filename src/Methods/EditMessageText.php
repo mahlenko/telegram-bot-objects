@@ -23,30 +23,31 @@ final readonly class EditMessageText implements TelegramMethodInterface
 
     public function __construct(
         /**
-         * Required if inline_message_id is not specified. Unique identifier for the target
-         * chat or username of the target channel (in the format @channelusername)
+         * Required if inline_message_id is not specified. Unique identifier for
+         * the target chat or username of the target channel (in the format
+         * @channelusername)
          */
         public int|string|null $chat_id,
         /**
-         * Required if inline_message_id is not specified. Identifier of the message to
-         * edit
+         * Required if inline_message_id is not specified. Identifier of the
+         * message to edit
          */
         public ?int $message_id,
         /**
-         * Required if chat_id and message_id are not specified. Identifier of the inline
-         * message
+         * Required if chat_id and message_id are not specified. Identifier of
+         * the inline message
          */
         public ?string $inline_message_id,
         /** New text of the message, 1-4096 characters after entities parsing */
         public string $text,
         /**
-         * Mode for parsing entities in the message text. See formatting options for more
-         * details.
+         * Mode for parsing entities in the message text. See formatting options
+         * for more details.
          */
         public ?string $parse_mode,
         /**
-         * A JSON-serialized list of special entities that appear in message text, which
-         * can be specified instead of parse_mode
+         * A JSON-serialized list of special entities that appear in message
+         * text, which can be specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $entities,

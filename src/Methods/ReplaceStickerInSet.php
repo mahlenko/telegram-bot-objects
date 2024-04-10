@@ -27,9 +27,9 @@ final readonly class ReplaceStickerInSet implements TelegramMethodInterface
         /** File identifier of the replaced sticker */
         public string $old_sticker,
         /**
-         * A JSON-serialized object with information about the added sticker. If exactly
-         * the same sticker had already been added to the set, then the set remains
-         * unchanged.
+         * A JSON-serialized object with information about the added sticker. If
+         * exactly the same sticker had already been added to the set, then the
+         * set remains unchanged.
          */
         public InputSticker $sticker,
     ) {

@@ -21,7 +21,10 @@ final readonly class MessageReactionUpdated implements TelegramTypeInterface
         public int $message_id,
         /** The user that changed the reaction, if the user isn't anonymous */
         public ?User $user,
-        /** The chat on behalf of which the reaction was changed, if the user is anonymous */
+        /**
+         * The chat on behalf of which the reaction was changed, if the user is
+         * anonymous
+         */
         public ?Chat $actor_chat,
         /** Date of the change in Unix time */
         public int $date,

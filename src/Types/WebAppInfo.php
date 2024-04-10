@@ -16,8 +16,8 @@ final readonly class WebAppInfo implements TelegramTypeInterface
 {
     public function __construct(
         /**
-         * An HTTPS URL of a Web App to be opened with additional data as specified in
-         * Initializing Web Apps
+         * An HTTPS URL of a Web App to be opened with additional data as
+         * specified in Initializing Web Apps
          */
         public string $url,
     ) {

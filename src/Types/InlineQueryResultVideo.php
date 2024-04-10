@@ -29,22 +29,28 @@ final readonly class InlineQueryResultVideo implements TelegramTypeInterface
         public string $id,
         /** A valid URL for the embedded video player or video file */
         public string $video_url,
-        /** MIME type of the content of the video URL, “text/html” or “video/mp4” */
+        /**
+         * MIME type of the content of the video URL, “text/html” or
+         * “video/mp4”
+         */
         public string $mime_type,
         /** URL of the thumbnail (JPEG only) for the video */
         public string $thumbnail_url,
         /** Title for the result */
         public string $title,
-        /** Caption of the video to be sent, 0-1024 characters after entities parsing */
+        /**
+         * Caption of the video to be sent, 0-1024 characters after entities
+         * parsing
+         */
         public ?string $caption,
         /**
-         * Mode for parsing entities in the video caption. See formatting options for more
-         * details.
+         * Mode for parsing entities in the video caption. See formatting options
+         * for more details.
          */
         public ?string $parse_mode,
         /**
-         * List of special entities that appear in the caption, which can be specified
-         * instead of parse_mode
+         * List of special entities that appear in the caption, which can be
+         * specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public ?array $caption_entities,
@@ -59,9 +65,9 @@ final readonly class InlineQueryResultVideo implements TelegramTypeInterface
         /** Inline keyboard attached to the message */
         public ?InlineKeyboardMarkup $reply_markup,
         /**
-         * Content of the message to be sent instead of the video. This field is required
-         * if InlineQueryResultVideo is used to send an HTML-page as a result (e.g., a
-         * YouTube video).
+         * Content of the message to be sent instead of the video. This field is
+         * required if InlineQueryResultVideo is used to send an HTML-page as a
+         * result (e.g., a YouTube video).
          */
         public ?InputMessageContent $input_message_content,
     ) {
