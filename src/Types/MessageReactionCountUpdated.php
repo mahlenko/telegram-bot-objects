@@ -16,16 +16,16 @@ final readonly class MessageReactionCountUpdated implements TelegramTypeInterfac
 {
 	public function __construct(
 		/** The chat containing the message */
-		public ?Chat $chat,
+		public Chat $chat,
 		/** Unique message identifier inside the chat */
-		public ?int $message_id,
+		public int $message_id,
 		/** Date of the change in Unix time */
-		public ?int $date,
+		public int $date,
 		/**
 		 * List of reactions that are present on the message
 		 * @var array<ReactionCount>
 		 */
-		public ?array $reactions,
+		public array $reactions,
 	) {
 	}
 }

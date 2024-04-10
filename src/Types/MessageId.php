@@ -16,7 +16,7 @@ final readonly class MessageId implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Unique message identifier */
-		public ?int $message_id,
+		public int $message_id,
 	) {
 	}
 }

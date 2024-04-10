@@ -16,13 +16,13 @@ final readonly class ChatBoostSourceGiveaway implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Source of the boost, always “giveaway” */
-		public ?string $source,
+		public string $source,
 		/** Identifier of a message in the chat with the giveaway; the message could have been deleted already. May be 0 if the message isn't sent yet. */
-		public ?int $giveaway_message_id,
+		public int $giveaway_message_id,
 		/** User that won the prize in the giveaway if any */
-		public User $user,
+		public ?User $user,
 		/** True, if the giveaway was completed, but there was no user to win the prize */
-		public true $is_unclaimed,
+		public ?true $is_unclaimed,
 	) {
 	}
 }

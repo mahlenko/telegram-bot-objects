@@ -16,11 +16,11 @@ final readonly class InaccessibleMessage implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Chat the message belonged to */
-		public ?Chat $chat,
+		public Chat $chat,
 		/** Unique message identifier inside the chat */
-		public ?int $message_id,
+		public int $message_id,
 		/** Always 0. The field can be used to differentiate regular and inaccessible messages. */
-		public ?int $date,
+		public int $date,
 	) {
 	}
 }

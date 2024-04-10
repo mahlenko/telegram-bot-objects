@@ -14,9 +14,9 @@ final readonly class BusinessLocation implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Address of the business */
-		public ?string $address,
+		public string $address,
 		/** Location of the business */
-		public Location $location,
+		public ?Location $location,
 	) {
 	}
 }

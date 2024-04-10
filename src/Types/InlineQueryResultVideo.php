@@ -19,38 +19,38 @@ final readonly class InlineQueryResultVideo implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the result, must be video */
-		public ?string $type,
+		public string $type,
 		/** Unique identifier for this result, 1-64 bytes */
-		public ?string $id,
+		public string $id,
 		/** A valid URL for the embedded video player or video file */
-		public ?string $video_url,
+		public string $video_url,
 		/** MIME type of the content of the video URL, “text/html” or “video/mp4” */
-		public ?string $mime_type,
+		public string $mime_type,
 		/** URL of the thumbnail (JPEG only) for the video */
-		public ?string $thumbnail_url,
+		public string $thumbnail_url,
 		/** Title for the result */
-		public ?string $title,
+		public string $title,
 		/** Caption of the video to be sent, 0-1024 characters after entities parsing */
-		public string $caption,
+		public ?string $caption,
 		/** Mode for parsing entities in the video caption. See formatting options for more details. */
-		public string $parse_mode,
+		public ?string $parse_mode,
 		/**
 		 * List of special entities that appear in the caption, which can be specified instead of parse_mode
 		 * @var array<MessageEntity>
 		 */
-		public array $caption_entities,
+		public ?array $caption_entities,
 		/** Video width */
-		public int $video_width,
+		public ?int $video_width,
 		/** Video height */
-		public int $video_height,
+		public ?int $video_height,
 		/** Video duration in seconds */
-		public int $video_duration,
+		public ?int $video_duration,
 		/** Short description of the result */
-		public string $description,
+		public ?string $description,
 		/** Inline keyboard attached to the message */
-		public InlineKeyboardMarkup $reply_markup,
+		public ?InlineKeyboardMarkup $reply_markup,
 		/** Content of the message to be sent instead of the video. This field is required if InlineQueryResultVideo is used to send an HTML-page as a result (e.g., a YouTube video). */
-		public InputMessageContent $input_message_content,
+		public ?InputMessageContent $input_message_content,
 	) {
 	}
 }

@@ -16,16 +16,16 @@ final readonly class PassportElementErrorTranslationFiles implements TelegramTyp
 {
 	public function __construct(
 		/** Error source, must be translation_files */
-		public ?string $source,
+		public string $source,
 		/** Type of element of the user's Telegram Passport which has the issue, one of “passport”, “driver_license”, “identity_card”, “internal_passport”, “utility_bill”, “bank_statement”, “rental_agreement”, “passport_registration”, “temporary_registration” */
-		public ?string $type,
+		public string $type,
 		/**
 		 * List of base64-encoded file hashes
 		 * @var array<string>
 		 */
-		public ?array $file_hashes,
+		public array $file_hashes,
 		/** Error message */
-		public ?string $message,
+		public string $message,
 	) {
 	}
 }

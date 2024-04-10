@@ -18,9 +18,9 @@ final readonly class SetChatDescription implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/** New chat description, 0-255 characters */
-		public ?string $description,
+		public string $description,
 	) {
 	}
 }

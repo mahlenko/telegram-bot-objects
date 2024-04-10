@@ -19,7 +19,7 @@ final readonly class GetMyDefaultAdministratorRights implements TelegramMethodIn
 
 	public function __construct(
 		/** Pass True to get default administrator rights of the bot in channels. Otherwise, default administrator rights of the bot for groups and supergroups will be returned. */
-		public ?bool $for_channels,
+		public bool $for_channels,
 	) {
 	}
 }

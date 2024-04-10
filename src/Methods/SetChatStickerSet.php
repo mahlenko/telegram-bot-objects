@@ -18,9 +18,9 @@ final readonly class SetChatStickerSet implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/** Name of the sticker set to be set as the group sticker set */
-		public string $sticker_set_name,
+		public ?string $sticker_set_name,
 	) {
 	}
 }

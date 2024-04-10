@@ -16,26 +16,26 @@ final readonly class InlineQueryResultCachedGif implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the result, must be gif */
-		public ?string $type,
+		public string $type,
 		/** Unique identifier for this result, 1-64 bytes */
-		public ?string $id,
+		public string $id,
 		/** A valid file identifier for the GIF file */
-		public ?string $gif_file_id,
+		public string $gif_file_id,
 		/** Title for the result */
-		public string $title,
+		public ?string $title,
 		/** Caption of the GIF file to be sent, 0-1024 characters after entities parsing */
-		public string $caption,
+		public ?string $caption,
 		/** Mode for parsing entities in the caption. See formatting options for more details. */
-		public string $parse_mode,
+		public ?string $parse_mode,
 		/**
 		 * List of special entities that appear in the caption, which can be specified instead of parse_mode
 		 * @var array<MessageEntity>
 		 */
-		public array $caption_entities,
+		public ?array $caption_entities,
 		/** Inline keyboard attached to the message */
-		public InlineKeyboardMarkup $reply_markup,
+		public ?InlineKeyboardMarkup $reply_markup,
 		/** Content of the message to be sent instead of the GIF animation */
-		public InputMessageContent $input_message_content,
+		public ?InputMessageContent $input_message_content,
 	) {
 	}
 }

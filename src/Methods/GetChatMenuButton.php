@@ -19,7 +19,7 @@ final readonly class GetChatMenuButton implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target private chat. If not specified, default bot's menu button will be returned */
-		public ?int $chat_id,
+		public int $chat_id,
 	) {
 	}
 }

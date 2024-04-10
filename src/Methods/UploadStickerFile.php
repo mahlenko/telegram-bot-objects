@@ -20,11 +20,11 @@ final readonly class UploadStickerFile implements TelegramMethodInterface
 
 	public function __construct(
 		/** User identifier of sticker file owner */
-		public int $user_id,
+		public ?int $user_id,
 		/** A file with the sticker in .WEBP, .PNG, .TGS, or .WEBM format. See https://core.telegram.org/stickers for technical requirements. More information on Sending Files » */
-		public InputFile $sticker,
+		public ?InputFile $sticker,
 		/** Format of the sticker, must be one of “static”, “animated”, “video” */
-		public string $sticker_format,
+		public ?string $sticker_format,
 	) {
 	}
 }

@@ -16,11 +16,11 @@ final readonly class EncryptedCredentials implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Base64-encoded encrypted JSON-serialized data with unique user's payload, data hashes and secrets required for EncryptedPassportElement decryption and authentication */
-		public ?string $data,
+		public string $data,
 		/** Base64-encoded data hash for data authentication */
-		public ?string $hash,
+		public string $hash,
 		/** Base64-encoded secret, encrypted with the bot's public RSA key, required for data decryption */
-		public ?string $secret,
+		public string $secret,
 	) {
 	}
 }

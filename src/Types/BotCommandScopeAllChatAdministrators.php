@@ -16,7 +16,7 @@ final readonly class BotCommandScopeAllChatAdministrators implements TelegramTyp
 {
 	public function __construct(
 		/** Scope type, must be all_chat_administrators */
-		public ?string $type,
+		public string $type,
 	) {
 	}
 }

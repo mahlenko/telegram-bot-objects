@@ -16,7 +16,7 @@ final readonly class BotCommandScopeAllPrivateChats implements TelegramTypeInter
 {
 	public function __construct(
 		/** Scope type, must be all_private_chats */
-		public ?string $type,
+		public string $type,
 	) {
 	}
 }

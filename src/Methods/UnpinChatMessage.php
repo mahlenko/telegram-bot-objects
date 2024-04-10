@@ -18,9 +18,9 @@ final readonly class UnpinChatMessage implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/** Identifier of a message to unpin. If not specified, the most recent pinned message (by sending date) will be unpinned. */
-		public ?int $message_id,
+		public int $message_id,
 	) {
 	}
 }

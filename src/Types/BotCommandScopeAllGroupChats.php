@@ -16,7 +16,7 @@ final readonly class BotCommandScopeAllGroupChats implements TelegramTypeInterfa
 {
 	public function __construct(
 		/** Scope type, must be all_group_chats */
-		public ?string $type,
+		public string $type,
 	) {
 	}
 }

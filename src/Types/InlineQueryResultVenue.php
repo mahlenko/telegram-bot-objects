@@ -16,35 +16,35 @@ final readonly class InlineQueryResultVenue implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the result, must be venue */
-		public ?string $type,
+		public string $type,
 		/** Unique identifier for this result, 1-64 Bytes */
-		public ?string $id,
+		public string $id,
 		/** Latitude of the venue location in degrees */
-		public ?float $latitude,
+		public float $latitude,
 		/** Longitude of the venue location in degrees */
-		public ?float $longitude,
+		public float $longitude,
 		/** Title of the venue */
-		public ?string $title,
+		public string $title,
 		/** Address of the venue */
-		public ?string $address,
+		public string $address,
 		/** Foursquare identifier of the venue if known */
-		public string $foursquare_id,
+		public ?string $foursquare_id,
 		/** Foursquare type of the venue, if known. (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.) */
-		public string $foursquare_type,
+		public ?string $foursquare_type,
 		/** Google Places identifier of the venue */
-		public string $google_place_id,
+		public ?string $google_place_id,
 		/** Google Places type of the venue. (See supported types.) */
-		public string $google_place_type,
+		public ?string $google_place_type,
 		/** Inline keyboard attached to the message */
-		public InlineKeyboardMarkup $reply_markup,
+		public ?InlineKeyboardMarkup $reply_markup,
 		/** Content of the message to be sent instead of the venue */
-		public InputMessageContent $input_message_content,
+		public ?InputMessageContent $input_message_content,
 		/** Url of the thumbnail for the result */
-		public string $thumbnail_url,
+		public ?string $thumbnail_url,
 		/** Thumbnail width */
-		public int $thumbnail_width,
+		public ?int $thumbnail_width,
 		/** Thumbnail height */
-		public int $thumbnail_height,
+		public ?int $thumbnail_height,
 	) {
 	}
 }

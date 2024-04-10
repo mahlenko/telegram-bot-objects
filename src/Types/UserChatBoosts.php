@@ -19,7 +19,7 @@ final readonly class UserChatBoosts implements TelegramTypeInterface
 		 * The list of boosts added to the chat by the user
 		 * @var array<ChatBoost>
 		 */
-		public ?array $boosts,
+		public array $boosts,
 	) {
 	}
 }

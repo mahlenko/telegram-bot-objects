@@ -16,9 +16,9 @@ final readonly class ReactionTypeCustomEmoji implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the reaction, always “custom_emoji” */
-		public ?string $type,
+		public string $type,
 		/** Custom emoji identifier */
-		public ?string $custom_emoji_id,
+		public string $custom_emoji_id,
 	) {
 	}
 }

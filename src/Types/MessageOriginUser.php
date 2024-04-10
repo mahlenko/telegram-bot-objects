@@ -16,11 +16,11 @@ final readonly class MessageOriginUser implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the message origin, always “user” */
-		public ?string $type,
+		public string $type,
 		/** Date the message was sent originally in Unix time */
-		public ?int $date,
+		public int $date,
 		/** User that sent the message originally */
-		public ?User $sender_user,
+		public User $sender_user,
 	) {
 	}
 }

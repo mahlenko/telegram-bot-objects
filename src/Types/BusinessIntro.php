@@ -14,11 +14,11 @@ final readonly class BusinessIntro implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Title text of the business intro */
-		public string $title,
+		public ?string $title,
 		/** Message text of the business intro */
-		public string $message,
+		public ?string $message,
 		/** Sticker of the business intro */
-		public Sticker $sticker,
+		public ?Sticker $sticker,
 	) {
 	}
 }

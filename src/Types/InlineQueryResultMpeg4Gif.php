@@ -16,36 +16,36 @@ final readonly class InlineQueryResultMpeg4Gif implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the result, must be mpeg4_gif */
-		public ?string $type,
+		public string $type,
 		/** Unique identifier for this result, 1-64 bytes */
-		public ?string $id,
+		public string $id,
 		/** A valid URL for the MPEG4 file. File size must not exceed 1MB */
-		public ?string $mpeg4_url,
+		public string $mpeg4_url,
 		/** Video width */
-		public int $mpeg4_width,
+		public ?int $mpeg4_width,
 		/** Video height */
-		public int $mpeg4_height,
+		public ?int $mpeg4_height,
 		/** Video duration in seconds */
-		public int $mpeg4_duration,
+		public ?int $mpeg4_duration,
 		/** URL of the static (JPEG or GIF) or animated (MPEG4) thumbnail for the result */
-		public ?string $thumbnail_url,
+		public string $thumbnail_url,
 		/** MIME type of the thumbnail, must be one of “image/jpeg”, “image/gif”, or “video/mp4”. Defaults to “image/jpeg” */
-		public string $thumbnail_mime_type,
+		public ?string $thumbnail_mime_type,
 		/** Title for the result */
-		public string $title,
+		public ?string $title,
 		/** Caption of the MPEG-4 file to be sent, 0-1024 characters after entities parsing */
-		public string $caption,
+		public ?string $caption,
 		/** Mode for parsing entities in the caption. See formatting options for more details. */
-		public string $parse_mode,
+		public ?string $parse_mode,
 		/**
 		 * List of special entities that appear in the caption, which can be specified instead of parse_mode
 		 * @var array<MessageEntity>
 		 */
-		public array $caption_entities,
+		public ?array $caption_entities,
 		/** Inline keyboard attached to the message */
-		public InlineKeyboardMarkup $reply_markup,
+		public ?InlineKeyboardMarkup $reply_markup,
 		/** Content of the message to be sent instead of the video animation */
-		public InputMessageContent $input_message_content,
+		public ?InputMessageContent $input_message_content,
 	) {
 	}
 }

@@ -16,7 +16,7 @@ final readonly class ChatBoostAdded implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Number of boosts added by the user */
-		public ?int $boost_count,
+		public int $boost_count,
 	) {
 	}
 }

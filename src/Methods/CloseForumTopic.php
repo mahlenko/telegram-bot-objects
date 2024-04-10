@@ -18,9 +18,9 @@ final readonly class CloseForumTopic implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/** Unique identifier for the target message thread of the forum topic */
-		public int $message_thread_id,
+		public ?int $message_thread_id,
 	) {
 	}
 }

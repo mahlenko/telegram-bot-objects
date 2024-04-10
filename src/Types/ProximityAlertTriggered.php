@@ -16,11 +16,11 @@ final readonly class ProximityAlertTriggered implements TelegramTypeInterface
 {
 	public function __construct(
 		/** User that triggered the alert */
-		public ?User $traveler,
+		public User $traveler,
 		/** User that set the alert */
-		public ?User $watcher,
+		public User $watcher,
 		/** The distance between the users */
-		public ?int $distance,
+		public int $distance,
 	) {
 	}
 }

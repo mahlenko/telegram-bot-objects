@@ -23,7 +23,7 @@ final readonly class GetCustomEmojiStickers implements TelegramMethodInterface
 		 * A JSON-serialized list of custom emoji identifiers. At most 200 custom emoji identifiers can be specified.
 		 * @var array<string>
 		 */
-		public array $custom_emoji_ids,
+		public ?array $custom_emoji_ids,
 	) {
 	}
 }

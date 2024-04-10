@@ -19,9 +19,9 @@ final readonly class GetUserChatBoosts implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the chat or username of the channel (in the format @channelusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/** Unique identifier of the target user */
-		public int $user_id,
+		public ?int $user_id,
 	) {
 	}
 }

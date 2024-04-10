@@ -22,13 +22,13 @@ final readonly class GetGameHighScores implements TelegramMethodInterface
 
 	public function __construct(
 		/** Target user id */
-		public int $user_id,
+		public ?int $user_id,
 		/** Required if inline_message_id is not specified. Unique identifier for the target chat */
-		public ?int $chat_id,
+		public int $chat_id,
 		/** Required if inline_message_id is not specified. Identifier of the sent message */
-		public ?int $message_id,
+		public int $message_id,
 		/** Required if chat_id and message_id are not specified. Identifier of the inline message */
-		public ?string $inline_message_id,
+		public string $inline_message_id,
 	) {
 	}
 }

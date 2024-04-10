@@ -16,13 +16,13 @@ final readonly class PassportElementErrorUnspecified implements TelegramTypeInte
 {
 	public function __construct(
 		/** Error source, must be unspecified */
-		public ?string $source,
+		public string $source,
 		/** Type of element of the user's Telegram Passport which has the issue */
-		public ?string $type,
+		public string $type,
 		/** Base64-encoded element hash */
-		public ?string $element_hash,
+		public string $element_hash,
 		/** Error message */
-		public ?string $message,
+		public string $message,
 	) {
 	}
 }

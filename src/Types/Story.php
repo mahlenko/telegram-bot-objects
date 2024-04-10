@@ -16,9 +16,9 @@ final readonly class Story implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Chat that posted the story */
-		public ?Chat $chat,
+		public Chat $chat,
 		/** Unique identifier for the story in the chat */
-		public ?int $id,
+		public int $id,
 	) {
 	}
 }

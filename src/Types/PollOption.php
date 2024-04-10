@@ -16,9 +16,9 @@ final readonly class PollOption implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Option text, 1-100 characters */
-		public ?string $text,
+		public string $text,
 		/** Number of users that voted for this option */
-		public ?int $voter_count,
+		public int $voter_count,
 	) {
 	}
 }

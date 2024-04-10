@@ -16,7 +16,7 @@ final readonly class MessageAutoDeleteTimerChanged implements TelegramTypeInterf
 {
 	public function __construct(
 		/** New auto-delete time for messages in the chat; in seconds */
-		public ?int $message_auto_delete_time,
+		public int $message_auto_delete_time,
 	) {
 	}
 }

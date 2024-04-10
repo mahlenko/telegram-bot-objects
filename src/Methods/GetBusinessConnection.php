@@ -19,7 +19,7 @@ final readonly class GetBusinessConnection implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier of the business connection */
-		public string $business_connection_id,
+		public ?string $business_connection_id,
 	) {
 	}
 }

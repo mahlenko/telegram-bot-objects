@@ -19,9 +19,9 @@ final readonly class RevokeChatInviteLink implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier of the target chat or username of the target channel (in the format @channelusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/** The invite link to revoke */
-		public string $invite_link,
+		public ?string $invite_link,
 	) {
 	}
 }

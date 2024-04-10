@@ -16,18 +16,18 @@ final readonly class StickerSet implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Sticker set name */
-		public ?string $name,
+		public string $name,
 		/** Sticker set title */
-		public ?string $title,
+		public string $title,
 		/** Type of stickers in the set, currently one of “regular”, “mask”, “custom_emoji” */
-		public ?string $sticker_type,
+		public string $sticker_type,
 		/**
 		 * List of all set stickers
 		 * @var array<Sticker>
 		 */
-		public ?array $stickers,
+		public array $stickers,
 		/** Sticker set thumbnail in the .WEBP, .TGS, or .WEBM format */
-		public PhotoSize $thumbnail,
+		public ?PhotoSize $thumbnail,
 	) {
 	}
 }

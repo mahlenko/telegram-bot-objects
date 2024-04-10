@@ -16,13 +16,13 @@ final readonly class OrderInfo implements TelegramTypeInterface
 {
 	public function __construct(
 		/** User name */
-		public string $name,
+		public ?string $name,
 		/** User's phone number */
-		public string $phone_number,
+		public ?string $phone_number,
 		/** User email */
-		public string $email,
+		public ?string $email,
 		/** User shipping address */
-		public ShippingAddress $shipping_address,
+		public ?ShippingAddress $shipping_address,
 	) {
 	}
 }

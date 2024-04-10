@@ -16,11 +16,11 @@ final readonly class GameHighScore implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Position in high score table for the game */
-		public ?int $position,
+		public int $position,
 		/** User */
-		public ?User $user,
+		public User $user,
 		/** Score */
-		public ?int $score,
+		public int $score,
 	) {
 	}
 }

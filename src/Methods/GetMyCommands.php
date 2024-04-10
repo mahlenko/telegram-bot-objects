@@ -20,9 +20,9 @@ final readonly class GetMyCommands implements TelegramMethodInterface
 
 	public function __construct(
 		/** A JSON-serialized object, describing scope of users. Defaults to BotCommandScopeDefault. */
-		public ?BotCommandScope $scope,
+		public BotCommandScope $scope,
 		/** A two-letter ISO 639-1 language code or an empty string */
-		public ?string $language_code,
+		public string $language_code,
 	) {
 	}
 }

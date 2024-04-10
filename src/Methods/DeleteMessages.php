@@ -19,12 +19,12 @@ final readonly class DeleteMessages implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 		/**
 		 * A JSON-serialized list of 1-100 identifiers of messages to delete. See deleteMessage for limitations on which messages can be deleted
 		 * @var array<int>
 		 */
-		public array $message_ids,
+		public ?array $message_ids,
 	) {
 	}
 }

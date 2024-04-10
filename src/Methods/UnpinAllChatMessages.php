@@ -18,7 +18,7 @@ final readonly class UnpinAllChatMessages implements TelegramMethodInterface
 
 	public function __construct(
 		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
-		public int|string $chat_id,
+		public int|string|null $chat_id,
 	) {
 	}
 }

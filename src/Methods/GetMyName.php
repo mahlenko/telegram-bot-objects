@@ -19,7 +19,7 @@ final readonly class GetMyName implements TelegramMethodInterface
 
 	public function __construct(
 		/** A two-letter ISO 639-1 language code or an empty string */
-		public ?string $language_code,
+		public string $language_code,
 	) {
 	}
 }

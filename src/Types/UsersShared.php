@@ -16,12 +16,12 @@ final readonly class UsersShared implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Identifier of the request */
-		public ?int $request_id,
+		public int $request_id,
 		/**
 		 * Information about users shared with the bot.
 		 * @var array<SharedUser>
 		 */
-		public ?array $users,
+		public array $users,
 	) {
 	}
 }

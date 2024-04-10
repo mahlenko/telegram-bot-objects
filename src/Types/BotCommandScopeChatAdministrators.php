@@ -16,9 +16,9 @@ final readonly class BotCommandScopeChatAdministrators implements TelegramTypeIn
 {
 	public function __construct(
 		/** Scope type, must be chat_administrators */
-		public ?string $type,
+		public string $type,
 		/** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
-		public int|string|null $chat_id,
+		public int|string $chat_id,
 	) {
 	}
 }

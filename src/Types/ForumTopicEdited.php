@@ -16,9 +16,9 @@ final readonly class ForumTopicEdited implements TelegramTypeInterface
 {
 	public function __construct(
 		/** New name of the topic, if it was edited */
-		public string $name,
+		public ?string $name,
 		/** New identifier of the custom emoji shown as the topic icon, if it was edited; an empty string if the icon was removed */
-		public string $icon_custom_emoji_id,
+		public ?string $icon_custom_emoji_id,
 	) {
 	}
 }

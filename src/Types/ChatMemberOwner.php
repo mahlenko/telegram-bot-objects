@@ -16,13 +16,13 @@ final readonly class ChatMemberOwner implements TelegramTypeInterface
 {
 	public function __construct(
 		/** The member's status in the chat, always “creator” */
-		public ?string $status,
+		public string $status,
 		/** Information about the user */
-		public ?User $user,
+		public User $user,
 		/** True, if the user's presence in the chat is hidden */
-		public ?bool $is_anonymous,
+		public bool $is_anonymous,
 		/** Custom title for this user */
-		public string $custom_title,
+		public ?string $custom_title,
 	) {
 	}
 }

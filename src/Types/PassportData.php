@@ -19,9 +19,9 @@ final readonly class PassportData implements TelegramTypeInterface
 		 * Array with information about documents and other Telegram Passport elements that was shared with the bot
 		 * @var array<EncryptedPassportElement>
 		 */
-		public ?array $data,
+		public array $data,
 		/** Encrypted credentials required to decrypt the data */
-		public ?EncryptedCredentials $credentials,
+		public EncryptedCredentials $credentials,
 	) {
 	}
 }

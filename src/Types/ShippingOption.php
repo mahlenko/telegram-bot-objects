@@ -16,14 +16,14 @@ final readonly class ShippingOption implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Shipping option identifier */
-		public ?string $id,
+		public string $id,
 		/** Option title */
-		public ?string $title,
+		public string $title,
 		/**
 		 * List of price portions
 		 * @var array<LabeledPrice>
 		 */
-		public ?array $prices,
+		public array $prices,
 	) {
 	}
 }

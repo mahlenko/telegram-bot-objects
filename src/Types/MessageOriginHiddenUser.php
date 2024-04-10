@@ -16,11 +16,11 @@ final readonly class MessageOriginHiddenUser implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the message origin, always “hidden_user” */
-		public ?string $type,
+		public string $type,
 		/** Date the message was sent originally in Unix time */
-		public ?int $date,
+		public int $date,
 		/** Name of the user that sent the message originally */
-		public ?string $sender_user_name,
+		public string $sender_user_name,
 	) {
 	}
 }

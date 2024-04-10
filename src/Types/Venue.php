@@ -16,19 +16,19 @@ final readonly class Venue implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Venue location. Can't be a live location */
-		public ?Location $location,
+		public Location $location,
 		/** Name of the venue */
-		public ?string $title,
+		public string $title,
 		/** Address of the venue */
-		public ?string $address,
+		public string $address,
 		/** Foursquare identifier of the venue */
-		public string $foursquare_id,
+		public ?string $foursquare_id,
 		/** Foursquare type of the venue. (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.) */
-		public string $foursquare_type,
+		public ?string $foursquare_type,
 		/** Google Places identifier of the venue */
-		public string $google_place_id,
+		public ?string $google_place_id,
 		/** Google Places type of the venue. (See supported types.) */
-		public string $google_place_type,
+		public ?string $google_place_type,
 	) {
 	}
 }

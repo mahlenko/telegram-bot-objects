@@ -16,9 +16,9 @@ final readonly class ReactionTypeEmoji implements TelegramTypeInterface
 {
 	public function __construct(
 		/** Type of the reaction, always “emoji” */
-		public ?string $type,
+		public string $type,
 		/** Reaction emoji. Currently, it can be one of "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" */
-		public ?string $emoji,
+		public string $emoji,
 	) {
 	}
 }

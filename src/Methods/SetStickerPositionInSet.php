@@ -18,9 +18,9 @@ final readonly class SetStickerPositionInSet implements TelegramMethodInterface
 
 	public function __construct(
 		/** File identifier of the sticker */
-		public string $sticker,
+		public ?string $sticker,
 		/** New sticker position in the set, zero-based */
-		public int $position,
+		public ?int $position,
 	) {
 	}
 }
