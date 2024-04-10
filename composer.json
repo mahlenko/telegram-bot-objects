@@ -4,7 +4,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "TelegramBot\\": "src/"
+            "TelegramBotCast\\": "src/"
         }
     },
     "authors": [
@@ -13,5 +13,10 @@
             "email": "mahlenko-weblive@yandex.ru"
         }
     ],
-    "require": {}
+    "require": {},
+    "config": {
+        "platform": {
+            "php": "8.2"
+        }
+    }
 }
