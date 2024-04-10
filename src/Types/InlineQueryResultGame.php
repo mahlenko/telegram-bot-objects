@@ -1,29 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\InlineModeInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents a <a href="#games">Game</a>.
+ * InlineQueryResultGame
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents a Game.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class InlineQueryResultGame extends TelegramType implements InlineModeInterface
+final readonly class InlineQueryResultGame implements TelegramTypeInterface
 {
-    /** Type of the result, must be game */
-    public string $type;
-
-    /** Unique identifier for this result, 1-64 bytes */
-    public string $id;
-
-    /** Short name of the game */
-    public string $game_short_name;
-
-    /** Optional. Inline keyboard attached to the message */
-    public ?InlineKeyboardMarkup $reply_markup;
+	public function __construct(
+		/** Type of the result, must be game */
+		public ?string $type,
+		/** Unique identifier for this result, 1-64 bytes */
+		public ?string $id,
+		/** Short name of the game */
+		public ?string $game_short_name,
+		/** Inline keyboard attached to the message */
+		public InlineKeyboardMarkup $reply_markup,
+	) {
+	}
 }

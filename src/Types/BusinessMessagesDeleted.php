@@ -1,35 +1,29 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object is received when messages are deleted from a connected
- * business account.
+ * BusinessMessagesDeleted
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object is received when messages are deleted from a connected business account.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class BusinessMessagesDeleted extends TelegramType implements TypesInterface
+final readonly class BusinessMessagesDeleted implements TelegramTypeInterface
 {
-    /** Unique identifier of the business connection */
-    public string $business_connection_id;
-
-    /**
-     * Information about a chat in the business account. The bot may not have
-     * access to the chat or the corresponding user.
-     */
-    public Chat $chat;
-
-    /**
-     * A JSON-serialized list of identifiers of deleted messages in the chat
-     * of the business account
-     *
-     * @var array<int>
-     */
-    public array $message_ids;
+	public function __construct(
+		/** Unique identifier of the business connection */
+		public ?string $business_connection_id,
+		/** Information about a chat in the business account. The bot may not have access to the chat or the corresponding user. */
+		public ?Chat $chat,
+		/**
+		 * A JSON-serialized list of identifiers of deleted messages in the chat of the business account
+		 * @var array<int>
+		 */
+		public ?array $message_ids,
+	) {
+	}
 }

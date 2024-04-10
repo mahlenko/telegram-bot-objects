@@ -1,31 +1,25 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\BotName;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\BotName;
 
 /**
- * Use this method to get the current bot name for the given user
- * language. Returns <a href="#botname">BotName</a> on success.
+ * GetMyName
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get the current bot name for the given user language. Returns BotName on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetMyName extends TelegramMethod implements MethodsInterface
+final readonly class GetMyName implements TelegramMethodInterface
 {
-    /** A two-letter ISO 639-1 language code or an empty string */
-    public ?string $language_code;
+	public const RESPONSE_TYPE = BotName::class;
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = BotName::class;
+	public function __construct(
+		/** A two-letter ISO 639-1 language code or an empty string */
+		public ?string $language_code,
+	) {
+	}
 }

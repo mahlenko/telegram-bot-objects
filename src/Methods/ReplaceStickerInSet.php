@@ -1,48 +1,31 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\StickersInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\InputSticker;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\InputSticker;
 
 /**
- * Use this method to replace an existing sticker in a sticker set with a
- * new one. The method is equivalent to calling <a
- * href="#deletestickerfromset">deleteStickerFromSet</a>, then <a
- * href="#addstickertoset">addStickerToSet</a>, then <a
- * href="#setstickerpositioninset">setStickerPositionInSet</a>. Returns
- * <em>True</em> on success.
+ * ReplaceStickerInSet
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to replace an existing sticker in a sticker set with a new one. The method is equivalent to calling deleteStickerFromSet, then addStickerToSet, then setStickerPositionInSet. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ReplaceStickerInSet extends TelegramMethod implements StickersInterface
+final readonly class ReplaceStickerInSet implements TelegramMethodInterface
 {
-    /** User identifier of the sticker set owner */
-    public int $user_id;
+	public const RESPONSE_TYPE = 'true';
 
-    /** Sticker set name */
-    public string $name;
-
-    /** File identifier of the replaced sticker */
-    public string $old_sticker;
-
-    /**
-     * A JSON-serialized object with information about the added sticker. If
-     * exactly the same sticker had already been added to the set, then the
-     * set remains unchanged.
-     */
-    public InputSticker $sticker;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['user_id', 'name', 'old_sticker', 'sticker'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** User identifier of the sticker set owner */
+		public int $user_id,
+		/** Sticker set name */
+		public string $name,
+		/** File identifier of the replaced sticker */
+		public string $old_sticker,
+		/** A JSON-serialized object with information about the added sticker. If exactly the same sticker had already been added to the set, then the set remains unchanged. */
+		public InputSticker $sticker,
+	) {
+	}
 }

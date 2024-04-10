@@ -1,29 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\PaymentsInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * OrderInfo
+ *
  * This object represents information about an order.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class OrderInfo extends TelegramType implements PaymentsInterface
+final readonly class OrderInfo implements TelegramTypeInterface
 {
-    /** Optional. User name */
-    public ?string $name;
-
-    /** Optional. User's phone number */
-    public ?string $phone_number;
-
-    /** Optional. User email */
-    public ?string $email;
-
-    /** Optional. User shipping address */
-    public ?ShippingAddress $shipping_address;
+	public function __construct(
+		/** User name */
+		public string $name,
+		/** User's phone number */
+		public string $phone_number,
+		/** User email */
+		public string $email,
+		/** User shipping address */
+		public ShippingAddress $shipping_address,
+	) {
+	}
 }

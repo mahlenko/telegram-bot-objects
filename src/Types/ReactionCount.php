@@ -1,24 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents a reaction added to a message along with the number of
- * times it was added.
+ * ReactionCount
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents a reaction added to a message along with the number of times it was added.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ReactionCount extends TelegramType implements TypesInterface
+final readonly class ReactionCount implements TelegramTypeInterface
 {
-    /** Type of the reaction */
-    public ReactionType $type;
-
-    /** Number of times the reaction was added */
-    public int $total_count;
+	public function __construct(
+		/** Type of the reaction */
+		public ?ReactionType $type,
+		/** Number of times the reaction was added */
+		public ?int $total_count,
+	) {
+	}
 }

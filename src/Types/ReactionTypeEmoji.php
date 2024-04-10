@@ -1,29 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * ReactionTypeEmoji
+ *
  * The reaction is based on an emoji.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ReactionTypeEmoji extends TelegramType implements TypesInterface
+final readonly class ReactionTypeEmoji implements TelegramTypeInterface
 {
-    /** Type of the reaction, always “emoji” */
-    public string $type;
-
-    /**
-     * Reaction emoji. Currently, it can be one of "", "", "", "", "", "",
-     * "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-     * "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-     * "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "",
-     * "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""
-     */
-    public string $emoji;
+	public function __construct(
+		/** Type of the reaction, always “emoji” */
+		public ?string $type,
+		/** Reaction emoji. Currently, it can be one of "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "" */
+		public ?string $emoji,
+	) {
+	}
 }

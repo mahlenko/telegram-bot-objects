@@ -1,26 +1,24 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * BotCommand
+ *
  * This object represents a bot command.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class BotCommand extends TelegramType implements TypesInterface
+final readonly class BotCommand implements TelegramTypeInterface
 {
-    /**
-     * Text of the command; 1-32 characters. Can contain only lowercase
-     * English letters, digits and underscores.
-     */
-    public string $command;
-
-    /** Description of the command; 1-256 characters. */
-    public string $description;
+	public function __construct(
+		/** Text of the command; 1-32 characters. Can contain only lowercase English letters, digits and underscores. */
+		public ?string $command,
+		/** Description of the command; 1-256 characters. */
+		public ?string $description,
+	) {
+	}
 }

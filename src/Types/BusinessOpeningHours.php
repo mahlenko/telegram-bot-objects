@@ -1,25 +1,25 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * BusinessOpeningHours
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class BusinessOpeningHours extends TelegramType implements TypesInterface
+final readonly class BusinessOpeningHours implements TelegramTypeInterface
 {
-    /** Unique name of the time zone for which the opening hours are defined */
-    public string $time_zone_name;
-
-    /**
-     * List of time intervals describing business opening hours
-     *
-     * @var array<BusinessOpeningHoursInterval>
-     */
-    public array $opening_hours;
+	public function __construct(
+		/** Unique name of the time zone for which the opening hours are defined */
+		public ?string $time_zone_name,
+		/**
+		 * List of time intervals describing business opening hours
+		 * @var array<BusinessOpeningHoursInterval>
+		 */
+		public ?array $opening_hours,
+	) {
+	}
 }

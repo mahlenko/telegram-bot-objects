@@ -1,26 +1,26 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * MessageOriginHiddenUser
+ *
  * The message was originally sent by an unknown user.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MessageOriginHiddenUser extends TelegramType implements TypesInterface
+final readonly class MessageOriginHiddenUser implements TelegramTypeInterface
 {
-    /** Type of the message origin, always “hidden_user” */
-    public string $type;
-
-    /** Date the message was sent originally in Unix time */
-    public int $date;
-
-    /** Name of the user that sent the message originally */
-    public string $sender_user_name;
+	public function __construct(
+		/** Type of the message origin, always “hidden_user” */
+		public ?string $type,
+		/** Date the message was sent originally in Unix time */
+		public ?int $date,
+		/** Name of the user that sent the message originally */
+		public ?string $sender_user_name,
+	) {
+	}
 }

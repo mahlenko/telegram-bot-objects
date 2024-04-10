@@ -1,38 +1,25 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\File;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\File;
 
 /**
- * Use this method to get basic information about a file and prepare it
- * for downloading. For the moment, bots can download files of up to 20MB
- * in size. On success, a <a href="#file">File</a> object is returned.
- * The file can then be downloaded via the link
- * <code>https://api.telegram.org/file/bot&lt;token&gt;/&lt;file_path&gt;</code>,
- * where <code>&lt;file_path&gt;</code> is taken from the response. It is
- * guaranteed that the link will be valid for at least 1 hour. When the
- * link expires, a new one can be requested by calling <a
- * href="#getfile">getFile</a> again.
+ * GetFile
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get basic information about a file and prepare it for downloading. For the moment, bots can download files of up to 20MB in size. On success, a File object is returned. The file can then be downloaded via the link https://api.telegram.org/file/bot<token>/<file_path>, where <file_path> is taken from the response. It is guaranteed that the link will be valid for at least 1 hour. When the link expires, a new one can be requested by calling getFile again.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetFile extends TelegramMethod implements MethodsInterface
+final readonly class GetFile implements TelegramMethodInterface
 {
-    /** File identifier to get information about */
-    public string $file_id;
+	public const RESPONSE_TYPE = File::class;
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['file_id'];
-
-    /** Response mapping type. */
-    public string $response_type = File::class;
+	public function __construct(
+		/** File identifier to get information about */
+		public string $file_id,
+	) {
+	}
 }

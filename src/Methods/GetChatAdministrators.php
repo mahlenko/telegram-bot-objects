@@ -1,35 +1,25 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\ChatMember;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\ChatMember;
 
 /**
- * Use this method to get a list of administrators in a chat, which
- * aren't bots. Returns an Array of <a href="#chatmember">ChatMember</a>
- * objects.
+ * GetChatAdministrators
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to get a list of administrators in a chat, which aren't bots. Returns an Array of ChatMember objects.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class GetChatAdministrators extends TelegramMethod implements MethodsInterface
+final readonly class GetChatAdministrators implements TelegramMethodInterface
 {
-    /**
-     * Unique identifier for the target chat or username of the target
-     * supergroup or channel (in the format @channelusername)
-     */
-    public int|string $chat_id;
+	public const RESPONSE_TYPE = [ChatMember::class];
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['chat_id'];
-
-    /** Response mapping type. */
-    public string $response_type = ChatMember::class;
+	public function __construct(
+		/** Unique identifier for the target chat or username of the target supergroup or channel (in the format @channelusername) */
+		public int|string $chat_id,
+	) {
+	}
 }

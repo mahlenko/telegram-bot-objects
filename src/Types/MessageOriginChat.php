@@ -1,32 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * MessageOriginChat
+ *
  * The message was originally sent on behalf of a chat to a group chat.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MessageOriginChat extends TelegramType implements TypesInterface
+final readonly class MessageOriginChat implements TelegramTypeInterface
 {
-    /** Type of the message origin, always “chat” */
-    public string $type;
-
-    /** Date the message was sent originally in Unix time */
-    public int $date;
-
-    /** Chat that sent the message originally */
-    public Chat $sender_chat;
-
-    /**
-     * Optional. For messages originally sent by an anonymous chat
-     * administrator, original message author signature
-     */
-    public ?string $author_signature;
+	public function __construct(
+		/** Type of the message origin, always “chat” */
+		public ?string $type,
+		/** Date the message was sent originally in Unix time */
+		public ?int $date,
+		/** Chat that sent the message originally */
+		public ?Chat $sender_chat,
+		/** For messages originally sent by an anonymous chat administrator, original message author signature */
+		public string $author_signature,
+	) {
+	}
 }

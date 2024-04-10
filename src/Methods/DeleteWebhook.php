@@ -1,31 +1,24 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\UpdatesInterface;
-use TelegramBot\TelegramMethod;
+use TelegramBotCast\Interface\TelegramMethodInterface;
 
 /**
- * Use this method to remove webhook integration if you decide to switch
- * back to <a href="#getupdates">getUpdates</a>. Returns <em>True</em> on
- * success.
+ * DeleteWebhook
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to remove webhook integration if you decide to switch back to getUpdates. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class DeleteWebhook extends TelegramMethod implements UpdatesInterface
+final readonly class DeleteWebhook implements TelegramMethodInterface
 {
-    /** Pass True to drop all pending updates */
-    public ?bool $drop_pending_updates;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** Pass True to drop all pending updates */
+		public ?bool $drop_pending_updates,
+	) {
+	}
 }

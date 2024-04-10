@@ -1,21 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents the <a href="#botcommandscope">scope</a> of bot commands,
- * covering all group and supergroup chats.
+ * BotCommandScopeAllGroupChats
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents the scope of bot commands, covering all group and supergroup chats.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class BotCommandScopeAllGroupChats extends TelegramType implements TypesInterface
+final readonly class BotCommandScopeAllGroupChats implements TelegramTypeInterface
 {
-    /** Scope type, must be all_group_chats */
-    public string $type;
+	public function __construct(
+		/** Scope type, must be all_group_chats */
+		public ?string $type,
+	) {
+	}
 }

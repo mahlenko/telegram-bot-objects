@@ -1,20 +1,22 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
+ * MessageId
+ *
  * This object represents a unique message identifier.
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class MessageId extends TelegramType implements TypesInterface
+final readonly class MessageId implements TelegramTypeInterface
 {
-    /** Unique message identifier */
-    public int $message_id;
+	public function __construct(
+		/** Unique message identifier */
+		public ?int $message_id,
+	) {
+	}
 }

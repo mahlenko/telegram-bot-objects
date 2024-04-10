@@ -1,40 +1,27 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
-use TelegramBot\Types\MenuButton;
+use TelegramBotCast\Interface\TelegramMethodInterface;
+use TelegramBotCast\Types\MenuButton;
 
 /**
- * Use this method to change the bot's menu button in a private chat, or
- * the default menu button. Returns <em>True</em> on success.
+ * SetChatMenuButton
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to change the bot's menu button in a private chat, or the default menu button. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class SetChatMenuButton extends TelegramMethod implements MethodsInterface
+final readonly class SetChatMenuButton implements TelegramMethodInterface
 {
-    /**
-     * Unique identifier for the target private chat. If not specified,
-     * default bot's menu button will be changed
-     */
-    public ?int $chat_id;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * A JSON-serialized object for the bot's new menu button. Defaults to
-     * MenuButtonDefault
-     */
-    public ?MenuButton $menu_button;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = [];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** Unique identifier for the target private chat. If not specified, default bot's menu button will be changed */
+		public ?int $chat_id,
+		/** A JSON-serialized object for the bot's new menu button. Defaults to MenuButtonDefault */
+		public ?MenuButton $menu_button,
+	) {
+	}
 }

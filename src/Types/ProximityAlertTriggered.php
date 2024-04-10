@@ -1,27 +1,26 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents the content of a service message, sent whenever
- * a user in the chat triggers a proximity alert set by another user.
+ * ProximityAlertTriggered
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents the content of a service message, sent whenever a user in the chat triggers a proximity alert set by another user.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class ProximityAlertTriggered extends TelegramType implements TypesInterface
+final readonly class ProximityAlertTriggered implements TelegramTypeInterface
 {
-    /** User that triggered the alert */
-    public User $traveler;
-
-    /** User that set the alert */
-    public User $watcher;
-
-    /** The distance between the users */
-    public int $distance;
+	public function __construct(
+		/** User that triggered the alert */
+		public ?User $traveler,
+		/** User that set the alert */
+		public ?User $watcher,
+		/** The distance between the users */
+		public ?int $distance,
+	) {
+	}
 }

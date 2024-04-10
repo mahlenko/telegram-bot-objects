@@ -1,27 +1,25 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object represents an <a
- * href="/bots/features#inline-keyboards">inline keyboard</a> that
- * appears right next to the message it belongs to.
+ * InlineKeyboardMarkup
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object represents an inline keyboard that appears right next to the message it belongs to.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class InlineKeyboardMarkup extends TelegramType implements TypesInterface
+final readonly class InlineKeyboardMarkup implements TelegramTypeInterface
 {
-    /**
-     * Array of button rows, each represented by an Array of
-     * InlineKeyboardButton objects
-     *
-     * @var array<array>
-     */
-    public array $inline_keyboard;
+	public function __construct(
+		/**
+		 * Array of button rows, each represented by an Array of InlineKeyboardButton objects
+		 * @var array<Array of InlineKeyboardButton>
+		 */
+		public $inline_keyboard,
+	) {
+	}
 }

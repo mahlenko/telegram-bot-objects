@@ -1,30 +1,28 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TelegramPassportInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents an issue in an unspecified place. The error is considered
- * resolved when new data is added.
+ * PassportElementErrorUnspecified
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents an issue in an unspecified place. The error is considered resolved when new data is added.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class PassportElementErrorUnspecified extends TelegramType implements TelegramPassportInterface
+final readonly class PassportElementErrorUnspecified implements TelegramTypeInterface
 {
-    /** Error source, must be unspecified */
-    public string $source;
-
-    /** Type of element of the user's Telegram Passport which has the issue */
-    public string $type;
-
-    /** Base64-encoded element hash */
-    public string $element_hash;
-
-    /** Error message */
-    public string $message;
+	public function __construct(
+		/** Error source, must be unspecified */
+		public ?string $source,
+		/** Type of element of the user's Telegram Passport which has the issue */
+		public ?string $type,
+		/** Base64-encoded element hash */
+		public ?string $element_hash,
+		/** Error message */
+		public ?string $message,
+	) {
+	}
 }

@@ -1,43 +1,26 @@
 <?php
+namespace TelegramBotCast\Methods;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Methods;
-
-use TelegramBot\Interface\MethodsInterface;
-use TelegramBot\TelegramMethod;
+use TelegramBotCast\Interface\TelegramMethodInterface;
 
 /**
- * Use this method to remove a message from the list of pinned messages
- * in a chat. If the chat is not a private chat, the bot must be an
- * administrator in the chat for this to work and must have the
- * 'can_pin_messages' administrator right in a supergroup or
- * 'can_edit_messages' administrator right in a channel. Returns
- * <em>True</em> on success.
+ * UnpinChatMessage
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Use this method to remove a message from the list of pinned messages in a chat. If the chat is not a private chat, the bot must be an administrator in the chat for this to work and must have the 'can_pin_messages' administrator right in a supergroup or 'can_edit_messages' administrator right in a channel. Returns True on success.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class UnpinChatMessage extends TelegramMethod implements MethodsInterface
+final readonly class UnpinChatMessage implements TelegramMethodInterface
 {
-    /**
-     * Unique identifier for the target chat or username of the target
-     * channel (in the format @channelusername)
-     */
-    public int|string $chat_id;
+	public const RESPONSE_TYPE = 'true';
 
-    /**
-     * Identifier of a message to unpin. If not specified, the most recent
-     * pinned message (by sending date) will be unpinned.
-     */
-    public ?int $message_id;
-
-    /**
-     * A list of necessary properties that should be checked before sending
-     * requests to the Telegram Bot API
-     */
-    public array $required_properties = ['chat_id'];
-
-    /** Response mapping type. */
-    public string $response_type = 'bool';
+	public function __construct(
+		/** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+		public int|string $chat_id,
+		/** Identifier of a message to unpin. If not specified, the most recent pinned message (by sending date) will be unpinned. */
+		public ?int $message_id,
+	) {
+	}
 }

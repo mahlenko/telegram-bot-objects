@@ -1,30 +1,26 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\TypesInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * This object describes a message that was deleted or is otherwise
- * inaccessible to the bot.
+ * InaccessibleMessage
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * This object describes a message that was deleted or is otherwise inaccessible to the bot.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class InaccessibleMessage extends TelegramType implements TypesInterface
+final readonly class InaccessibleMessage implements TelegramTypeInterface
 {
-    /** Chat the message belonged to */
-    public Chat $chat;
-
-    /** Unique message identifier inside the chat */
-    public int $message_id;
-
-    /**
-     * Always 0. The field can be used to differentiate regular and
-     * inaccessible messages.
-     */
-    public int $date;
+	public function __construct(
+		/** Chat the message belonged to */
+		public ?Chat $chat,
+		/** Unique message identifier inside the chat */
+		public ?int $message_id,
+		/** Always 0. The field can be used to differentiate regular and inaccessible messages. */
+		public ?int $date,
+	) {
+	}
 }

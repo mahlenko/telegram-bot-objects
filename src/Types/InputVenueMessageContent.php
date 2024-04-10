@@ -1,46 +1,36 @@
 <?php
+namespace TelegramBotCast\Types;
 
-declare(strict_types=1);
-
-namespace TelegramBot\Types;
-
-use TelegramBot\Interface\InlineModeInterface;
-use TelegramBot\TelegramType;
+use TelegramBotCast\Interface\TelegramTypeInterface;
 
 /**
- * Represents the <a href="#inputmessagecontent">content</a> of a venue
- * message to be sent as the result of an inline query.
+ * InputVenueMessageContent
  *
- * @version Telegram Bot Casts v2.0.0 (Bot API 7.2)
- * @author Sergey Makhlenko <https://github.com/mahlenko>
+ * Represents the content of a venue message to be sent as the result of an inline query.
+ *
+ * @package Telegram Bot Cast
+ * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
+ * @license https://mit-license.org/license.txt The MIT License (MIT)
  */
-final class InputVenueMessageContent extends TelegramType implements InlineModeInterface
+final readonly class InputVenueMessageContent implements TelegramTypeInterface
 {
-    /** Latitude of the venue in degrees */
-    public float $latitude;
-
-    /** Longitude of the venue in degrees */
-    public float $longitude;
-
-    /** Name of the venue */
-    public string $title;
-
-    /** Address of the venue */
-    public string $address;
-
-    /** Optional. Foursquare identifier of the venue, if known */
-    public ?string $foursquare_id;
-
-    /**
-     * Optional. Foursquare type of the venue, if known. (For example,
-     * “arts_entertainment/default”, “arts_entertainment/aquarium” or
-     * “food/icecream”.)
-     */
-    public ?string $foursquare_type;
-
-    /** Optional. Google Places identifier of the venue */
-    public ?string $google_place_id;
-
-    /** Optional. Google Places type of the venue. (See supported types.) */
-    public ?string $google_place_type;
+	public function __construct(
+		/** Latitude of the venue in degrees */
+		public ?float $latitude,
+		/** Longitude of the venue in degrees */
+		public ?float $longitude,
+		/** Name of the venue */
+		public ?string $title,
+		/** Address of the venue */
+		public ?string $address,
+		/** Foursquare identifier of the venue, if known */
+		public string $foursquare_id,
+		/** Foursquare type of the venue, if known. (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.) */
+		public string $foursquare_type,
+		/** Google Places identifier of the venue */
+		public string $google_place_id,
+		/** Google Places type of the venue. (See supported types.) */
+		public string $google_place_type,
+	) {
+	}
 }
