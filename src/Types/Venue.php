@@ -23,7 +23,10 @@ final readonly class Venue implements TelegramTypeInterface
         public string $address,
         /** Foursquare identifier of the venue */
         public ?string $foursquare_id,
-        /** Foursquare type of the venue. (For example, “arts_entertainment/default”, “arts_entertainment/aquarium” or “food/icecream”.) */
+        /**
+         * Foursquare type of the venue. (For example, “arts_entertainment/default”,
+         * “arts_entertainment/aquarium” or “food/icecream”.)
+         */
         public ?string $foursquare_type,
         /** Google Places identifier of the venue */
         public ?string $google_place_id,

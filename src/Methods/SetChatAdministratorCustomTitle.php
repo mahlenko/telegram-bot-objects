@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * SetChatAdministratorCustomTitle
  *
- * Use this method to set a custom title for an administrator in a supergroup promoted by the bot. Returns True on success.
+ * Use this method to set a custom title for an administrator in a supergroup
+ * promoted by the bot. Returns True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -17,7 +18,10 @@ final readonly class SetChatAdministratorCustomTitle implements TelegramMethodIn
     public const RESPONSE_TYPE = 'true';
 
     public function __construct(
-        /** Unique identifier for the target chat or username of the target supergroup (in the format @supergroupusername) */
+        /**
+         * Unique identifier for the target chat or username of the target supergroup (in
+         * the format @supergroupusername)
+         */
         public int|string|null $chat_id,
         /** Unique identifier of the target user */
         public ?int $user_id,

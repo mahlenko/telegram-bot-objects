@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ChatBoostSourcePremium
  *
- * The boost was obtained by subscribing to Telegram Premium or by gifting a Telegram Premium subscription to another user.
+ * The boost was obtained by subscribing to Telegram Premium or by gifting a
+ * Telegram Premium subscription to another user.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

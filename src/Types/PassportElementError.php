@@ -6,16 +6,22 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * PassportElementError
  *
- * This object represents an error in the Telegram Passport element which was submitted that should be resolved by the user. It should be one of:
- *  - PassportElementErrorDataField
+ * This object represents an error in the Telegram Passport element which was
+ * submitted that should be resolved by the user. It should be one of:
+ *  -
+ * PassportElementErrorDataField
  *  - PassportElementErrorFrontSide
- *  - PassportElementErrorReverseSide
+ *  -
+ * PassportElementErrorReverseSide
  *  - PassportElementErrorSelfie
- *  - PassportElementErrorFile
+ *  -
+ * PassportElementErrorFile
  *  - PassportElementErrorFiles
- *  - PassportElementErrorTranslationFile
+ *  -
+ * PassportElementErrorTranslationFile
  *  - PassportElementErrorTranslationFiles
- *  - PassportElementErrorUnspecified
+ *  -
+ * PassportElementErrorUnspecified
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * Profile accent colors
  *
- * Currently, the following colors in RGB format are in use for profile backgrounds.
+ * Currently, the following colors in RGB format are in use for profile
+ * backgrounds.
  *
  *
  * @package Telegram Bot Cast

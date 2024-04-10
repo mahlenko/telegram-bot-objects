@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * DeleteWebhook
  *
- * Use this method to remove webhook integration if you decide to switch back to getUpdates. Returns True on success.
+ * Use this method to remove webhook integration if you decide to switch back to
+ * getUpdates. Returns True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

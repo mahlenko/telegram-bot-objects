@@ -7,7 +7,9 @@ use TelegramBotCast\Types\InputSticker;
 /**
  * ReplaceStickerInSet
  *
- * Use this method to replace an existing sticker in a sticker set with a new one. The method is equivalent to calling deleteStickerFromSet, then addStickerToSet, then setStickerPositionInSet. Returns True on success.
+ * Use this method to replace an existing sticker in a sticker set with a new one.
+ * The method is equivalent to calling deleteStickerFromSet, then addStickerToSet,
+ * then setStickerPositionInSet. Returns True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -24,7 +26,11 @@ final readonly class ReplaceStickerInSet implements TelegramMethodInterface
         public ?string $name,
         /** File identifier of the replaced sticker */
         public ?string $old_sticker,
-        /** A JSON-serialized object with information about the added sticker. If exactly the same sticker had already been added to the set, then the set remains unchanged. */
+        /**
+         * A JSON-serialized object with information about the added sticker. If exactly
+         * the same sticker had already been added to the set, then the set remains
+         * unchanged.
+         */
         public ?InputSticker $sticker,
     ) {
     }

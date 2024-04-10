@@ -15,7 +15,10 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class ChatPermissions implements TelegramTypeInterface
 {
     public function __construct(
-        /** True, if the user is allowed to send text messages, contacts, giveaways, giveaway winners, invoices, locations and venues */
+        /**
+         * True, if the user is allowed to send text messages, contacts, giveaways,
+         * giveaway winners, invoices, locations and venues
+         */
         public ?bool $can_send_messages,
         /** True, if the user is allowed to send audios */
         public ?bool $can_send_audios,
@@ -31,17 +34,26 @@ final readonly class ChatPermissions implements TelegramTypeInterface
         public ?bool $can_send_voice_notes,
         /** True, if the user is allowed to send polls */
         public ?bool $can_send_polls,
-        /** True, if the user is allowed to send animations, games, stickers and use inline bots */
+        /**
+         * True, if the user is allowed to send animations, games, stickers and use inline
+         * bots
+         */
         public ?bool $can_send_other_messages,
         /** True, if the user is allowed to add web page previews to their messages */
         public ?bool $can_add_web_page_previews,
-        /** True, if the user is allowed to change the chat title, photo and other settings. Ignored in public supergroups */
+        /**
+         * True, if the user is allowed to change the chat title, photo and other settings.
+         * Ignored in public supergroups
+         */
         public ?bool $can_change_info,
         /** True, if the user is allowed to invite new users to the chat */
         public ?bool $can_invite_users,
         /** True, if the user is allowed to pin messages. Ignored in public supergroups */
         public ?bool $can_pin_messages,
-        /** True, if the user is allowed to create forum topics. If omitted defaults to the value of can_pin_messages */
+        /**
+         * True, if the user is allowed to create forum topics. If omitted defaults to the
+         * value of can_pin_messages
+         */
         public ?bool $can_manage_topics,
     ) {
     }

@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ChatMemberRestricted
  *
- * Represents a chat member that is under certain restrictions in the chat. Supergroups only.
+ * Represents a chat member that is under certain restrictions in the chat.
+ * Supergroups only.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -21,7 +22,10 @@ final readonly class ChatMemberRestricted implements TelegramTypeInterface
         public User $user,
         /** True, if the user is a member of the chat at the moment of the request */
         public bool $is_member,
-        /** True, if the user is allowed to send text messages, contacts, giveaways, giveaway winners, invoices, locations and venues */
+        /**
+         * True, if the user is allowed to send text messages, contacts, giveaways,
+         * giveaway winners, invoices, locations and venues
+         */
         public bool $can_send_messages,
         /** True, if the user is allowed to send audios */
         public bool $can_send_audios,
@@ -37,7 +41,10 @@ final readonly class ChatMemberRestricted implements TelegramTypeInterface
         public bool $can_send_voice_notes,
         /** True, if the user is allowed to send polls */
         public bool $can_send_polls,
-        /** True, if the user is allowed to send animations, games, stickers and use inline bots */
+        /**
+         * True, if the user is allowed to send animations, games, stickers and use inline
+         * bots
+         */
         public bool $can_send_other_messages,
         /** True, if the user is allowed to add web page previews to their messages */
         public bool $can_add_web_page_previews,
@@ -49,7 +56,10 @@ final readonly class ChatMemberRestricted implements TelegramTypeInterface
         public bool $can_pin_messages,
         /** True, if the user is allowed to create forum topics */
         public bool $can_manage_topics,
-        /** Date when restrictions will be lifted for this user; Unix time. If 0, then the user is restricted forever */
+        /**
+         * Date when restrictions will be lifted for this user; Unix time. If 0, then the
+         * user is restricted forever
+         */
         public int $until_date,
     ) {
     }

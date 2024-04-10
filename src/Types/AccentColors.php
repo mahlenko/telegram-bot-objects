@@ -6,7 +6,9 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * Accent colors
  *
- * Colors with identifiers 0 (red), 1 (orange), 2 (purple/violet), 3 (green), 4 (cyan), 5 (blue), 6 (pink) can be customized by app themes. Additionally, the following colors in RGB format are currently in use.
+ * Colors with identifiers 0 (red), 1 (orange), 2 (purple/violet), 3 (green), 4
+ * (cyan), 5 (blue), 6 (pink) can be customized by app themes. Additionally, the
+ * following colors in RGB format are currently in use.
  *
  *
  * @package Telegram Bot Cast

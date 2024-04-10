@@ -7,7 +7,8 @@ use TelegramBotCast\Types\StickerSet;
 /**
  * GetStickerSet
  *
- * Use this method to get a sticker set. On success, a StickerSet object is returned.
+ * Use this method to get a sticker set. On success, a StickerSet object is
+ * returned.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

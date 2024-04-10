@@ -6,11 +6,13 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * InputMedia
  *
- * This object represents the content of a media message to be sent. It should be one of
+ * This object represents the content of a media message to be sent. It should be
+ * one of
  *  - InputMediaAnimation
  *  - InputMediaDocument
  *  - InputMediaAudio
- *  - InputMediaPhoto
+ *  -
+ * InputMediaPhoto
  *  - InputMediaVideo
  *
  * @package Telegram Bot Cast

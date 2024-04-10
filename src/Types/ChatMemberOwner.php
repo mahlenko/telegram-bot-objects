@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ChatMemberOwner
  *
- * Represents a chat member that owns the chat and has all administrator privileges.
+ * Represents a chat member that owns the chat and has all administrator
+ * privileges.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

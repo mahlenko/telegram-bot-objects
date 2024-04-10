@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * VideoChatParticipantsInvited
  *
- * This object represents a service message about new members invited to a video chat.
+ * This object represents a service message about new members invited to a video
+ * chat.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

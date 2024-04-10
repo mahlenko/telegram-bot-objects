@@ -15,7 +15,12 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class User implements TelegramTypeInterface
 {
     public function __construct(
-        /** Unique identifier for this user or bot. This number may have more than 32 significant bits and some programming languages may have difficulty/silent defects in interpreting it. But it has at most 52 significant bits, so a 64-bit integer or double-precision float type are safe for storing this identifier. */
+        /**
+         * Unique identifier for this user or bot. This number may have more than 32
+         * significant bits and some programming languages may have difficulty/silent
+         * defects in interpreting it. But it has at most 52 significant bits, so a 64-bit
+         * integer or double-precision float type are safe for storing this identifier.
+         */
         public int $id,
         /** True, if this user is a bot */
         public bool $is_bot,
@@ -37,7 +42,10 @@ final readonly class User implements TelegramTypeInterface
         public ?bool $can_read_all_group_messages,
         /** True, if the bot supports inline queries. Returned only in getMe. */
         public ?bool $supports_inline_queries,
-        /** True, if the bot can be connected to a Telegram Business account to receive its messages. Returned only in getMe. */
+        /**
+         * True, if the bot can be connected to a Telegram Business account to receive its
+         * messages. Returned only in getMe.
+         */
         public ?bool $can_connect_to_business,
     ) {
     }

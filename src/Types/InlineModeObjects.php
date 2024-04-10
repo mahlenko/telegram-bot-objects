@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * Inline mode objects
  *
- * Objects and methods used in the inline mode are described in the Inline mode section.
+ * Objects and methods used in the inline mode are described in the Inline mode
+ * section.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

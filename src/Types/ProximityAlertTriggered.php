@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ProximityAlertTriggered
  *
- * This object represents the content of a service message, sent whenever a user in the chat triggers a proximity alert set by another user.
+ * This object represents the content of a service message, sent whenever a user in
+ * the chat triggers a proximity alert set by another user.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

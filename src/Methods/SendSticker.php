@@ -13,7 +13,8 @@ use TelegramBotCast\Types\ReplyParameters;
 /**
  * SendSticker
  *
- * Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers. On success, the sent Message is returned.
+ * Use this method to send static .WEBP, animated .TGS, or video .WEBM stickers. On
+ * success, the sent Message is returned.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -24,13 +25,28 @@ final readonly class SendSticker implements TelegramMethodInterface
     public const RESPONSE_TYPE = Message::class;
 
     public function __construct(
-        /** Unique identifier of the business connection on behalf of which the message will be sent */
+        /**
+         * Unique identifier of the business connection on behalf of which the message will
+         * be sent
+         */
         public string $business_connection_id,
-        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        /**
+         * Unique identifier for the target chat or username of the target channel (in the
+         * format @channelusername)
+         */
         public int|string|null $chat_id,
-        /** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
+        /**
+         * Unique identifier for the target message thread (topic) of the forum; for forum
+         * supergroups only
+         */
         public int $message_thread_id,
-        /** Sticker to send. Pass a file_id as String to send a file that exists on the Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get a .WEBP sticker from the Internet, or upload a new .WEBP, .TGS, or .WEBM sticker using multipart/form-data. More information on Sending Files ». Video and animated stickers can't be sent via an HTTP URL. */
+        /**
+         * Sticker to send. Pass a file_id as String to send a file that exists on the
+         * Telegram servers (recommended), pass an HTTP URL as a String for Telegram to get
+         * a .WEBP sticker from the Internet, or upload a new .WEBP, .TGS, or .WEBM sticker
+         * using multipart/form-data. More information on Sending Files ». Video and
+         * animated stickers can't be sent via an HTTP URL.
+         */
         public InputFile|string|null $sticker,
         /** Emoji associated with the sticker; only for just uploaded stickers */
         public string $emoji,
@@ -40,7 +56,11 @@ final readonly class SendSticker implements TelegramMethodInterface
         public bool $protect_content,
         /** Description of the message to reply to */
         public ReplyParameters $reply_parameters,
-        /** Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove reply keyboard or to force a reply from the user. Not supported for messages sent on behalf of a business account. */
+        /**
+         * Additional interface options. A JSON-serialized object for an inline keyboard,
+         * custom reply keyboard, instructions to remove reply keyboard or to force a reply
+         * from the user. Not supported for messages sent on behalf of a business account.
+         */
         public InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardRemove|ForceReply $reply_markup,
     ) {
     }

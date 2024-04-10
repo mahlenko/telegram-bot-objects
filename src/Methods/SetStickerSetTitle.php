@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * SetStickerSetTitle
  *
- * Use this method to set the title of a created sticker set. Returns True on success.
+ * Use this method to set the title of a created sticker set. Returns True on
+ * success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

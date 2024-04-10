@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * DeleteStickerSet
  *
- * Use this method to delete a sticker set that was created by the bot. Returns True on success.
+ * Use this method to delete a sticker set that was created by the bot. Returns
+ * True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

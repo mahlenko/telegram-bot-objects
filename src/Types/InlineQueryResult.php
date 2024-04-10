@@ -6,28 +6,39 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * InlineQueryResult
  *
- * This object represents one result of an inline query. Telegram clients currently support results of the following 20 types:
+ * This object represents one result of an inline query. Telegram clients currently
+ * support results of the following 20 types:
  *  - InlineQueryResultCachedAudio
- *  - InlineQueryResultCachedDocument
+ *  -
+ * InlineQueryResultCachedDocument
  *  - InlineQueryResultCachedGif
- *  - InlineQueryResultCachedMpeg4Gif
+ *  -
+ * InlineQueryResultCachedMpeg4Gif
  *  - InlineQueryResultCachedPhoto
- *  - InlineQueryResultCachedSticker
+ *  -
+ * InlineQueryResultCachedSticker
  *  - InlineQueryResultCachedVideo
- *  - InlineQueryResultCachedVoice
+ *  -
+ * InlineQueryResultCachedVoice
  *  - InlineQueryResultArticle
- *  - InlineQueryResultAudio
+ *  -
+ * InlineQueryResultAudio
  *  - InlineQueryResultContact
  *  - InlineQueryResultGame
- *  - InlineQueryResultDocument
+ *  -
+ * InlineQueryResultDocument
  *  - InlineQueryResultGif
  *  - InlineQueryResultLocation
- *  - InlineQueryResultMpeg4Gif
+ *
+ * - InlineQueryResultMpeg4Gif
  *  - InlineQueryResultPhoto
  *  - InlineQueryResultVenue
- *  - InlineQueryResultVideo
+ *
+ * - InlineQueryResultVideo
  *  - InlineQueryResultVoice
- * Note: All URLs passed in inline query results will be available to end users and therefore must be assumed to be public.
+ * Note: All URLs passed in
+ * inline query results will be available to end users and therefore must be
+ * assumed to be public.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

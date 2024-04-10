@@ -7,7 +7,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  * ChatBoostSource
  *
  * This object describes the source of a chat boost. It can be one of
- *  - ChatBoostSourcePremium
+ *  -
+ * ChatBoostSourcePremium
  *  - ChatBoostSourceGiftCode
  *  - ChatBoostSourceGiveaway
  *

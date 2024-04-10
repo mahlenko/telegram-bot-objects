@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * VideoChatScheduled
  *
- * This object represents a service message about a video chat scheduled in the chat.
+ * This object represents a service message about a video chat scheduled in the
+ * chat.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -15,7 +16,10 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class VideoChatScheduled implements TelegramTypeInterface
 {
     public function __construct(
-        /** Point in time (Unix timestamp) when the video chat is supposed to be started by a chat administrator */
+        /**
+         * Point in time (Unix timestamp) when the video chat is supposed to be started by
+         * a chat administrator
+         */
         public int $start_date,
     ) {
     }

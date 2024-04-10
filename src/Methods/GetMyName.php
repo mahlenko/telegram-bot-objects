@@ -7,7 +7,8 @@ use TelegramBotCast\Types\BotName;
 /**
  * GetMyName
  *
- * Use this method to get the current bot name for the given user language. Returns BotName on success.
+ * Use this method to get the current bot name for the given user language. Returns
+ * BotName on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

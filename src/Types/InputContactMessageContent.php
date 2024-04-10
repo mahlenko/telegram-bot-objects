@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * InputContactMessageContent
  *
- * Represents the content of a contact message to be sent as the result of an inline query.
+ * Represents the content of a contact message to be sent as the result of an
+ * inline query.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

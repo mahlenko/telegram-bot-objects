@@ -15,7 +15,10 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class SentWebAppMessage implements TelegramTypeInterface
 {
     public function __construct(
-        /** Identifier of the sent inline message. Available only if there is an inline keyboard attached to the message. */
+        /**
+         * Identifier of the sent inline message. Available only if there is an inline
+         * keyboard attached to the message.
+         */
         public ?string $inline_message_id,
     ) {
     }

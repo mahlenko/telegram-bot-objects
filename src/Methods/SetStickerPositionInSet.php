@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * SetStickerPositionInSet
  *
- * Use this method to move a sticker in a set created by the bot to a specific position. Returns True on success.
+ * Use this method to move a sticker in a set created by the bot to a specific
+ * position. Returns True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

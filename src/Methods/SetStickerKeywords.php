@@ -6,7 +6,9 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * SetStickerKeywords
  *
- * Use this method to change search keywords assigned to a regular or custom emoji sticker. The sticker must belong to a sticker set created by the bot. Returns True on success.
+ * Use this method to change search keywords assigned to a regular or custom emoji
+ * sticker. The sticker must belong to a sticker set created by the bot. Returns
+ * True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -20,7 +22,8 @@ final readonly class SetStickerKeywords implements TelegramMethodInterface
         /** File identifier of the sticker */
         public ?string $sticker,
         /**
-         * A JSON-serialized list of 0-20 search keywords for the sticker with total length of up to 64 characters
+         * A JSON-serialized list of 0-20 search keywords for the sticker with total length
+         * of up to 64 characters
          * @var array<string>
          */
         public array $keywords,

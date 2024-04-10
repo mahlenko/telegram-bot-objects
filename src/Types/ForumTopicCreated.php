@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ForumTopicCreated
  *
- * This object represents a service message about a new forum topic created in the chat.
+ * This object represents a service message about a new forum topic created in the
+ * chat.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

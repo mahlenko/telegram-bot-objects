@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * CallbackGame
  *
- * A placeholder, currently holds no information. Use BotFather to set up your game.
+ * A placeholder, currently holds no information. Use BotFather to set up your
+ * game.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

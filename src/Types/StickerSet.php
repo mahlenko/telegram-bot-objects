@@ -19,7 +19,10 @@ final readonly class StickerSet implements TelegramTypeInterface
         public string $name,
         /** Sticker set title */
         public string $title,
-        /** Type of stickers in the set, currently one of “regular”, “mask”, “custom_emoji” */
+        /**
+         * Type of stickers in the set, currently one of “regular”, “mask”,
+         * “custom_emoji”
+         */
         public string $sticker_type,
         /**
          * List of all set stickers

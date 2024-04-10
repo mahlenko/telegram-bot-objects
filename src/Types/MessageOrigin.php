@@ -7,10 +7,12 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
  * MessageOrigin
  *
  * This object describes the origin of a message. It can be one of
- *  - MessageOriginUser
+ *  -
+ * MessageOriginUser
  *  - MessageOriginHiddenUser
  *  - MessageOriginChat
- *  - MessageOriginChannel
+ *  -
+ * MessageOriginChannel
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

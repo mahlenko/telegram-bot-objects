@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * PassportElementErrorUnspecified
  *
- * Represents an issue in an unspecified place. The error is considered resolved when new data is added.
+ * Represents an issue in an unspecified place. The error is considered resolved
+ * when new data is added.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

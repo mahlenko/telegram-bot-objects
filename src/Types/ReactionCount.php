@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ReactionCount
  *
- * Represents a reaction added to a message along with the number of times it was added.
+ * Represents a reaction added to a message along with the number of times it was
+ * added.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

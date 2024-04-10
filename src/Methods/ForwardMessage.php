@@ -7,7 +7,9 @@ use TelegramBotCast\Types\Message;
 /**
  * ForwardMessage
  *
- * Use this method to forward messages of any kind. Service messages and messages with protected content can't be forwarded. On success, the sent Message is returned.
+ * Use this method to forward messages of any kind. Service messages and messages
+ * with protected content can't be forwarded. On success, the sent Message is
+ * returned.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -18,11 +20,20 @@ final readonly class ForwardMessage implements TelegramMethodInterface
     public const RESPONSE_TYPE = Message::class;
 
     public function __construct(
-        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        /**
+         * Unique identifier for the target chat or username of the target channel (in the
+         * format @channelusername)
+         */
         public int|string|null $chat_id,
-        /** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
+        /**
+         * Unique identifier for the target message thread (topic) of the forum; for forum
+         * supergroups only
+         */
         public int $message_thread_id,
-        /** Unique identifier for the chat where the original message was sent (or channel username in the format @channelusername) */
+        /**
+         * Unique identifier for the chat where the original message was sent (or channel
+         * username in the format @channelusername)
+         */
         public int|string|null $from_chat_id,
         /** Sends the message silently. Users will receive a notification with no sound. */
         public bool $disable_notification,

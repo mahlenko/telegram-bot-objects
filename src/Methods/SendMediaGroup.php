@@ -12,7 +12,9 @@ use TelegramBotCast\Types\ReplyParameters;
 /**
  * SendMediaGroup
  *
- * Use this method to send a group of photos, videos, documents or audios as an album. Documents and audio files can be only grouped in an album with messages of the same type. On success, an array of Messages that were sent is returned.
+ * Use this method to send a group of photos, videos, documents or audios as an
+ * album. Documents and audio files can be only grouped in an album with messages
+ * of the same type. On success, an array of Messages that were sent is returned.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -23,11 +25,20 @@ final readonly class SendMediaGroup implements TelegramMethodInterface
     public const RESPONSE_TYPE = [Message::class];
 
     public function __construct(
-        /** Unique identifier of the business connection on behalf of which the message will be sent */
+        /**
+         * Unique identifier of the business connection on behalf of which the message will
+         * be sent
+         */
         public string $business_connection_id,
-        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        /**
+         * Unique identifier for the target chat or username of the target channel (in the
+         * format @channelusername)
+         */
         public int|string|null $chat_id,
-        /** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
+        /**
+         * Unique identifier for the target message thread (topic) of the forum; for forum
+         * supergroups only
+         */
         public int $message_thread_id,
         /**
          * A JSON-serialized array describing messages to be sent, must include 2-10 items

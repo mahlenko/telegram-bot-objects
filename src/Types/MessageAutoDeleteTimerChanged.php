@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * MessageAutoDeleteTimerChanged
  *
- * This object represents a service message about a change in auto-delete timer settings.
+ * This object represents a service message about a change in auto-delete timer
+ * settings.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

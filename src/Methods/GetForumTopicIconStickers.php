@@ -7,7 +7,8 @@ use TelegramBotCast\Types\Sticker;
 /**
  * GetForumTopicIconStickers
  *
- * Use this method to get custom emoji stickers, which can be used as a forum topic icon by any user. Requires no parameters. Returns an Array of Sticker objects.
+ * Use this method to get custom emoji stickers, which can be used as a forum topic
+ * icon by any user. Requires no parameters. Returns an Array of Sticker objects.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

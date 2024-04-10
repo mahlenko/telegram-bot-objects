@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ForumTopicClosed
  *
- * This object represents a service message about a forum topic closed in the chat. Currently holds no information.
+ * This object represents a service message about a forum topic closed in the chat.
+ * Currently holds no information.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

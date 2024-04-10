@@ -7,7 +7,8 @@ use TelegramBotCast\Types\UserProfilePhotos;
 /**
  * GetUserProfilePhotos
  *
- * Use this method to get a list of profile pictures for a user. Returns a UserProfilePhotos object.
+ * Use this method to get a list of profile pictures for a user. Returns a
+ * UserProfilePhotos object.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -20,9 +21,15 @@ final readonly class GetUserProfilePhotos implements TelegramMethodInterface
     public function __construct(
         /** Unique identifier of the target user */
         public ?int $user_id,
-        /** Sequential number of the first photo to be returned. By default, all photos are returned. */
+        /**
+         * Sequential number of the first photo to be returned. By default, all photos are
+         * returned.
+         */
         public int $offset,
-        /** Limits the number of photos to be retrieved. Values between 1-100 are accepted. Defaults to 100. */
+        /**
+         * Limits the number of photos to be retrieved. Values between 1-100 are accepted.
+         * Defaults to 100.
+         */
         public int $limit,
     ) {
     }

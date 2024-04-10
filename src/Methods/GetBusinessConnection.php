@@ -7,7 +7,8 @@ use TelegramBotCast\Types\BusinessConnection;
 /**
  * GetBusinessConnection
  *
- * Use this method to get information about the connection of the bot with a business account. Returns a BusinessConnection object on success.
+ * Use this method to get information about the connection of the bot with a
+ * business account. Returns a BusinessConnection object on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

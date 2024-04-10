@@ -12,7 +12,8 @@ use TelegramBotCast\Types\ReplyParameters;
 /**
  * SendContact
  *
- * Use this method to send phone contacts. On success, the sent Message is returned.
+ * Use this method to send phone contacts. On success, the sent Message is
+ * returned.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -23,11 +24,20 @@ final readonly class SendContact implements TelegramMethodInterface
     public const RESPONSE_TYPE = Message::class;
 
     public function __construct(
-        /** Unique identifier of the business connection on behalf of which the message will be sent */
+        /**
+         * Unique identifier of the business connection on behalf of which the message will
+         * be sent
+         */
         public string $business_connection_id,
-        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        /**
+         * Unique identifier for the target chat or username of the target channel (in the
+         * format @channelusername)
+         */
         public int|string|null $chat_id,
-        /** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
+        /**
+         * Unique identifier for the target message thread (topic) of the forum; for forum
+         * supergroups only
+         */
         public int $message_thread_id,
         /** Contact's phone number */
         public ?string $phone_number,
@@ -43,7 +53,12 @@ final readonly class SendContact implements TelegramMethodInterface
         public bool $protect_content,
         /** Description of the message to reply to */
         public ReplyParameters $reply_parameters,
-        /** Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user. Not supported for messages sent on behalf of a business account */
+        /**
+         * Additional interface options. A JSON-serialized object for an inline keyboard,
+         * custom reply keyboard, instructions to remove a reply keyboard or to force a
+         * reply from the user. Not supported for messages sent on behalf of a business
+         * account
+         */
         public InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardRemove|ForceReply $reply_markup,
     ) {
     }

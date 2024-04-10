@@ -7,7 +7,8 @@ use TelegramBotCast\Types\BotShortDescription;
 /**
  * GetMyShortDescription
  *
- * Use this method to get the current bot short description for the given user language. Returns BotShortDescription on success.
+ * Use this method to get the current bot short description for the given user
+ * language. Returns BotShortDescription on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

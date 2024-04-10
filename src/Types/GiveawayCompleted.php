@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * GiveawayCompleted
  *
- * This object represents a service message about the completion of a giveaway without public winners.
+ * This object represents a service message about the completion of a giveaway
+ * without public winners.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

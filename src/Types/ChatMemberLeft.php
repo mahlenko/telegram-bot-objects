@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * ChatMemberLeft
  *
- * Represents a chat member that isn't currently a member of the chat, but may join it themselves.
+ * Represents a chat member that isn't currently a member of the chat, but may join
+ * it themselves.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

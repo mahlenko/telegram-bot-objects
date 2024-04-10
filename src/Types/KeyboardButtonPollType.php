@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * KeyboardButtonPollType
  *
- * This object represents type of a poll, which is allowed to be created and sent when the corresponding button is pressed.
+ * This object represents type of a poll, which is allowed to be created and sent
+ * when the corresponding button is pressed.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -15,7 +16,11 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 final readonly class KeyboardButtonPollType implements TelegramTypeInterface
 {
     public function __construct(
-        /** If quiz is passed, the user will be allowed to create only polls in the quiz mode. If regular is passed, only regular polls will be allowed. Otherwise, the user will be allowed to create a poll of any type. */
+        /**
+         * If quiz is passed, the user will be allowed to create only polls in the quiz
+         * mode. If regular is passed, only regular polls will be allowed. Otherwise, the
+         * user will be allowed to create a poll of any type.
+         */
         public ?string $type,
     ) {
     }

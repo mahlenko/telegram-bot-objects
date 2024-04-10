@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * BotCommandScopeAllChatAdministrators
  *
- * Represents the scope of bot commands, covering all group and supergroup chat administrators.
+ * Represents the scope of bot commands, covering all group and supergroup chat
+ * administrators.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

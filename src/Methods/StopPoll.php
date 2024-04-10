@@ -8,7 +8,8 @@ use TelegramBotCast\Types\Poll;
 /**
  * StopPoll
  *
- * Use this method to stop a poll which was sent by the bot. On success, the stopped Poll is returned.
+ * Use this method to stop a poll which was sent by the bot. On success, the
+ * stopped Poll is returned.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -19,7 +20,10 @@ final readonly class StopPoll implements TelegramMethodInterface
     public const RESPONSE_TYPE = Poll::class;
 
     public function __construct(
-        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        /**
+         * Unique identifier for the target chat or username of the target channel (in the
+         * format @channelusername)
+         */
         public int|string|null $chat_id,
         /** Identifier of the original message with the poll */
         public ?int $message_id,

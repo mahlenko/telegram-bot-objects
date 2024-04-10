@@ -6,7 +6,8 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * UsersShared
  *
- * This object contains information about the users whose identifiers were shared with the bot using a KeyboardButtonRequestUsers button.
+ * This object contains information about the users whose identifiers were shared
+ * with the bot using a KeyboardButtonRequestUsers button.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

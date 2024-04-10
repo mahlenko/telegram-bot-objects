@@ -8,7 +8,8 @@ use TelegramBotCast\Types\User;
 /**
  * ChatMemberBanned
  *
- * Represents a chat member that was banned in the chat and can't return to the chat or view chat messages.
+ * Represents a chat member that was banned in the chat and can't return to the
+ * chat or view chat messages.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>
@@ -23,7 +24,10 @@ final readonly class ChatMemberBanned implements TelegramMethodInterface
         public string $status,
         /** Information about the user */
         public User $user,
-        /** Date when restrictions will be lifted for this user; Unix time. If 0, then the user is banned forever */
+        /**
+         * Date when restrictions will be lifted for this user; Unix time. If 0, then the
+         * user is banned forever
+         */
         public int $until_date,
     ) {
     }

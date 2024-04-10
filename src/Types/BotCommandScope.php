@@ -6,13 +6,17 @@ use TelegramBotCast\Interface\TelegramTypeInterface;
 /**
  * BotCommandScope
  *
- * This object represents the scope to which bot commands are applied. Currently, the following 7 scopes are supported:
+ * This object represents the scope to which bot commands are applied. Currently,
+ * the following 7 scopes are supported:
  *  - BotCommandScopeDefault
- *  - BotCommandScopeAllPrivateChats
+ *  -
+ * BotCommandScopeAllPrivateChats
  *  - BotCommandScopeAllGroupChats
- *  - BotCommandScopeAllChatAdministrators
+ *  -
+ * BotCommandScopeAllChatAdministrators
  *  - BotCommandScopeChat
- *  - BotCommandScopeChatAdministrators
+ *  -
+ * BotCommandScopeChatAdministrators
  *  - BotCommandScopeChatMember
  *
  * @package Telegram Bot Cast

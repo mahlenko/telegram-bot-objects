@@ -6,7 +6,9 @@ use TelegramBotCast\Interface\TelegramMethodInterface;
 /**
  * SetStickerEmojiList
  *
- * Use this method to change the list of emoji assigned to a regular or custom emoji sticker. The sticker must belong to a sticker set created by the bot. Returns True on success.
+ * Use this method to change the list of emoji assigned to a regular or custom
+ * emoji sticker. The sticker must belong to a sticker set created by the bot.
+ * Returns True on success.
  *
  * @package Telegram Bot Cast
  * @author Sergey Makhlenko <https://t.me/SergeyMakhlenko>

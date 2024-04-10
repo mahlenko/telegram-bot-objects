@@ -25,18 +25,31 @@ final readonly class SendMessage implements TelegramMethodInterface
     public const RESPONSE_TYPE = Message::class;
 
     public function __construct(
-        /** Unique identifier of the business connection on behalf of which the message will be sent */
+        /**
+         * Unique identifier of the business connection on behalf of which the message will
+         * be sent
+         */
         public string $business_connection_id,
-        /** Unique identifier for the target chat or username of the target channel (in the format @channelusername) */
+        /**
+         * Unique identifier for the target chat or username of the target channel (in the
+         * format @channelusername)
+         */
         public int|string|null $chat_id,
-        /** Unique identifier for the target message thread (topic) of the forum; for forum supergroups only */
+        /**
+         * Unique identifier for the target message thread (topic) of the forum; for forum
+         * supergroups only
+         */
         public int $message_thread_id,
         /** Text of the message to be sent, 1-4096 characters after entities parsing */
         public ?string $text,
-        /** Mode for parsing entities in the message text. See formatting options for more details. */
+        /**
+         * Mode for parsing entities in the message text. See formatting options for more
+         * details.
+         */
         public string $parse_mode,
         /**
-         * A JSON-serialized list of special entities that appear in message text, which can be specified instead of parse_mode
+         * A JSON-serialized list of special entities that appear in message text, which
+         * can be specified instead of parse_mode
          * @var array<MessageEntity>
          */
         public array $entities,
@@ -48,7 +61,12 @@ final readonly class SendMessage implements TelegramMethodInterface
         public bool $protect_content,
         /** Description of the message to reply to */
         public ReplyParameters $reply_parameters,
-        /** Additional interface options. A JSON-serialized object for an inline keyboard, custom reply keyboard, instructions to remove a reply keyboard or to force a reply from the user. Not supported for messages sent on behalf of a business account */
+        /**
+         * Additional interface options. A JSON-serialized object for an inline keyboard,
+         * custom reply keyboard, instructions to remove a reply keyboard or to force a
+         * reply from the user. Not supported for messages sent on behalf of a business
+         * account
+         */
         public InlineKeyboardMarkup|ReplyKeyboardMarkup|ReplyKeyboardRemove|ForceReply $reply_markup,
     ) {
     }
